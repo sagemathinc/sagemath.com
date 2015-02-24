@@ -1,0 +1,32 @@
+application: sage-math-inc
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+default_expiration: "10m" # default is 10m, set this to 1d if happy
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /.*
+  script: smc.app
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: markupsafe
+  version: latest
+
+pagespeed:
+  enabled_rewriters:
+  - MinifyCss
+  - CollapseWhitespace
+  - ImageAddDimensions
+  - RemoveComments
+  - InlineImages
+  - InlineJs
+
