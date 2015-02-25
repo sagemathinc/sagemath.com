@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6a15e62-e63b-4313-9fa8-d9c6b2048d38" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/OCRA.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/OCRA.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/OCRA.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/header/notebook-nature-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/header/notebook-nature.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pattern/pattern-black-orchid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pattern/pattern-cutcube.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pattern/pattern-grey-squares-nq8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pattern/pattern-grey-squares.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pattern/pattern-pinstriped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pattern/pattern-squares.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/header/pc-in-laboratory-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/header/pc-in-laboratory.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/ocr-a.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sagemath.com.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery-1.10.2.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.js" afterPath="$PROJECT_DIR$/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.nicescroll.js" afterPath="$PROJECT_DIR$/js/jquery.nicescroll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.stellar.js" afterPath="$PROJECT_DIR$/js/jquery.stellar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/normal.css" afterPath="$PROJECT_DIR$/css/normal.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/normal.js" afterPath="$PROJECT_DIR$/js/normal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts.js" afterPath="$PROJECT_DIR$/js/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smc.py" afterPath="$PROJECT_DIR$/smc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sagemath.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +35,7 @@
           <file leaf-file-name="smc.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/smc.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.13993542" vertical-offset="0" max-vertical-offset="929">
+                <state vertical-scroll-proportion="0.18705036" vertical-offset="0" max-vertical-offset="695">
                   <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
                   <folding>
                     <element signature="e#22#31#0" expanded="true" />
@@ -135,7 +101,7 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.36865342" vertical-offset="14850" max-vertical-offset="15964">
+                <state vertical-scroll-proportion="0.49702382" vertical-offset="14850" max-vertical-offset="15964">
                   <caret line="1168" column="38" selection-start-line="1168" selection-start-column="38" selection-end-line="1168" selection-end-column="38" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -284,6 +250,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesJinja2" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -562,11 +529,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.36842105" order="10" side_tool="true" content_ui="tabs" x="99" y="97" width="1722" height="884" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24198553" sideWeight="0.50030136" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24198553" sideWeight="0.499388" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24198553" sideWeight="0.499388" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.6315789" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12796208" sideWeight="0.5075862" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32301342" sideWeight="0.5608215" order="5" side_tool="false" content_ui="tabs" />
@@ -691,7 +658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36865342" vertical-offset="14850" max-vertical-offset="15964">
+        <state vertical-scroll-proportion="0.49702382" vertical-offset="14850" max-vertical-offset="15964">
           <caret line="1168" column="38" selection-start-line="1168" selection-start-column="38" selection-end-line="1168" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -719,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13993542" vertical-offset="0" max-vertical-offset="929">
+        <state vertical-scroll-proportion="0.18705036" vertical-offset="0" max-vertical-offset="695">
           <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
             <element signature="e#22#31#0" expanded="true" />

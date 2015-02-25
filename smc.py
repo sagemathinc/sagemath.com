@@ -10,7 +10,7 @@ YEAR = str(datetime.date.today().year)
 
 GLOBAL_VALS = {
     "year": YEAR,
-    "email": "office@sagemath.com",
+    "email": "info@sagemath.com",
     "smc": "SageMathCloud",
     "company": "SageMath, Inc.",
     "slogan": "Collaborative Computational Mathematics Online."
@@ -33,15 +33,24 @@ class MainPage(webapp2.RequestHandler):
         self.response.write(template.render(vals))
 
 
-class ContactForm(webapp2.RedirectHandler):
+class ContactForm(webapp2.RequestHandler):
     def post(self):
         self.response.headers['Content-Type'] = 'text/plain'
         for k in self.request.arguments():
             logging.info("%s: %s" % (k, self.request.get(k)))
 
+class Stats(webapp2.RequestHandler):
+    def get(self):
+        import urllib2
+        try:
+            stats = urllib2.urlopen('https://cloud.sagemath.com/stats').read()
+            self.response.write(stats)
+        except:
+            self.error(500)
 
 app = webapp2.WSGIApplication([
                                   ('/', MainPage),
-                                  ('/contact', ContactForm)
+                                  ('/contact', ContactForm),
+                                  ('/stats', Stats)
                               ],
                               debug=True)
