@@ -56,6 +56,11 @@
   font-size: .85em;
 }
 
+.button.large {
+  padding: 15px 40px;
+  font-size: 1.1em;
+}
+
 .button.small {
   padding: 5px 15px;
   font-size: .75em;

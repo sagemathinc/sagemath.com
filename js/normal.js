@@ -14,13 +14,12 @@
 
  */
 
-var elegance = { w: elegance };
+var elegance = {w: elegance};
 
 elegance.init = function () {
 
   'use strict';
 
-  
 
   var $ = window.$;
 
@@ -38,7 +37,6 @@ elegance.init = function () {
 
   var domready = false;
 
-  
 
   /**
 
@@ -82,7 +80,6 @@ elegance.init = function () {
 
   };
 
-  
 
   /**
 
@@ -100,7 +97,6 @@ elegance.init = function () {
 
   };
 
-  
 
   /**
 
@@ -128,7 +124,6 @@ elegance.init = function () {
 
   };
 
-  
 
   /**
 
@@ -156,7 +151,6 @@ elegance.init = function () {
 
   };
 
-  
 
   // Feature detects + browser sniffs  ಠ_ಠ
 
@@ -166,7 +160,6 @@ elegance.init = function () {
 
   api.env.chrome = /chrome|crios/i.test(ua);
 
-  
 
   /**
 
@@ -190,7 +183,6 @@ elegance.init = function () {
 
   };
 
-  
 
   /**
 
@@ -208,7 +200,9 @@ elegance.init = function () {
 
     resize.up = _.throttle(function (evt) {
 
-      _.each(handlers, function (h) { h(evt); });
+      _.each(handlers, function (h) {
+        h(evt);
+      });
 
     });
 
@@ -256,7 +250,6 @@ elegance.init = function () {
 
   }();
 
-  
 
   // Wrap window.location in api
 
@@ -266,7 +259,6 @@ elegance.init = function () {
 
   };
 
-  
 
   // Designer-specific methods
 
@@ -292,13 +284,12 @@ elegance.init = function () {
 
     api.location = function (url) {
 
-      window.dispatchEvent(new CustomEvent('__wf_location', { detail: url }));
+      window.dispatchEvent(new CustomEvent('__wf_location', {detail: url}));
 
     };
 
   }
 
-  
 
   // DOM ready - Call primary and secondary handlers
 
@@ -318,7 +309,6 @@ elegance.init = function () {
 
   });
 
-  
 
   /*!
 
@@ -360,41 +350,36 @@ elegance.init = function () {
 
     var _ = {};
 
-    
 
     // Current version.
 
     _.VERSION = '1.5.2-elegance';
 
-    
 
     // Establish the object that gets returned to break out of a loop iteration.
 
     var breaker = {};
 
 
-
     // Save bytes in the minified (but not gzipped) version:
 
     var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
 
-    
 
     // Create quick reference variables for speed access to core prototypes.
 
     var
 
-      push             = ArrayProto.push,
+        push = ArrayProto.push,
 
-      slice            = ArrayProto.slice,
+        slice = ArrayProto.slice,
 
-      concat           = ArrayProto.concat,
+        concat = ArrayProto.concat,
 
-      toString         = ObjProto.toString,
+        toString = ObjProto.toString,
 
-      hasOwnProperty   = ObjProto.hasOwnProperty;
+        hasOwnProperty = ObjProto.hasOwnProperty;
 
-    
 
     // All **ECMAScript 5** native function implementations that we hope to use
 
@@ -402,37 +387,35 @@ elegance.init = function () {
 
     var
 
-      nativeForEach      = ArrayProto.forEach,
+        nativeForEach = ArrayProto.forEach,
 
-      nativeMap          = ArrayProto.map,
+        nativeMap = ArrayProto.map,
 
-      nativeReduce       = ArrayProto.reduce,
+        nativeReduce = ArrayProto.reduce,
 
-      nativeReduceRight  = ArrayProto.reduceRight,
+        nativeReduceRight = ArrayProto.reduceRight,
 
-      nativeFilter       = ArrayProto.filter,
+        nativeFilter = ArrayProto.filter,
 
-      nativeEvery        = ArrayProto.every,
+        nativeEvery = ArrayProto.every,
 
-      nativeSome         = ArrayProto.some,
+        nativeSome = ArrayProto.some,
 
-      nativeIndexOf      = ArrayProto.indexOf,
+        nativeIndexOf = ArrayProto.indexOf,
 
-      nativeLastIndexOf  = ArrayProto.lastIndexOf,
+        nativeLastIndexOf = ArrayProto.lastIndexOf,
 
-      nativeIsArray      = Array.isArray,
+        nativeIsArray = Array.isArray,
 
-      nativeKeys         = Object.keys,
+        nativeKeys = Object.keys,
 
-      nativeBind         = FuncProto.bind;
+        nativeBind = FuncProto.bind;
 
-    
 
     // Collection Functions
 
     // --------------------
 
-    
 
     // The cornerstone, an `each` implementation, aka `forEach`.
 
@@ -440,7 +423,7 @@ elegance.init = function () {
 
     // Delegates to **ECMAScript 5**'s native `forEach` if available.
 
-    var each = _.each = _.forEach = function(obj, iterator, context) {
+    var each = _.each = _.forEach = function (obj, iterator, context) {
 
       /* jshint shadow:true */
 
@@ -472,13 +455,12 @@ elegance.init = function () {
 
     };
 
-    
 
     // Return the results of applying the iterator to each element.
 
     // Delegates to **ECMAScript 5**'s native `map` if available.
 
-    _.map = _.collect = function(obj, iterator, context) {
+    _.map = _.collect = function (obj, iterator, context) {
 
       var results = [];
 
@@ -486,7 +468,7 @@ elegance.init = function () {
 
       if (nativeMap && obj.map === nativeMap) return obj.map(iterator, context);
 
-      each(obj, function(value, index, list) {
+      each(obj, function (value, index, list) {
 
         results.push(iterator.call(context, value, index, list));
 
@@ -496,7 +478,6 @@ elegance.init = function () {
 
     };
 
-    
 
     // Return all the elements that pass a truth test.
 
@@ -504,7 +485,7 @@ elegance.init = function () {
 
     // Aliased as `select`.
 
-    _.filter = _.select = function(obj, iterator, context) {
+    _.filter = _.select = function (obj, iterator, context) {
 
       var results = [];
 
@@ -512,7 +493,7 @@ elegance.init = function () {
 
       if (nativeFilter && obj.filter === nativeFilter) return obj.filter(iterator, context);
 
-      each(obj, function(value, index, list) {
+      each(obj, function (value, index, list) {
 
         if (iterator.call(context, value, index, list)) results.push(value);
 
@@ -522,7 +503,6 @@ elegance.init = function () {
 
     };
 
-    
 
     // Determine if at least one element in the object matches a truth test.
 
@@ -530,7 +510,7 @@ elegance.init = function () {
 
     // Aliased as `any`.
 
-    var any = _.some = _.any = function(obj, iterator, context) {
+    var any = _.some = _.any = function (obj, iterator, context) {
 
       iterator || (iterator = _.identity);
 
@@ -540,7 +520,7 @@ elegance.init = function () {
 
       if (nativeSome && obj.some === nativeSome) return obj.some(iterator, context);
 
-      each(obj, function(value, index, list) {
+      each(obj, function (value, index, list) {
 
         if (result || (result = iterator.call(context, value, index, list))) return breaker;
 
@@ -550,19 +530,18 @@ elegance.init = function () {
 
     };
 
-    
 
     // Determine if the array or object contains a given value (using `===`).
 
     // Aliased as `include`.
 
-    _.contains = _.include = function(obj, target) {
+    _.contains = _.include = function (obj, target) {
 
       if (obj == null) return false;
 
       if (nativeIndexOf && obj.indexOf === nativeIndexOf) return obj.indexOf(target) != -1;
 
-      return any(obj, function(value) {
+      return any(obj, function (value) {
 
         return value === target;
 
@@ -570,45 +549,43 @@ elegance.init = function () {
 
     };
 
-    
 
     // Function (ahem) Functions
 
     // --------------------
 
-    
 
     // Delays a function for the given number of milliseconds, and then calls
 
     // it with the arguments supplied.
 
-    _.delay = function(func, wait) {
+    _.delay = function (func, wait) {
 
       var args = slice.call(arguments, 2);
 
-      return setTimeout(function(){ return func.apply(null, args); }, wait);
+      return setTimeout(function () {
+        return func.apply(null, args);
+      }, wait);
 
     };
-
 
 
     // Defers a function, scheduling it to run after the current call stack has
 
     // cleared.
 
-    _.defer = function(func) {
+    _.defer = function (func) {
 
       return _.delay.apply(_, [func, 1].concat(slice.call(arguments, 1)));
 
     };
 
-    
 
     // Returns a function, that, when invoked, will only be triggered once every
 
     // browser animation frame - using tram's requestAnimationFrame polyfill.
 
-    _.throttle = function(func) {
+    _.throttle = function (func) {
 
       var wait, args, context;
 
@@ -634,7 +611,6 @@ elegance.init = function () {
 
     };
 
-    
 
     // Returns a function, that, as long as it continues to be invoked, will not
 
@@ -644,11 +620,11 @@ elegance.init = function () {
 
     // leading edge, instead of the trailing.
 
-    _.debounce = function(func, wait, immediate) {
+    _.debounce = function (func, wait, immediate) {
 
       var timeout, args, context, timestamp, result;
 
-      return function() {
+      return function () {
 
         context = this;
 
@@ -656,7 +632,7 @@ elegance.init = function () {
 
         timestamp = new Date();
 
-        var later = function() {
+        var later = function () {
 
           var last = (new Date()) - timestamp;
 
@@ -690,19 +666,17 @@ elegance.init = function () {
 
     };
 
-    
 
     // Object Functions
 
     // ----------------
 
 
-
     // Retrieve the names of an object's properties.
 
     // Delegates to **ECMAScript 5**'s native `Object.keys`
 
-    _.keys = nativeKeys || function(obj) {
+    _.keys = nativeKeys || function (obj) {
 
       if (obj !== Object(obj)) throw new TypeError('Invalid object');
 
@@ -714,19 +688,17 @@ elegance.init = function () {
 
     };
 
-    
 
     // Shortcut function for checking if an object has a given property directly
 
     // on itself (in other words, not on a prototype).
 
-    _.has = function(obj, key) {
+    _.has = function (obj, key) {
 
       return hasOwnProperty.call(obj, key);
 
     };
 
-    
 
     // Export underscore
 
@@ -734,7 +706,6 @@ elegance.init = function () {
 
   }
 
-    
 
   // Export api
 
@@ -764,7 +735,632 @@ elegance.init = function () {
 
  */
 
-window.tram=function(t){function i(t,i){var e=new I.Bare;return e.init(t,i)}function e(t){return t.replace(/[A-Z]/g,function(t){return"-"+t.toLowerCase()})}function n(t){var i=parseInt(t.slice(1),16),e=255&i>>16,n=255&i>>8,r=255&i;return[e,n,r]}function r(t,i,e){return"#"+(1<<24|t<<16|i<<8|e).toString(16).slice(1)}function s(){}function a(t,i){V("Type warning: Expected: ["+t+"] Got: ["+typeof i+"] "+i)}function o(t,i,e){V("Units do not match ["+t+"]: "+i+", "+e)}function u(t,i,e){if(void 0!==i&&(e=i),void 0===t)return e;var n=e;return J.test(t)||!K.test(t)?n=parseInt(t,10):K.test(t)&&(n=1e3*parseFloat(t)),0>n&&(n=0),n===n?n:e}function c(t){for(var i=-1,e=t?t.length:0,n=[];e>++i;){var r=t[i];r&&n.push(r)}return n}var h=function(t,i,e){function n(t){return"object"==typeof t}function r(t){return"function"==typeof t}function s(){}function a(o,u){function c(){var t=new h;return r(t.init)&&t.init.apply(t,arguments),t}function h(){}u===e&&(u=o,o=Object),c.Bare=h;var l,f=s[t]=o[t],d=h[t]=c[t]=new s;return d.constructor=c,c.mixin=function(i){return h[t]=c[t]=a(c,i)[t],c},c.open=function(t){if(l={},r(t)?l=t.call(c,d,f,c,o):n(t)&&(l=t),n(l))for(var e in l)i.call(l,e)&&(d[e]=l[e]);return r(d.init)||(d.init=o),c},c.open(u)}return a}("prototype",{}.hasOwnProperty),l={ease:["ease",function(t,i,e,n){var r=(t/=n)*t,s=r*t;return i+e*(-2.75*s*r+11*r*r+-15.5*s+8*r+.25*t)}],"ease-in":["ease-in",function(t,i,e,n){var r=(t/=n)*t,s=r*t;return i+e*(-1*s*r+3*r*r+-3*s+2*r)}],"ease-out":["ease-out",function(t,i,e,n){var r=(t/=n)*t,s=r*t;return i+e*(.3*s*r+-1.6*r*r+2.2*s+-1.8*r+1.9*t)}],"ease-in-out":["ease-in-out",function(t,i,e,n){var r=(t/=n)*t,s=r*t;return i+e*(2*s*r+-5*r*r+2*s+2*r)}],linear:["linear",function(t,i,e,n){return e*t/n+i}],"ease-in-quad":["cubic-bezier(0.550, 0.085, 0.680, 0.530)",function(t,i,e,n){return e*(t/=n)*t+i}],"ease-out-quad":["cubic-bezier(0.250, 0.460, 0.450, 0.940)",function(t,i,e,n){return-e*(t/=n)*(t-2)+i}],"ease-in-out-quad":["cubic-bezier(0.455, 0.030, 0.515, 0.955)",function(t,i,e,n){return 1>(t/=n/2)?e/2*t*t+i:-e/2*(--t*(t-2)-1)+i}],"ease-in-cubic":["cubic-bezier(0.550, 0.055, 0.675, 0.190)",function(t,i,e,n){return e*(t/=n)*t*t+i}],"ease-out-cubic":["cubic-bezier(0.215, 0.610, 0.355, 1)",function(t,i,e,n){return e*((t=t/n-1)*t*t+1)+i}],"ease-in-out-cubic":["cubic-bezier(0.645, 0.045, 0.355, 1)",function(t,i,e,n){return 1>(t/=n/2)?e/2*t*t*t+i:e/2*((t-=2)*t*t+2)+i}],"ease-in-quart":["cubic-bezier(0.895, 0.030, 0.685, 0.220)",function(t,i,e,n){return e*(t/=n)*t*t*t+i}],"ease-out-quart":["cubic-bezier(0.165, 0.840, 0.440, 1)",function(t,i,e,n){return-e*((t=t/n-1)*t*t*t-1)+i}],"ease-in-out-quart":["cubic-bezier(0.770, 0, 0.175, 1)",function(t,i,e,n){return 1>(t/=n/2)?e/2*t*t*t*t+i:-e/2*((t-=2)*t*t*t-2)+i}],"ease-in-quint":["cubic-bezier(0.755, 0.050, 0.855, 0.060)",function(t,i,e,n){return e*(t/=n)*t*t*t*t+i}],"ease-out-quint":["cubic-bezier(0.230, 1, 0.320, 1)",function(t,i,e,n){return e*((t=t/n-1)*t*t*t*t+1)+i}],"ease-in-out-quint":["cubic-bezier(0.860, 0, 0.070, 1)",function(t,i,e,n){return 1>(t/=n/2)?e/2*t*t*t*t*t+i:e/2*((t-=2)*t*t*t*t+2)+i}],"ease-in-sine":["cubic-bezier(0.470, 0, 0.745, 0.715)",function(t,i,e,n){return-e*Math.cos(t/n*(Math.PI/2))+e+i}],"ease-out-sine":["cubic-bezier(0.390, 0.575, 0.565, 1)",function(t,i,e,n){return e*Math.sin(t/n*(Math.PI/2))+i}],"ease-in-out-sine":["cubic-bezier(0.445, 0.050, 0.550, 0.950)",function(t,i,e,n){return-e/2*(Math.cos(Math.PI*t/n)-1)+i}],"ease-in-expo":["cubic-bezier(0.950, 0.050, 0.795, 0.035)",function(t,i,e,n){return 0===t?i:e*Math.pow(2,10*(t/n-1))+i}],"ease-out-expo":["cubic-bezier(0.190, 1, 0.220, 1)",function(t,i,e,n){return t===n?i+e:e*(-Math.pow(2,-10*t/n)+1)+i}],"ease-in-out-expo":["cubic-bezier(1, 0, 0, 1)",function(t,i,e,n){return 0===t?i:t===n?i+e:1>(t/=n/2)?e/2*Math.pow(2,10*(t-1))+i:e/2*(-Math.pow(2,-10*--t)+2)+i}],"ease-in-circ":["cubic-bezier(0.600, 0.040, 0.980, 0.335)",function(t,i,e,n){return-e*(Math.sqrt(1-(t/=n)*t)-1)+i}],"ease-out-circ":["cubic-bezier(0.075, 0.820, 0.165, 1)",function(t,i,e,n){return e*Math.sqrt(1-(t=t/n-1)*t)+i}],"ease-in-out-circ":["cubic-bezier(0.785, 0.135, 0.150, 0.860)",function(t,i,e,n){return 1>(t/=n/2)?-e/2*(Math.sqrt(1-t*t)-1)+i:e/2*(Math.sqrt(1-(t-=2)*t)+1)+i}],"ease-in-back":["cubic-bezier(0.600, -0.280, 0.735, 0.045)",function(t,i,e,n,r){return void 0===r&&(r=1.70158),e*(t/=n)*t*((r+1)*t-r)+i}],"ease-out-back":["cubic-bezier(0.175, 0.885, 0.320, 1.275)",function(t,i,e,n,r){return void 0===r&&(r=1.70158),e*((t=t/n-1)*t*((r+1)*t+r)+1)+i}],"ease-in-out-back":["cubic-bezier(0.680, -0.550, 0.265, 1.550)",function(t,i,e,n,r){return void 0===r&&(r=1.70158),1>(t/=n/2)?e/2*t*t*(((r*=1.525)+1)*t-r)+i:e/2*((t-=2)*t*(((r*=1.525)+1)*t+r)+2)+i}]},f={"ease-in-back":"cubic-bezier(0.600, 0, 0.735, 0.045)","ease-out-back":"cubic-bezier(0.175, 0.885, 0.320, 1)","ease-in-out-back":"cubic-bezier(0.680, 0, 0.265, 1)"},d=document,p=window,b="bkwld-tram",m=/[\-\.0-9]/g,v=/[A-Z]/,g="number",y=/^(rgb|#)/,w=/(em|cm|mm|in|pt|pc|px)$/,k=/(em|cm|mm|in|pt|pc|px|%)$/,x=/(deg|rad|turn)$/,z="unitless",q=" ",$=d.createElement("a"),M=["Webkit","Moz","O","ms"],A=["-webkit-","-moz-","-o-","-ms-"],B=function(t){if(t in $.style)return{dom:t,css:t};var i,e,n="",r=t.split("-");for(i=0;r.length>i;i++)n+=r[i].charAt(0).toUpperCase()+r[i].slice(1);for(i=0;M.length>i;i++)if(e=M[i]+n,e in $.style)return{dom:e,css:A[i]+t}},R=i.support={bind:Function.prototype.bind,transform:B("transform"),transition:B("transition"),backface:B("backface-visibility"),timing:B("transition-timing-function")};if(R.transition){var F=R.timing.dom;if($.style[F]=l["ease-in-back"][0],!$.style[F])for(var j in f)l[j][0]=f[j]}var G=i.frame=function(){var t=p.requestAnimationFrame||p.webkitRequestAnimationFrame||p.mozRequestAnimationFrame||p.oRequestAnimationFrame||p.msRequestAnimationFrame;return t&&R.bind?t.bind(p):function(t){p.setTimeout(t,16)}}(),T=i.now=function(){var t=p.performance,i=t&&(t.now||t.webkitNow||t.msNow||t.mozNow);return i&&R.bind?i.bind(t):Date.now||function(){return+new Date}}(),U=h(function(i){function n(t,i){var e=c((""+t).split(q)),n=e[0];i=i||{};var r=Q[n];if(!r)return V("Unsupported property: "+n);if(!i.weak||!this.props[n]){var s=r[0],a=this.props[n];return a||(a=this.props[n]=new s.Bare),a.init(this.$el,e,r,i),a}}function r(t,i,e){if(t){var r=typeof t;if(i||(this.timer&&this.timer.destroy(),this.queue=[],this.active=!1),"number"==r&&i)return this.timer=new X({duration:t,context:this,complete:o}),this.active=!0,void 0;if("string"==r&&i)return n.call(this,t,e&&e[1]),o.call(this);if("function"==r)return t.call(this,this),void 0;if("object"==r){var s=0;b.call(this,t,function(t,i){t.span>s&&(s=t.span),t.stop(),t.animate(i)},function(t){"wait"in t&&(s=u(t.wait,0))}),p.call(this),s>0&&(this.timer=new X({duration:s,context:this}),this.active=!0,i&&(this.timer.complete=o));var a=this,c=!1,h={};G(function(){b.call(a,t,function(t){t.active&&(c=!0,h[t.name]=t.nextStyle)}),c&&a.$el.css(h)})}}}function s(t){t=u(t,0),this.active?this.queue.push({options:t}):(this.timer=new X({duration:t,context:this,complete:o}),this.active=!0)}function a(t){return this.active?(this.queue.push({options:t,args:arguments}),this.timer.complete=o,void 0):V("No active transition timer. Use start() or wait() before then().")}function o(){if(this.timer&&this.timer.destroy(),this.active=!1,this.queue.length){var t=this.queue.shift();r.call(this,t.options,!0,t.args)}}function h(t){this.timer&&this.timer.destroy(),this.queue=[],this.active=!1;var i;"string"==typeof t?(i={},i[t]=1):i="object"==typeof t?t:this.props,b.call(this,i,m),p.call(this)}function l(t){h.call(this,t),b.call(this,t,g,y)}function f(t){"string"!=typeof t&&(t="block"),this.el.style.display=t}function d(){h.call(this),this.el.style.display="none"}function p(){var t,i,e=[];for(t in this.props)i=this.props[t],i.active&&e.push(i.string);e=e.join(","),this.style!==e&&(this.style=e,this.el.style[R.transition.dom]=e)}function b(t,i,r){var s,a,o,u,c=i!==m,h={};for(s in t)o=t[s],s in W?(h.transform||(h.transform={}),h.transform[s]=o):(v.test(s)&&(s=e(s)),s in Q?h[s]=o:(u||(u={}),u[s]=o));for(s in h){if(o=h[s],a=this.props[s],!a){if(!c)continue;a=n.call(this,s)}i.call(this,a,o)}r&&u&&r.call(this,u)}function m(t){t.stop()}function g(t,i){t.set(i)}function y(t){this.$el.css(t)}function w(t,e){i[t]=function(){return this.children?k.call(this,e,arguments):(this.el&&e.apply(this,arguments),this)}}function k(t,i){var e,n=this.children.length;for(e=0;n>e;e++)t.apply(this.children[e],i);return this}i.init=function(i){this.$el=t(i),this.el=this.$el[0],this.props={},this.queue=[],this.style="",this.active=!1,R.backface&&E.hideBackface&&C(this.el,R.backface.css,"hidden")},w("add",n),w("start",r),w("wait",s),w("then",a),w("next",o),w("stop",h),w("set",l),w("show",f),w("hide",d)}),I=h(U,function(i){function e(i,e){var n=t.data(i,b)||t.data(i,b,new U.Bare);return n.el||n.init(i),e?n.start(e):n}i.init=function(i,n){var r=t(i);if(!r.length)return this;if(1===r.length)return e(r[0],n);var s=[];return r.each(function(t,i){s.push(e(i,n))}),this.children=s,this}}),S=h(function(t){function i(t,i,e){return void 0!==i&&(e=i),t in l?t:e}function e(t){var i=/rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(t);return(i?r(i[1],i[2],i[3]):t).replace(/#(\w)(\w)(\w)$/,"#$1$1$2$2$3$3")}var n={duration:500,ease:"ease",delay:0};t.init=function(t,e,r,s){this.$el=t,this.el=t[0];var a=e[0];r[2]&&(a=r[2]),L[a]&&(a=L[a]),this.name=a,this.type=r[1],this.duration=u(e[1],this.duration,n.duration),this.ease=i(e[2],this.ease,n.ease),this.delay=u(e[3],this.delay,n.delay),this.span=this.duration+this.delay,this.active=!1,this.unit=s.unit||this.unit||E.defaultUnit,this.angle=s.angle||this.angle||E.defaultAngle,E.fallback||s.fallback?this.animate=this.fallback:(this.animate=this.transition,this.string=this.name+q+this.duration+"ms"+("ease"!=this.ease?q+l[this.ease][0]:"")+(this.delay?q+this.delay+"ms":""))},t.set=function(t){t=this.convert(t,this.type),this.update(t),this.redraw()},t.transition=function(t){this.active=!0,this.nextStyle=this.convert(t,this.type)},t.fallback=function(t){this.tween=new P({from:this.convert(this.get(),this.type),to:this.convert(t,this.type),duration:this.duration,delay:this.delay,ease:this.ease,update:this.update,context:this})},t.get=function(){return D(this.el,this.name)},t.update=function(t){C(this.el,this.name,t)},t.stop=function(){this.tween&&this.tween.destroy(),this.active&&(this.active=!1,C(this.el,this.name,this.get()))},t.convert=function(t,i){var n,r="number"==typeof t,s="string"==typeof t;switch(i){case g:if(r)return t;if(s&&""===t.replace(m,""))return+t;n="number(unitless)";break;case y:if(s){if(""===t&&this.original)return this.original;if(i.test(t))return"#"==t.charAt(0)&&7==t.length?t:e(t)}n="hex or rgb string";break;case w:if(r)return t+this.unit;if(s&&i.test(t))return t;n="number(px) or string(unit)";break;case k:if(r)return t+this.unit;if(s&&i.test(t))return t;n="number(px) or string(unit or %)";break;case x:if(r)return t+this.angle;if(s&&i.test(t))return t;n="number(deg) or string(angle)";break;case z:if(r)return t;if(s&&k.test(t))return t;n="number(unitless) or string(unit or %)"}return a(n,t),t},t.redraw=function(){this.el.offsetHeight}}),Z=h(S,function(t,i){t.init=function(){i.init.apply(this,arguments),this.original||(this.original=this.convert(this.get(),y))}}),N=h(S,function(t,i){t.init=function(){i.init.apply(this,arguments),this.animate=this.fallback},t.get=function(){return this.$el[this.name]()},t.update=function(t){this.$el[this.name](t)}}),O=h(S,function(t,i){function e(t,i){var e,n,r,s,a;for(e in t)s=W[e],r=s[0],n=s[1]||e,a=this.convert(t[e],r),i.call(this,n,a,r)}t.init=function(){i.init.apply(this,arguments),this.current||(this.current={},W.perspective&&E.perspective&&(this.current.perspective=E.perspective,C(this.el,this.name,this.style(this.current)),this.redraw()))},t.set=function(t){e.call(this,t,function(t,i){this.current[t]=i}),C(this.el,this.name,this.style(this.current)),this.redraw()},t.transition=function(t){var i=this.values(t);this.tween=new Y({current:this.current,values:i,duration:this.duration,delay:this.delay,ease:this.ease});var e,n={};for(e in this.current)n[e]=e in i?i[e]:this.current[e];this.active=!0,this.nextStyle=this.style(n)},t.fallback=function(t){var i=this.values(t);this.tween=new Y({current:this.current,values:i,duration:this.duration,delay:this.delay,ease:this.ease,update:this.update,context:this})},t.update=function(){C(this.el,this.name,this.style(this.current))},t.style=function(t){var i,e="";for(i in t)e+=i+"("+t[i]+") ";return e},t.values=function(t){var i,n={};return e.call(this,t,function(t,e,r){n[t]=e,void 0===this.current[t]&&(i=0,~t.indexOf("scale")&&(i=1),this.current[t]=this.convert(i,r))}),n}}),P=h(function(i){function e(t){1===d.push(t)&&G(a)}function a(){var t,i,e,n=d.length;if(n)for(G(a),i=T(),t=n;t--;)e=d[t],e&&e.render(i)}function u(i){var e,n=t.inArray(i,d);n>=0&&(e=d.slice(n+1),d.length=n,e.length&&(d=d.concat(e)))}function c(t){return Math.round(t*p)/p}function h(t,i,e){return r(t[0]+e*(i[0]-t[0]),t[1]+e*(i[1]-t[1]),t[2]+e*(i[2]-t[2]))}var f={ease:l.ease[1],from:0,to:1};i.init=function(t){this.duration=t.duration||0,this.delay=t.delay||0;var i=t.ease||f.ease;l[i]&&(i=l[i][1]),"function"!=typeof i&&(i=f.ease),this.ease=i,this.update=t.update||s,this.complete=t.complete||s,this.context=t.context||this,this.name=t.name;var e=t.from,n=t.to;void 0===e&&(e=f.from),void 0===n&&(n=f.to),this.unit=t.unit||"","number"==typeof e&&"number"==typeof n?(this.begin=e,this.change=n-e):this.format(n,e),this.value=this.begin+this.unit,this.start=T(),t.autoplay!==!1&&this.play()},i.play=function(){this.active||(this.start||(this.start=T()),this.active=!0,e(this))},i.stop=function(){this.active&&(this.active=!1,u(this))},i.render=function(t){var i,e=t-this.start;if(this.delay){if(this.delay>=e)return;e-=this.delay}if(this.duration>e){var n=this.ease(e,0,1,this.duration);return i=this.startRGB?h(this.startRGB,this.endRGB,n):c(this.begin+n*this.change),this.value=i+this.unit,this.update.call(this.context,i),void 0}i=this.endHex||this.begin+this.change,this.value=i+this.unit,this.update.call(this.context,i),this.complete.call(this.context),this.destroy()},i.format=function(t,i){if(i+="",t+="","#"==t.charAt(0))return this.startRGB=n(i),this.endRGB=n(t),this.endHex=t,this.begin=0,this.change=1,void 0;if(!this.unit){var e=i.replace(m,""),r=t.replace(m,"");e!==r&&o("tween",i,t),this.unit=e}i=parseFloat(i),t=parseFloat(t),this.begin=this.value=i,this.change=t-i},i.destroy=function(){this.stop(),this.ease=this.update=this.complete=this.context=null};var d=[],p=1e3}),X=h(P,function(t){t.init=function(t){this.duration=t.duration||0,this.complete=t.complete||s,this.context=t.context,this.play()},t.render=function(t){var i=t-this.start;this.duration>i||(this.complete.call(this.context),this.destroy())}}),Y=h(P,function(t,i){t.init=function(t){this.context=t.context,this.update=t.update,this.tweens=[],this.current=t.current;var i,e;for(i in t.values)e=t.values[i],this.current[i]!==e&&this.tweens.push(new P({name:i,from:this.current[i],to:e,duration:t.duration,delay:t.delay,ease:t.ease,autoplay:!1}));this.play()},t.render=function(t){var i,e,n=this.tweens.length,r=!1;for(i=n;i--;)e=this.tweens[i],e.ease&&(e.render(t),this.current[e.name]=e.value,r=!0);return r?(this.update&&this.update.call(this.context),void 0):this.destroy()},t.destroy=function(){if(i.destroy.call(this),this.tweens){var t,e=this.tweens.length;for(t=e;t--;)this.tweens[t].destroy();this.tweens=null,this.current=null}}}),E=i.config={defaultUnit:"px",defaultAngle:"deg",hideBackface:!0,perspective:"",fallback:!R.transition,agentTests:[]};i.fallback=function(t){if(!R.transition)return E.fallback=!0;E.agentTests.push("("+t+")");var i=RegExp(E.agentTests.join("|"),"i");E.fallback=i.test(navigator.userAgent)},i.fallback("6.0.[2-5] Safari");var H={};i.macro=function(t,i){H[t]=i},i.tween=function(t){return new P(t)},i.delay=function(t,i,e){return new X({complete:i,duration:t,context:e})},t.fn.tram=function(t){return i.call(null,this,t)};var C=t.style,D=t.css,L={transform:R.transform&&R.transform.css},Q={color:[Z,y],background:[Z,y,"background-color"],"outline-color":[Z,y],"border-color":[Z,y],"border-top-color":[Z,y],"border-right-color":[Z,y],"border-bottom-color":[Z,y],"border-left-color":[Z,y],"border-width":[S,w],"border-top-width":[S,w],"border-right-width":[S,w],"border-bottom-width":[S,w],"border-left-width":[S,w],"border-spacing":[S,w],"letter-spacing":[S,w],margin:[S,w],"margin-top":[S,w],"margin-right":[S,w],"margin-bottom":[S,w],"margin-left":[S,w],padding:[S,w],"padding-top":[S,w],"padding-right":[S,w],"padding-bottom":[S,w],"padding-left":[S,w],"outline-width":[S,w],opacity:[S,g],top:[S,k],right:[S,k],bottom:[S,k],left:[S,k],"font-size":[S,k],"text-indent":[S,k],"word-spacing":[S,k],width:[S,k],"min-width":[S,k],"max-width":[S,k],height:[S,k],"min-height":[S,k],"max-height":[S,k],"line-height":[S,z],"scroll-top":[N,g,"scrollTop"],"scroll-left":[N,g,"scrollLeft"]},W={};R.transform&&(Q.transform=[O],W={x:[k,"translateX"],y:[k,"translateY"],rotate:[x],rotateX:[x],rotateY:[x],scale:[g],scaleX:[g],scaleY:[g],skew:[x],skewX:[x],skewY:[x]}),R.transform&&R.backface&&(W.z=[k,"translateZ"],W.rotateZ=[x],W.scaleZ=[g],W.perspective=[w]);var J=/ms/,K=/s|\./,V=function(){var t="warn",i=window.console;return i&&i[t]?function(e){i[t](e)}:s}();return t.tram=i}(window.jQuery);
+window.tram = function (t) {
+  function i(t, i) {
+    var e = new I.Bare;
+    return e.init(t, i)
+  }
+
+  function e(t) {
+    return t.replace(/[A-Z]/g, function (t) {
+      return "-" + t.toLowerCase()
+    })
+  }
+
+  function n(t) {
+    var i = parseInt(t.slice(1), 16), e = 255 & i >> 16, n = 255 & i >> 8, r = 255 & i;
+    return [e, n, r]
+  }
+
+  function r(t, i, e) {
+    return "#" + (1 << 24 | t << 16 | i << 8 | e).toString(16).slice(1)
+  }
+
+  function s() {
+  }
+
+  function a(t, i) {
+    V("Type warning: Expected: [" + t + "] Got: [" + typeof i + "] " + i)
+  }
+
+  function o(t, i, e) {
+    V("Units do not match [" + t + "]: " + i + ", " + e)
+  }
+
+  function u(t, i, e) {
+    if (void 0 !== i && (e = i), void 0 === t)return e;
+    var n = e;
+    return J.test(t) || !K.test(t) ? n = parseInt(t, 10) : K.test(t) && (n = 1e3 * parseFloat(t)), 0 > n && (n = 0), n === n ? n : e
+  }
+
+  function c(t) {
+    for (var i = -1, e = t ? t.length : 0, n = []; e > ++i;) {
+      var r = t[i];
+      r && n.push(r)
+    }
+    return n
+  }
+
+  var h = function (t, i, e) {
+    function n(t) {
+      return "object" == typeof t
+    }
+
+    function r(t) {
+      return "function" == typeof t
+    }
+
+    function s() {
+    }
+
+    function a(o, u) {
+      function c() {
+        var t = new h;
+        return r(t.init) && t.init.apply(t, arguments), t
+      }
+
+      function h() {
+      }
+
+      u === e && (u = o, o = Object), c.Bare = h;
+      var l, f = s[t] = o[t], d = h[t] = c[t] = new s;
+      return d.constructor = c, c.mixin = function (i) {
+        return h[t] = c[t] = a(c, i)[t], c
+      }, c.open = function (t) {
+        if (l = {}, r(t) ? l = t.call(c, d, f, c, o) : n(t) && (l = t), n(l))for (var e in l)i.call(l, e) && (d[e] = l[e]);
+        return r(d.init) || (d.init = o), c
+      }, c.open(u)
+    }
+
+    return a
+  }("prototype", {}.hasOwnProperty), l = {
+    ease: ["ease", function (t, i, e, n) {
+      var r = (t /= n) * t, s = r * t;
+      return i + e * (-2.75 * s * r + 11 * r * r + -15.5 * s + 8 * r + .25 * t)
+    }], "ease-in": ["ease-in", function (t, i, e, n) {
+      var r = (t /= n) * t, s = r * t;
+      return i + e * (-1 * s * r + 3 * r * r + -3 * s + 2 * r)
+    }], "ease-out": ["ease-out", function (t, i, e, n) {
+      var r = (t /= n) * t, s = r * t;
+      return i + e * (.3 * s * r + -1.6 * r * r + 2.2 * s + -1.8 * r + 1.9 * t)
+    }], "ease-in-out": ["ease-in-out", function (t, i, e, n) {
+      var r = (t /= n) * t, s = r * t;
+      return i + e * (2 * s * r + -5 * r * r + 2 * s + 2 * r)
+    }], linear: ["linear", function (t, i, e, n) {
+      return e * t / n + i
+    }], "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function (t, i, e, n) {
+      return e * (t /= n) * t + i
+    }], "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function (t, i, e, n) {
+      return -e * (t /= n) * (t - 2) + i
+    }], "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function (t, i, e, n) {
+      return 1 > (t /= n / 2) ? e / 2 * t * t + i : -e / 2 * (--t * (t - 2) - 1) + i
+    }], "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function (t, i, e, n) {
+      return e * (t /= n) * t * t + i
+    }], "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function (t, i, e, n) {
+      return e * ((t = t / n - 1) * t * t + 1) + i
+    }], "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function (t, i, e, n) {
+      return 1 > (t /= n / 2) ? e / 2 * t * t * t + i : e / 2 * ((t -= 2) * t * t + 2) + i
+    }], "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function (t, i, e, n) {
+      return e * (t /= n) * t * t * t + i
+    }], "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function (t, i, e, n) {
+      return -e * ((t = t / n - 1) * t * t * t - 1) + i
+    }], "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function (t, i, e, n) {
+      return 1 > (t /= n / 2) ? e / 2 * t * t * t * t + i : -e / 2 * ((t -= 2) * t * t * t - 2) + i
+    }], "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function (t, i, e, n) {
+      return e * (t /= n) * t * t * t * t + i
+    }], "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function (t, i, e, n) {
+      return e * ((t = t / n - 1) * t * t * t * t + 1) + i
+    }], "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function (t, i, e, n) {
+      return 1 > (t /= n / 2) ? e / 2 * t * t * t * t * t + i : e / 2 * ((t -= 2) * t * t * t * t + 2) + i
+    }], "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function (t, i, e, n) {
+      return -e * Math.cos(t / n * (Math.PI / 2)) + e + i
+    }], "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function (t, i, e, n) {
+      return e * Math.sin(t / n * (Math.PI / 2)) + i
+    }], "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function (t, i, e, n) {
+      return -e / 2 * (Math.cos(Math.PI * t / n) - 1) + i
+    }], "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function (t, i, e, n) {
+      return 0 === t ? i : e * Math.pow(2, 10 * (t / n - 1)) + i
+    }], "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function (t, i, e, n) {
+      return t === n ? i + e : e * (-Math.pow(2, -10 * t / n) + 1) + i
+    }], "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function (t, i, e, n) {
+      return 0 === t ? i : t === n ? i + e : 1 > (t /= n / 2) ? e / 2 * Math.pow(2, 10 * (t - 1)) + i : e / 2 * (-Math.pow(2, -10 * --t) + 2) + i
+    }], "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function (t, i, e, n) {
+      return -e * (Math.sqrt(1 - (t /= n) * t) - 1) + i
+    }], "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function (t, i, e, n) {
+      return e * Math.sqrt(1 - (t = t / n - 1) * t) + i
+    }], "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function (t, i, e, n) {
+      return 1 > (t /= n / 2) ? -e / 2 * (Math.sqrt(1 - t * t) - 1) + i : e / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + i
+    }], "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function (t, i, e, n, r) {
+      return void 0 === r && (r = 1.70158), e * (t /= n) * t * ((r + 1) * t - r) + i
+    }], "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function (t, i, e, n, r) {
+      return void 0 === r && (r = 1.70158), e * ((t = t / n - 1) * t * ((r + 1) * t + r) + 1) + i
+    }], "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function (t, i, e, n, r) {
+      return void 0 === r && (r = 1.70158), 1 > (t /= n / 2) ? e / 2 * t * t * (((r *= 1.525) + 1) * t - r) + i : e / 2 * ((t -= 2) * t * (((r *= 1.525) + 1) * t + r) + 2) + i
+    }]
+  }, f = {
+    "ease-in-back": "cubic-bezier(0.600, 0, 0.735, 0.045)",
+    "ease-out-back": "cubic-bezier(0.175, 0.885, 0.320, 1)",
+    "ease-in-out-back": "cubic-bezier(0.680, 0, 0.265, 1)"
+  }, d = document, p = window, b = "bkwld-tram", m = /[\-\.0-9]/g, v = /[A-Z]/, g = "number", y = /^(rgb|#)/, w = /(em|cm|mm|in|pt|pc|px)$/, k = /(em|cm|mm|in|pt|pc|px|%)$/, x = /(deg|rad|turn)$/, z = "unitless", q = " ", $ = d.createElement("a"), M = ["Webkit", "Moz", "O", "ms"], A = ["-webkit-", "-moz-", "-o-", "-ms-"], B = function (t) {
+    if (t in $.style)return {dom: t, css: t};
+    var i, e, n = "", r = t.split("-");
+    for (i = 0; r.length > i; i++)n += r[i].charAt(0).toUpperCase() + r[i].slice(1);
+    for (i = 0; M.length > i; i++)if (e = M[i] + n, e in $.style)return {dom: e, css: A[i] + t}
+  }, R = i.support = {
+    bind: Function.prototype.bind,
+    transform: B("transform"),
+    transition: B("transition"),
+    backface: B("backface-visibility"),
+    timing: B("transition-timing-function")
+  };
+  if (R.transition) {
+    var F = R.timing.dom;
+    if ($.style[F] = l["ease-in-back"][0], !$.style[F])for (var j in f)l[j][0] = f[j]
+  }
+  var G = i.frame = function () {
+    var t = p.requestAnimationFrame || p.webkitRequestAnimationFrame || p.mozRequestAnimationFrame || p.oRequestAnimationFrame || p.msRequestAnimationFrame;
+    return t && R.bind ? t.bind(p) : function (t) {
+      p.setTimeout(t, 16)
+    }
+  }(), T = i.now = function () {
+    var t = p.performance, i = t && (t.now || t.webkitNow || t.msNow || t.mozNow);
+    return i && R.bind ? i.bind(t) : Date.now || function () {
+      return +new Date
+    }
+  }(), U = h(function (i) {
+    function n(t, i) {
+      var e = c(("" + t).split(q)), n = e[0];
+      i = i || {};
+      var r = Q[n];
+      if (!r)return V("Unsupported property: " + n);
+      if (!i.weak || !this.props[n]) {
+        var s = r[0], a = this.props[n];
+        return a || (a = this.props[n] = new s.Bare), a.init(this.$el, e, r, i), a
+      }
+    }
+
+    function r(t, i, e) {
+      if (t) {
+        var r = typeof t;
+        if (i || (this.timer && this.timer.destroy(), this.queue = [], this.active = !1), "number" == r && i)return this.timer = new X({
+          duration: t,
+          context: this,
+          complete: o
+        }), this.active = !0, void 0;
+        if ("string" == r && i)return n.call(this, t, e && e[1]), o.call(this);
+        if ("function" == r)return t.call(this, this), void 0;
+        if ("object" == r) {
+          var s = 0;
+          b.call(this, t, function (t, i) {
+            t.span > s && (s = t.span), t.stop(), t.animate(i)
+          }, function (t) {
+            "wait"in t && (s = u(t.wait, 0))
+          }), p.call(this), s > 0 && (this.timer = new X({
+            duration: s,
+            context: this
+          }), this.active = !0, i && (this.timer.complete = o));
+          var a = this, c = !1, h = {};
+          G(function () {
+            b.call(a, t, function (t) {
+              t.active && (c = !0, h[t.name] = t.nextStyle)
+            }), c && a.$el.css(h)
+          })
+        }
+      }
+    }
+
+    function s(t) {
+      t = u(t, 0), this.active ? this.queue.push({options: t}) : (this.timer = new X({
+        duration: t,
+        context: this,
+        complete: o
+      }), this.active = !0)
+    }
+
+    function a(t) {
+      return this.active ? (this.queue.push({
+        options: t,
+        args: arguments
+      }), this.timer.complete = o, void 0) : V("No active transition timer. Use start() or wait() before then().")
+    }
+
+    function o() {
+      if (this.timer && this.timer.destroy(), this.active = !1, this.queue.length) {
+        var t = this.queue.shift();
+        r.call(this, t.options, !0, t.args)
+      }
+    }
+
+    function h(t) {
+      this.timer && this.timer.destroy(), this.queue = [], this.active = !1;
+      var i;
+      "string" == typeof t ? (i = {}, i[t] = 1) : i = "object" == typeof t ? t : this.props, b.call(this, i, m), p.call(this)
+    }
+
+    function l(t) {
+      h.call(this, t), b.call(this, t, g, y)
+    }
+
+    function f(t) {
+      "string" != typeof t && (t = "block"), this.el.style.display = t
+    }
+
+    function d() {
+      h.call(this), this.el.style.display = "none"
+    }
+
+    function p() {
+      var t, i, e = [];
+      for (t in this.props)i = this.props[t], i.active && e.push(i.string);
+      e = e.join(","), this.style !== e && (this.style = e, this.el.style[R.transition.dom] = e)
+    }
+
+    function b(t, i, r) {
+      var s, a, o, u, c = i !== m, h = {};
+      for (s in t)o = t[s], s in W ? (h.transform || (h.transform = {}), h.transform[s] = o) : (v.test(s) && (s = e(s)), s in Q ? h[s] = o : (u || (u = {}), u[s] = o));
+      for (s in h) {
+        if (o = h[s], a = this.props[s], !a) {
+          if (!c)continue;
+          a = n.call(this, s)
+        }
+        i.call(this, a, o)
+      }
+      r && u && r.call(this, u)
+    }
+
+    function m(t) {
+      t.stop()
+    }
+
+    function g(t, i) {
+      t.set(i)
+    }
+
+    function y(t) {
+      this.$el.css(t)
+    }
+
+    function w(t, e) {
+      i[t] = function () {
+        return this.children ? k.call(this, e, arguments) : (this.el && e.apply(this, arguments), this)
+      }
+    }
+
+    function k(t, i) {
+      var e, n = this.children.length;
+      for (e = 0; n > e; e++)t.apply(this.children[e], i);
+      return this
+    }
+
+    i.init = function (i) {
+      this.$el = t(i), this.el = this.$el[0], this.props = {}, this.queue = [], this.style = "", this.active = !1, R.backface && E.hideBackface && C(this.el, R.backface.css, "hidden")
+    }, w("add", n), w("start", r), w("wait", s), w("then", a), w("next", o), w("stop", h), w("set", l), w("show", f), w("hide", d)
+  }), I = h(U, function (i) {
+    function e(i, e) {
+      var n = t.data(i, b) || t.data(i, b, new U.Bare);
+      return n.el || n.init(i), e ? n.start(e) : n
+    }
+
+    i.init = function (i, n) {
+      var r = t(i);
+      if (!r.length)return this;
+      if (1 === r.length)return e(r[0], n);
+      var s = [];
+      return r.each(function (t, i) {
+        s.push(e(i, n))
+      }), this.children = s, this
+    }
+  }), S = h(function (t) {
+    function i(t, i, e) {
+      return void 0 !== i && (e = i), t in l ? t : e
+    }
+
+    function e(t) {
+      var i = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(t);
+      return (i ? r(i[1], i[2], i[3]) : t).replace(/#(\w)(\w)(\w)$/, "#$1$1$2$2$3$3")
+    }
+
+    var n = {duration: 500, ease: "ease", delay: 0};
+    t.init = function (t, e, r, s) {
+      this.$el = t, this.el = t[0];
+      var a = e[0];
+      r[2] && (a = r[2]), L[a] && (a = L[a]), this.name = a, this.type = r[1], this.duration = u(e[1], this.duration, n.duration), this.ease = i(e[2], this.ease, n.ease), this.delay = u(e[3], this.delay, n.delay), this.span = this.duration + this.delay, this.active = !1, this.unit = s.unit || this.unit || E.defaultUnit, this.angle = s.angle || this.angle || E.defaultAngle, E.fallback || s.fallback ? this.animate = this.fallback : (this.animate = this.transition, this.string = this.name + q + this.duration + "ms" + ("ease" != this.ease ? q + l[this.ease][0] : "") + (this.delay ? q + this.delay + "ms" : ""))
+    }, t.set = function (t) {
+      t = this.convert(t, this.type), this.update(t), this.redraw()
+    }, t.transition = function (t) {
+      this.active = !0, this.nextStyle = this.convert(t, this.type)
+    }, t.fallback = function (t) {
+      this.tween = new P({
+        from: this.convert(this.get(), this.type),
+        to: this.convert(t, this.type),
+        duration: this.duration,
+        delay: this.delay,
+        ease: this.ease,
+        update: this.update,
+        context: this
+      })
+    }, t.get = function () {
+      return D(this.el, this.name)
+    }, t.update = function (t) {
+      C(this.el, this.name, t)
+    }, t.stop = function () {
+      this.tween && this.tween.destroy(), this.active && (this.active = !1, C(this.el, this.name, this.get()))
+    }, t.convert = function (t, i) {
+      var n, r = "number" == typeof t, s = "string" == typeof t;
+      switch (i) {
+        case g:
+          if (r)return t;
+          if (s && "" === t.replace(m, ""))return +t;
+          n = "number(unitless)";
+          break;
+        case y:
+          if (s) {
+            if ("" === t && this.original)return this.original;
+            if (i.test(t))return "#" == t.charAt(0) && 7 == t.length ? t : e(t)
+          }
+          n = "hex or rgb string";
+          break;
+        case w:
+          if (r)return t + this.unit;
+          if (s && i.test(t))return t;
+          n = "number(px) or string(unit)";
+          break;
+        case k:
+          if (r)return t + this.unit;
+          if (s && i.test(t))return t;
+          n = "number(px) or string(unit or %)";
+          break;
+        case x:
+          if (r)return t + this.angle;
+          if (s && i.test(t))return t;
+          n = "number(deg) or string(angle)";
+          break;
+        case z:
+          if (r)return t;
+          if (s && k.test(t))return t;
+          n = "number(unitless) or string(unit or %)"
+      }
+      return a(n, t), t
+    }, t.redraw = function () {
+      this.el.offsetHeight
+    }
+  }), Z = h(S, function (t, i) {
+    t.init = function () {
+      i.init.apply(this, arguments), this.original || (this.original = this.convert(this.get(), y))
+    }
+  }), N = h(S, function (t, i) {
+    t.init = function () {
+      i.init.apply(this, arguments), this.animate = this.fallback
+    }, t.get = function () {
+      return this.$el[this.name]()
+    }, t.update = function (t) {
+      this.$el[this.name](t)
+    }
+  }), O = h(S, function (t, i) {
+    function e(t, i) {
+      var e, n, r, s, a;
+      for (e in t)s = W[e], r = s[0], n = s[1] || e, a = this.convert(t[e], r), i.call(this, n, a, r)
+    }
+
+    t.init = function () {
+      i.init.apply(this, arguments), this.current || (this.current = {}, W.perspective && E.perspective && (this.current.perspective = E.perspective, C(this.el, this.name, this.style(this.current)), this.redraw()))
+    }, t.set = function (t) {
+      e.call(this, t, function (t, i) {
+        this.current[t] = i
+      }), C(this.el, this.name, this.style(this.current)), this.redraw()
+    }, t.transition = function (t) {
+      var i = this.values(t);
+      this.tween = new Y({
+        current: this.current,
+        values: i,
+        duration: this.duration,
+        delay: this.delay,
+        ease: this.ease
+      });
+      var e, n = {};
+      for (e in this.current)n[e] = e in i ? i[e] : this.current[e];
+      this.active = !0, this.nextStyle = this.style(n)
+    }, t.fallback = function (t) {
+      var i = this.values(t);
+      this.tween = new Y({
+        current: this.current,
+        values: i,
+        duration: this.duration,
+        delay: this.delay,
+        ease: this.ease,
+        update: this.update,
+        context: this
+      })
+    }, t.update = function () {
+      C(this.el, this.name, this.style(this.current))
+    }, t.style = function (t) {
+      var i, e = "";
+      for (i in t)e += i + "(" + t[i] + ") ";
+      return e
+    }, t.values = function (t) {
+      var i, n = {};
+      return e.call(this, t, function (t, e, r) {
+        n[t] = e, void 0 === this.current[t] && (i = 0, ~t.indexOf("scale") && (i = 1), this.current[t] = this.convert(i, r))
+      }), n
+    }
+  }), P = h(function (i) {
+    function e(t) {
+      1 === d.push(t) && G(a)
+    }
+
+    function a() {
+      var t, i, e, n = d.length;
+      if (n)for (G(a), i = T(), t = n; t--;)e = d[t], e && e.render(i)
+    }
+
+    function u(i) {
+      var e, n = t.inArray(i, d);
+      n >= 0 && (e = d.slice(n + 1), d.length = n, e.length && (d = d.concat(e)))
+    }
+
+    function c(t) {
+      return Math.round(t * p) / p
+    }
+
+    function h(t, i, e) {
+      return r(t[0] + e * (i[0] - t[0]), t[1] + e * (i[1] - t[1]), t[2] + e * (i[2] - t[2]))
+    }
+
+    var f = {ease: l.ease[1], from: 0, to: 1};
+    i.init = function (t) {
+      this.duration = t.duration || 0, this.delay = t.delay || 0;
+      var i = t.ease || f.ease;
+      l[i] && (i = l[i][1]), "function" != typeof i && (i = f.ease), this.ease = i, this.update = t.update || s, this.complete = t.complete || s, this.context = t.context || this, this.name = t.name;
+      var e = t.from, n = t.to;
+      void 0 === e && (e = f.from), void 0 === n && (n = f.to), this.unit = t.unit || "", "number" == typeof e && "number" == typeof n ? (this.begin = e, this.change = n - e) : this.format(n, e), this.value = this.begin + this.unit, this.start = T(), t.autoplay !== !1 && this.play()
+    }, i.play = function () {
+      this.active || (this.start || (this.start = T()), this.active = !0, e(this))
+    }, i.stop = function () {
+      this.active && (this.active = !1, u(this))
+    }, i.render = function (t) {
+      var i, e = t - this.start;
+      if (this.delay) {
+        if (this.delay >= e)return;
+        e -= this.delay
+      }
+      if (this.duration > e) {
+        var n = this.ease(e, 0, 1, this.duration);
+        return i = this.startRGB ? h(this.startRGB, this.endRGB, n) : c(this.begin + n * this.change), this.value = i + this.unit, this.update.call(this.context, i), void 0
+      }
+      i = this.endHex || this.begin + this.change, this.value = i + this.unit, this.update.call(this.context, i), this.complete.call(this.context), this.destroy()
+    }, i.format = function (t, i) {
+      if (i += "", t += "", "#" == t.charAt(0))return this.startRGB = n(i), this.endRGB = n(t), this.endHex = t, this.begin = 0, this.change = 1, void 0;
+      if (!this.unit) {
+        var e = i.replace(m, ""), r = t.replace(m, "");
+        e !== r && o("tween", i, t), this.unit = e
+      }
+      i = parseFloat(i), t = parseFloat(t), this.begin = this.value = i, this.change = t - i
+    }, i.destroy = function () {
+      this.stop(), this.ease = this.update = this.complete = this.context = null
+    };
+    var d = [], p = 1e3
+  }), X = h(P, function (t) {
+    t.init = function (t) {
+      this.duration = t.duration || 0, this.complete = t.complete || s, this.context = t.context, this.play()
+    }, t.render = function (t) {
+      var i = t - this.start;
+      this.duration > i || (this.complete.call(this.context), this.destroy())
+    }
+  }), Y = h(P, function (t, i) {
+    t.init = function (t) {
+      this.context = t.context, this.update = t.update, this.tweens = [], this.current = t.current;
+      var i, e;
+      for (i in t.values)e = t.values[i], this.current[i] !== e && this.tweens.push(new P({
+        name: i,
+        from: this.current[i],
+        to: e,
+        duration: t.duration,
+        delay: t.delay,
+        ease: t.ease,
+        autoplay: !1
+      }));
+      this.play()
+    }, t.render = function (t) {
+      var i, e, n = this.tweens.length, r = !1;
+      for (i = n; i--;)e = this.tweens[i], e.ease && (e.render(t), this.current[e.name] = e.value, r = !0);
+      return r ? (this.update && this.update.call(this.context), void 0) : this.destroy()
+    }, t.destroy = function () {
+      if (i.destroy.call(this), this.tweens) {
+        var t, e = this.tweens.length;
+        for (t = e; t--;)this.tweens[t].destroy();
+        this.tweens = null, this.current = null
+      }
+    }
+  }), E = i.config = {
+    defaultUnit: "px",
+    defaultAngle: "deg",
+    hideBackface: !0,
+    perspective: "",
+    fallback: !R.transition,
+    agentTests: []
+  };
+  i.fallback = function (t) {
+    if (!R.transition)return E.fallback = !0;
+    E.agentTests.push("(" + t + ")");
+    var i = RegExp(E.agentTests.join("|"), "i");
+    E.fallback = i.test(navigator.userAgent)
+  }, i.fallback("6.0.[2-5] Safari");
+  var H = {};
+  i.macro = function (t, i) {
+    H[t] = i
+  }, i.tween = function (t) {
+    return new P(t)
+  }, i.delay = function (t, i, e) {
+    return new X({complete: i, duration: t, context: e})
+  }, t.fn.tram = function (t) {
+    return i.call(null, this, t)
+  };
+  var C = t.style, D = t.css, L = {transform: R.transform && R.transform.css}, Q = {
+    color: [Z, y],
+    background: [Z, y, "background-color"],
+    "outline-color": [Z, y],
+    "border-color": [Z, y],
+    "border-top-color": [Z, y],
+    "border-right-color": [Z, y],
+    "border-bottom-color": [Z, y],
+    "border-left-color": [Z, y],
+    "border-width": [S, w],
+    "border-top-width": [S, w],
+    "border-right-width": [S, w],
+    "border-bottom-width": [S, w],
+    "border-left-width": [S, w],
+    "border-spacing": [S, w],
+    "letter-spacing": [S, w],
+    margin: [S, w],
+    "margin-top": [S, w],
+    "margin-right": [S, w],
+    "margin-bottom": [S, w],
+    "margin-left": [S, w],
+    padding: [S, w],
+    "padding-top": [S, w],
+    "padding-right": [S, w],
+    "padding-bottom": [S, w],
+    "padding-left": [S, w],
+    "outline-width": [S, w],
+    opacity: [S, g],
+    top: [S, k],
+    right: [S, k],
+    bottom: [S, k],
+    left: [S, k],
+    "font-size": [S, k],
+    "text-indent": [S, k],
+    "word-spacing": [S, k],
+    width: [S, k],
+    "min-width": [S, k],
+    "max-width": [S, k],
+    height: [S, k],
+    "min-height": [S, k],
+    "max-height": [S, k],
+    "line-height": [S, z],
+    "scroll-top": [N, g, "scrollTop"],
+    "scroll-left": [N, g, "scrollLeft"]
+  }, W = {};
+  R.transform && (Q.transform = [O], W = {
+    x: [k, "translateX"],
+    y: [k, "translateY"],
+    rotate: [x],
+    rotateX: [x],
+    rotateY: [x],
+    scale: [g],
+    scaleX: [g],
+    scaleY: [g],
+    skew: [x],
+    skewX: [x],
+    skewY: [x]
+  }), R.transform && R.backface && (W.z = [k, "translateZ"], W.rotateZ = [x], W.scaleZ = [g], W.perspective = [w]);
+  var J = /ms/, K = /s|\./, V = function () {
+    var t = "warn", i = window.console;
+    return i && i[t] ? function (e) {
+      i[t](e)
+    } : s
+  }();
+  return t.tram = i
+}(window.jQuery);
 
 /*!
 
@@ -778,7 +1374,83 @@ window.tram=function(t){function i(t,i){var e=new I.Bare;return e.init(t,i)}func
 
  */
 
-(function($){if(!$.support.cors&&$.ajaxTransport&&window.XDomainRequest){var n=/^https?:\/\//i;var o=/^get|post$/i;var p=new RegExp('^'+location.protocol,'i');var q=/text\/html/i;var r=/\/json/i;var s=/\/xml/i;$.ajaxTransport('* text html xml json',function(i,j,k){if(i.crossDomain&&i.async&&o.test(i.type)&&n.test(i.url)&&p.test(i.url)){var l=null;var m=(j.dataType||'').toLowerCase();return{send:function(f,g){l=new XDomainRequest();if(/^\d+$/.test(j.timeout)){l.timeout=j.timeout}l.ontimeout=function(){g(500,'timeout')};l.onload=function(){var a='Content-Length: '+l.responseText.length+'\r\nContent-Type: '+l.contentType;var b={code:200,message:'success'};var c={text:l.responseText};try{if(m==='html'||q.test(l.contentType)){c.html=l.responseText}else if(m==='json'||(m!=='text'&&r.test(l.contentType))){try{c.json=$.parseJSON(l.responseText)}catch(e){b.code=500;b.message='parseerror'}}else if(m==='xml'||(m!=='text'&&s.test(l.contentType))){var d=new ActiveXObject('Microsoft.XMLDOM');d.async=false;try{d.loadXML(l.responseText)}catch(e){d=undefined}if(!d||!d.documentElement||d.getElementsByTagName('parsererror').length){b.code=500;b.message='parseerror';throw'Invalid XML: '+l.responseText;}c.xml=d}}catch(parseMessage){throw parseMessage;}finally{g(b.code,b.message,c,a)}};l.onprogress=function(){};l.onerror=function(){g(500,'error',{text:l.responseText})};var h='';if(j.data){h=($.type(j.data)==='string')?j.data:$.param(j.data)}l.open(i.type,i.url);l.send(h)},abort:function(){if(l){l.abort()}}}}})}})(jQuery);
+(function ($) {
+  if (!$.support.cors && $.ajaxTransport && window.XDomainRequest) {
+    var n = /^https?:\/\//i;
+    var o = /^get|post$/i;
+    var p = new RegExp('^' + location.protocol, 'i');
+    var q = /text\/html/i;
+    var r = /\/json/i;
+    var s = /\/xml/i;
+    $.ajaxTransport('* text html xml json', function (i, j, k) {
+      if (i.crossDomain && i.async && o.test(i.type) && n.test(i.url) && p.test(i.url)) {
+        var l = null;
+        var m = (j.dataType || '').toLowerCase();
+        return {
+          send: function (f, g) {
+            l = new XDomainRequest();
+            if (/^\d+$/.test(j.timeout)) {
+              l.timeout = j.timeout
+            }
+            l.ontimeout = function () {
+              g(500, 'timeout')
+            };
+            l.onload = function () {
+              var a = 'Content-Length: ' + l.responseText.length + '\r\nContent-Type: ' + l.contentType;
+              var b = {code: 200, message: 'success'};
+              var c = {text: l.responseText};
+              try {
+                if (m === 'html' || q.test(l.contentType)) {
+                  c.html = l.responseText
+                } else if (m === 'json' || (m !== 'text' && r.test(l.contentType))) {
+                  try {
+                    c.json = $.parseJSON(l.responseText)
+                  } catch (e) {
+                    b.code = 500;
+                    b.message = 'parseerror'
+                  }
+                } else if (m === 'xml' || (m !== 'text' && s.test(l.contentType))) {
+                  var d = new ActiveXObject('Microsoft.XMLDOM');
+                  d.async = false;
+                  try {
+                    d.loadXML(l.responseText)
+                  } catch (e) {
+                    d = undefined
+                  }
+                  if (!d || !d.documentElement || d.getElementsByTagName('parsererror').length) {
+                    b.code = 500;
+                    b.message = 'parseerror';
+                    throw'Invalid XML: ' + l.responseText;
+                  }
+                  c.xml = d
+                }
+              } catch (parseMessage) {
+                throw parseMessage;
+              } finally {
+                g(b.code, b.message, c, a)
+              }
+            };
+            l.onprogress = function () {
+            };
+            l.onerror = function () {
+              g(500, 'error', {text: l.responseText})
+            };
+            var h = '';
+            if (j.data) {
+              h = ($.type(j.data) === 'string') ? j.data : $.param(j.data)
+            }
+            l.open(i.type, i.url);
+            l.send(h)
+          }, abort: function () {
+            if (l) {
+              l.abort()
+            }
+          }
+        }
+      }
+    })
+  }
+})(jQuery);
 
 /*!
 
@@ -793,183 +1465,183 @@ window.tram=function(t){function i(t,i){var e=new I.Bare;return e.init(t,i)}func
 (function (window, document) {
 
 
-
-    'use strict';
-
+  'use strict';
 
 
-    function Tap(el) {
+  function Tap(el) {
 
-        el = typeof el === 'object' ? el : document.getElementById(el);
+    el = typeof el === 'object' ? el : document.getElementById(el);
 
-        this.element = el;
+    this.element = el;
 
-        this.moved = false; //flags if the finger has moved
+    this.moved = false; //flags if the finger has moved
 
-        this.startX = 0; //starting x coordinate
+    this.startX = 0; //starting x coordinate
 
-        this.startY = 0; //starting y coordinate
+    this.startY = 0; //starting y coordinate
 
-        this.hasTouchEventOccured = false; //flag touch event
+    this.hasTouchEventOccured = false; //flag touch event
 
-        el.addEventListener('touchstart', this, false);
+    el.addEventListener('touchstart', this, false);
 
-        el.addEventListener('touchmove', this, false);
+    el.addEventListener('touchmove', this, false);
 
-        el.addEventListener('touchend', this, false);
+    el.addEventListener('touchend', this, false);
 
-        el.addEventListener('touchcancel', this, false);
+    el.addEventListener('touchcancel', this, false);
 
-        el.addEventListener('mousedown', this, false);
+    el.addEventListener('mousedown', this, false);
 
-        el.addEventListener('mouseup', this, false);
+    el.addEventListener('mouseup', this, false);
+
+  }
+
+
+  Tap.prototype.start = function (e) {
+
+    if (e.type === 'touchstart') {
+
+      this.hasTouchEventOccured = true;
+
+    }
+
+    this.moved = false;
+
+    this.startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+
+    this.startY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+
+  };
+
+
+  Tap.prototype.move = function (e) {
+
+    //if finger moves more than 10px flag to cancel
+
+    if (Math.abs(e.touches[0].clientX - this.startX) > 10 || Math.abs(e.touches[0].clientY - this.startY) > 10) {
+
+      this.moved = true;
+
+    }
+
+  };
+
+
+  Tap.prototype.end = function (e) {
+
+    var evt;
+
+
+    if (this.hasTouchEventOccured && e.type === 'mouseup') {
+
+      e.preventDefault();
+
+      e.stopPropagation();
+
+      this.hasTouchEventOccured = false;
+
+      return;
 
     }
 
 
+    if (!this.moved) {
 
-    Tap.prototype.start = function (e) {
+      //create custom event
 
-        if (e.type === 'touchstart') {
+      if (typeof document.CustomEvent !== "undefined") {
 
-            this.hasTouchEventOccured = true;
+        evt = new document.CustomEvent('tap', {
 
-        }
+          bubbles: true,
 
-        this.moved = false;
+          cancelable: true
 
-        this.startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+        });
 
-        this.startY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+      } else {
 
-    };
+        evt = document.createEvent('Event');
 
+        evt.initEvent('tap', true, true);
 
+      }
 
-    Tap.prototype.move = function (e) {
+      e.target.dispatchEvent(evt);
 
-        //if finger moves more than 10px flag to cancel
+    }
 
-        if (Math.abs(e.touches[0].clientX - this.startX) > 10 || Math.abs(e.touches[0].clientY - this.startY) > 10) {
+  };
 
-            this.moved = true;
 
-        }
+  Tap.prototype.cancel = function (e) {
 
-    };
+    this.hasTouchEventOccured = false;
 
+    this.moved = false;
 
+    this.startX = 0;
 
-    Tap.prototype.end = function (e) {
+    this.startY = 0;
 
-        var evt;
+  };
 
 
+  Tap.prototype.destroy = function () {
 
-        if (this.hasTouchEventOccured && e.type === 'mouseup') {
+    var el = this.element;
 
-            e.preventDefault();
+    el.removeEventListener('touchstart', this, false);
 
-            e.stopPropagation();
+    el.removeEventListener('touchmove', this, false);
 
-            this.hasTouchEventOccured = false;
+    el.removeEventListener('touchend', this, false);
 
-            return;
+    el.removeEventListener('touchcancel', this, false);
 
-        }
+    el.removeEventListener('mousedown', this, false);
 
+    el.removeEventListener('mouseup', this, false);
 
+    this.element = null;
 
-        if (!this.moved) {
+  };
 
-            //create custom event
 
-            if (typeof document.CustomEvent !== "undefined") {
+  Tap.prototype.handleEvent = function (e) {
 
-                evt = new document.CustomEvent('tap', {
+    switch (e.type) {
 
-                    bubbles: true,
+      case 'touchstart':
+        this.start(e);
+        break;
 
-                    cancelable: true
+      case 'touchmove':
+        this.move(e);
+        break;
 
-                });
+      case 'touchend':
+        this.end(e);
+        break;
 
-            } else {
+      case 'touchcancel':
+        this.cancel(e);
+        break;
 
-                evt = document.createEvent('Event');
+      case 'mousedown':
+        this.start(e);
+        break;
 
-                evt.initEvent('tap', true, true);
+      case 'mouseup':
+        this.end(e);
+        break;
 
-            }
+    }
 
-            e.target.dispatchEvent(evt);
+  };
 
-        }
 
-    };
-
-
-
-    Tap.prototype.cancel = function (e) {
-
-        this.hasTouchEventOccured = false;
-
-        this.moved = false;
-
-        this.startX = 0;
-
-        this.startY = 0;
-
-    };
-
-
-
-    Tap.prototype.destroy = function () {
-
-        var el = this.element;
-
-        el.removeEventListener('touchstart', this, false);
-
-        el.removeEventListener('touchmove', this, false);
-
-        el.removeEventListener('touchend', this, false);
-
-        el.removeEventListener('touchcancel', this, false);
-
-        el.removeEventListener('mousedown', this, false);
-
-        el.removeEventListener('mouseup', this, false);
-
-        this.element = null;
-
-    };
-
-
-
-    Tap.prototype.handleEvent = function (e) {
-
-        switch (e.type) {
-
-        case 'touchstart': this.start(e); break;
-
-        case 'touchmove': this.move(e); break;
-
-        case 'touchend': this.end(e); break;
-
-        case 'touchcancel': this.cancel(e); break;
-
-        case 'mousedown': this.start(e); break;
-
-        case 'mouseup': this.end(e); break;
-
-        }
-
-    };
-
-
-
-    window.Tap = Tap;
-
+  window.Tap = Tap;
 
 
 }(window, document));
@@ -998,7 +1670,6 @@ elegance.define('elegance-touch', function ($, _) {
 
   'use strict';
 
-  
 
   var Tap = window.Tap;
 
@@ -1008,11 +1679,10 @@ elegance.define('elegance-touch', function ($, _) {
 
   var fallback = !document.addEventListener;
 
-  
 
   // jQuery event "tap" - use click in old + non-touch browsers
 
-  $.event.special.tap = (fallback || !elegance.env.touch) ? { bindType: 'click', delegateType: 'click' } : {
+  $.event.special.tap = (fallback || !elegance.env.touch) ? {bindType: 'click', delegateType: 'click'} : {
 
     setup: function () {
 
@@ -1048,19 +1718,16 @@ elegance.define('elegance-touch', function ($, _) {
 
   };
 
-  
 
   // No swipe events for old browsers
 
   if (fallback || !Object.create) return;
 
-  
 
   // jQuery event "swipe"
 
   dataKey = namespace + 'swipe';
 
-  
 
   $.event.special.swipe = {
 
@@ -1098,7 +1765,6 @@ elegance.define('elegance-touch', function ($, _) {
 
   };
 
-  
 
   /**
 
@@ -1112,7 +1778,6 @@ elegance.define('elegance-touch', function ($, _) {
 
   }
 
-  
 
   (function () {
 
@@ -1124,7 +1789,6 @@ elegance.define('elegance-touch', function ($, _) {
 
     if (threshold > 40) threshold = 40;
 
-    
 
     proto.start = function (e) {
 
@@ -1142,7 +1806,6 @@ elegance.define('elegance-touch', function ($, _) {
 
     };
 
-    
 
     proto.move = _.throttle(function (e) {
 
@@ -1162,7 +1825,6 @@ elegance.define('elegance-touch', function ($, _) {
 
     });
 
-    
 
     proto.end = function (e) {
 
@@ -1174,13 +1836,12 @@ elegance.define('elegance-touch', function ($, _) {
 
       if (Math.abs(velocityX) > threshold) {
 
-        $(this.element).triggerHandler('swipe', { direction: velocityX > 0 ? 'right' : 'left' });
+        $(this.element).triggerHandler('swipe', {direction: velocityX > 0 ? 'right' : 'left'});
 
       }
 
     };
 
-    
 
     proto.destroy = function () {
 
@@ -1190,7 +1851,6 @@ elegance.define('elegance-touch', function ($, _) {
 
     };
 
-    
 
     proto.cancel = function () {
 
@@ -1204,7 +1864,6 @@ elegance.define('elegance-touch', function ($, _) {
 
     };
 
-    
 
     proto.handleEvent = function (e) {
 
@@ -1216,7 +1875,6 @@ elegance.define('elegance-touch', function ($, _) {
 
   }());
 
-  
 
 });
 
@@ -1232,7 +1890,6 @@ elegance.define('elegance-forms', function ($, _) {
 
   'use strict';
 
-  
 
   var api = {};
 
@@ -1259,7 +1916,6 @@ elegance.define('elegance-forms', function ($, _) {
 
     init();
 
-    
 
     // Wire events
 
@@ -1269,7 +1925,6 @@ elegance.define('elegance-forms', function ($, _) {
 
   };
 
-  
 
   api.preview = api.design = function () {
 
@@ -1277,20 +1932,17 @@ elegance.define('elegance-forms', function ($, _) {
 
   };
 
-  
 
   function init() {
 
     siteId = $('html').attr('data-wf-site');
 
-    
 
     $forms = $('.w-form');
     $forms.each(build);
 
   }
 
-  
 
   function build(i, el) {
 
@@ -1300,9 +1952,8 @@ elegance.define('elegance-forms', function ($, _) {
 
     var data = $.data(el, namespace);
 
-    if (!data) data = $.data(el, namespace, { form: $el }); // data.form
+    if (!data) data = $.data(el, namespace, {form: $el}); // data.form
 
-    
 
     reset(data);
 
@@ -1312,7 +1963,6 @@ elegance.define('elegance-forms', function ($, _) {
 
     data.fail = wrap.find('> .w-form-fail');
 
-    
 
     var action = data.action = $el.find("form").attr('action');
     console.log("action: ", action);
@@ -1326,13 +1976,12 @@ elegance.define('elegance-forms', function ($, _) {
 
   }
 
-  
 
   function listen() {
 
     // Handle form submission for elegance forms
 
-    $doc.on('submit', namespace + 'form', function(evt) {
+    $doc.on('submit', namespace + 'form', function (evt) {
 
       var data = $.data(this, namespace);
 
@@ -1348,7 +1997,6 @@ elegance.define('elegance-forms', function ($, _) {
 
   }
 
-  
 
   // Reset data common to all submit handlers
 
@@ -1366,7 +2014,6 @@ elegance.define('elegance-forms', function ($, _) {
 
   }
 
-  
 
   // Disable submit button
 
@@ -1390,37 +2037,23 @@ elegance.define('elegance-forms', function ($, _) {
 
   }
 
-  
 
   // Find form fields, validate, and set value pairs
 
   function findFields(form, result) {
-
     var status = null;
-
     result = result || {};
-
-    form.find(':input:not([type="submit"])').each(function(i, el) {
-
+    form.find(':input:not([type="submit"])').each(function (i, el) {
       var field = $(el);
-
       var name = field.attr('data-name') || field.attr('name') || ('Field ' + (i + 1));
-
       var value = field.val();
-
       if (typeof value == 'string') value = $.trim(value);
-
       result[name] = value;
-
       status = status || getStatus(field, name, value);
-
     });
-
     return status;
-
   }
 
-  
 
   function getStatus(field, name, value) {
 
@@ -1440,7 +2073,6 @@ elegance.define('elegance-forms', function ($, _) {
 
   }
 
-  
 
   // Submit form to elegance
 
@@ -1449,133 +2081,57 @@ elegance.define('elegance-forms', function ($, _) {
 
     reset(data);
 
-    
-
     var form = data.form;
 
     var payload = {
-
       name: form.attr('data-name') || form.attr('name') || 'Untitled Form',
-
       source: loc.href,
-
-      test: elegance.env(),
-
-      fields: {}
-
+      test: elegance.env()
+      //fields: {}
     };
 
-    
-
     preventDefault(data);
-
-    
-
-    // Find & populate all fields
-
-    var status = findFields(form, payload.fields);
-
-    if (status) return alert(status);
-
-    
-
-    // Disable submit button
-
-    disableBtn(data);
-
-
-
-    // Read site ID
-
-    // NOTE: If this site is exported, the HTML tag must retain the data-wf-site attribute for forms to work
-
-    //if (!siteId) { afterSubmit(data); return; }
-    //
-    //var url = 'https://elegance.com/api/v1/form/' + siteId;
-    //
-    //
-    //
-    //// Work around same-protocol IE XDR limitation
-    //
-    //if (retro && url.indexOf('https://elegance.com') >= 0) {
-    //
-    //  url = url.replace('https://elegance.com/', 'http://data.elegance.com/');
-    //
-    //}
-
-    
-
-    $.ajax({
-
-      url: url,
-
-      type: 'POST',
-
-      data: payload,
-
-      dataType: 'json',
-
-      crossDomain: true
-
-    }).done(function () {
-
-      data.success = true;
-
-      afterSubmit(data);
-
-    }).fail(function () {
-
-      afterSubmit(data);
-
-    });
-
-  }
-
-  
-
-  // Submit form to MailChimp
-
-  function submitMailChimp(data) {
-
-    reset(data);
-
-    
-
-    var form = data.form;
-
-    var payload = {};
-
-    
-
-    // Skip Ajax submission if http/s mismatch, fallback to POST instead
-
-    if (/^https/.test(loc.href) && !/^https/.test(data.action)) {
-
-      form.attr('method', 'post');
-
-      return;
-
-    }
-
-    
-
-    preventDefault(data);
-
-    
 
     // Find & populate all fields
 
     var status = findFields(form, payload);
-
     if (status) return alert(status);
-
-    
 
     // Disable submit button
 
     disableBtn(data);
 
-    
+    $.ajax({
+      url: url,
+      type: 'POST',
+      data: payload,
+      dataType: 'json',
+      crossDomain: true
+    }).always(function (xhr) {
+      data.success = xhr.statusText == "OK";
+      afterSubmit(data);
+    });
+  }
+
+  // Submit form to MailChimp
+  function submitMailChimp(data) {
+    reset(data);
+    var form = data.form;
+    var payload = {};
+    // Skip Ajax submission if http/s mismatch, fallback to POST instead
+    if (/^https/.test(loc.href) && !/^https/.test(data.action)) {
+      form.attr('method', 'post');
+      return;
+    }
+    preventDefault(data);
+    // Find & populate all fields
+    var status = findFields(form, payload);
+    if (status) return alert(status);
+
+    // Disable submit button
+
+    disableBtn(data);
+
 
     // Use special format for MailChimp params
 
@@ -1603,7 +2159,6 @@ elegance.define('elegance-forms', function ($, _) {
 
     }
 
-    
 
     // Use the (undocumented) MailChimp jsonp api
 
@@ -1611,17 +2166,16 @@ elegance.define('elegance-forms', function ($, _) {
 
     // Add special param to prevent bot signups
 
-    var userId = url.indexOf('u=')+2;
+    var userId = url.indexOf('u=') + 2;
 
     userId = url.substring(userId, url.indexOf('&', userId));
 
-    var listId = url.indexOf('id=')+3;
+    var listId = url.indexOf('id=') + 3;
 
     listId = url.substring(listId, url.indexOf('&', listId));
 
     payload['b_' + userId + '_' + listId] = '';
 
-    
 
     $.ajax({
 
@@ -1647,55 +2201,31 @@ elegance.define('elegance-forms', function ($, _) {
 
   }
 
-  
 
   // Common callback which runs after all Ajax submissions
 
   function afterSubmit(data) {
-
     var form = data.form;
-
     var wrap = form.closest('div.w-form');
-
     var redirect = data.redirect;
-
     var success = data.success;
-
-    
-
     // Redirect to a success url if defined
-
     if (success && redirect) {
-
       elegance.location(redirect);
-
       return;
-
     }
 
-    
-
     // Show or hide status divs
-
     data.done.toggleClass('w-form-done-show', success);
-
     data.fail.toggleClass('w-form-fail-show', !success);
 
-    
-
     // Hide form on success
-
     success && form.addClass('w-hidden');
 
-    
-
     // Reset data and enable submit button
-
     reset(data);
-
   }
 
-  
 
   function preventDefault(data) {
 
@@ -1724,7 +2254,6 @@ elegance.define('elegance-maps', function ($, _) {
 
   'use strict';
 
-  
 
   var api = {};
 
@@ -1736,13 +2265,11 @@ elegance.define('elegance-maps', function ($, _) {
 
   var namespace = '.w-widget-map';
 
-  
 
   // -----------------------------------
 
   // App preview
 
-  
 
   api.preview = function () {
 
@@ -1764,7 +2291,6 @@ elegance.define('elegance-maps', function ($, _) {
 
   };
 
-  
 
   api.design = function (evt) {
 
@@ -1782,7 +2308,6 @@ elegance.define('elegance-maps', function ($, _) {
 
   };
 
-  
 
   function redrawMaps() {
 
@@ -1790,13 +2315,11 @@ elegance.define('elegance-maps', function ($, _) {
 
   }
 
-  
 
   // -----------------------------------
 
   // Site load
 
-  
 
   api.ready = function () {
 
@@ -1806,7 +2329,6 @@ elegance.define('elegance-maps', function ($, _) {
 
   };
 
-  
 
   function initMaps() {
 
@@ -1836,7 +2358,6 @@ elegance.define('elegance-maps', function ($, _) {
 
   }
 
-  
 
   // Render map onto each element
 
@@ -1848,7 +2369,6 @@ elegance.define('elegance-maps', function ($, _) {
 
   }
 
-  
 
   // Resize map when window changes
 
@@ -1862,7 +2382,6 @@ elegance.define('elegance-maps', function ($, _) {
 
   }
 
-  
 
   // Store state on element data
 
@@ -1870,13 +2389,11 @@ elegance.define('elegance-maps', function ($, _) {
 
   function getState(el, data) {
 
-    
 
     var state = $.data(el, store);
 
     if (state) return state;
 
-    
 
     var $el = $(el);
 
@@ -1892,7 +2409,6 @@ elegance.define('elegance-maps', function ($, _) {
 
       zoom: 12,
 
-      
 
       // Marker
 
@@ -1902,7 +2418,6 @@ elegance.define('elegance-maps', function ($, _) {
 
       }),
 
-      
 
       // Tooltip infowindow
 
@@ -1914,7 +2429,6 @@ elegance.define('elegance-maps', function ($, _) {
 
     });
 
-    
 
     // LatLng center point
 
@@ -1928,13 +2442,11 @@ elegance.define('elegance-maps', function ($, _) {
 
     state.latLngObj = latLngObj;
 
-    
 
     // Disable touch events
 
     var mapDraggable = (elegance.env.touch && data.disableTouch) ? false : true;
 
-    
 
     // Map instance
 
@@ -1970,7 +2482,6 @@ elegance.define('elegance-maps', function ($, _) {
 
     state.marker.setMap(state.map);
 
-    
 
     // Set map position and offset
 
@@ -2002,7 +2513,6 @@ elegance.define('elegance-maps', function ($, _) {
 
     };
 
-    
 
     // Fix position after first tiles have loaded
 
@@ -2014,7 +2524,6 @@ elegance.define('elegance-maps', function ($, _) {
 
     });
 
-    
 
     // Set initial position
 
@@ -2024,7 +2533,6 @@ elegance.define('elegance-maps', function ($, _) {
 
     state.infowindow.setPosition(state.latLngObj);
 
-    
 
     // Draw tooltip
 
@@ -2046,7 +2554,6 @@ elegance.define('elegance-maps', function ($, _) {
 
     }
 
-    
 
     // Map style - options.style
 
@@ -2058,7 +2565,6 @@ elegance.define('elegance-maps', function ($, _) {
 
     }
 
-    
 
     // Zoom - options.zoom
 
@@ -2072,23 +2578,20 @@ elegance.define('elegance-maps', function ($, _) {
 
     }
 
-    
 
     // Click marker to open in google maps
 
-    google.maps.event.addListener(state.marker, 'click', function() {
+    google.maps.event.addListener(state.marker, 'click', function () {
 
       window.open('https://maps.google.com/?z=' + state.zoom + '&daddr=' + state.latLng);
 
     });
 
-    
 
     return state;
 
   }
 
-  
 
   // Export module
 
@@ -2108,13 +2611,11 @@ elegance.define('elegance-gplus', function ($) {
 
   'use strict';
 
-  
 
   var $doc = $(document);
 
   var api = {};
 
-  
 
   api.ready = function () {
 
@@ -2124,7 +2625,6 @@ elegance.define('elegance-gplus', function ($) {
 
   };
 
-  
 
   function init() {
 
@@ -2132,7 +2632,6 @@ elegance.define('elegance-gplus', function ($) {
 
   }
 
-  
 
   // Export module
 
@@ -2152,7 +2651,6 @@ elegance.define('elegance-scroll', function ($) {
 
   'use strict';
 
-  
 
   var $doc = $(document);
 
@@ -2162,7 +2660,6 @@ elegance.define('elegance-scroll', function ($) {
 
   var loc = win.location;
 
-  
 
   function ready() {
 
@@ -2175,10 +2672,9 @@ elegance.define('elegance-scroll', function ($) {
     }
 
 
-
     // When clicking on a link, check if it links to another part of the page
 
-    $doc.on('click', 'a', function(e) {
+    $doc.on('click', 'a', function (e) {
 
       if (elegance.env('design')) {
 
@@ -2186,13 +2682,11 @@ elegance.define('elegance-scroll', function ($) {
 
       }
 
-      
 
       // Ignore links being used by jQuery mobile
 
       if (window.$.mobile && $(e.currentTarget).hasClass('ui-link')) return;
 
-      
 
       var hash = this.hash ? this.hash.substring(1) : null;
 
@@ -2206,7 +2700,6 @@ elegance.define('elegance-scroll', function ($) {
 
   }
 
-  
 
   function findEl(hash, e) {
 
@@ -2219,7 +2712,6 @@ elegance.define('elegance-scroll', function ($) {
     }
 
 
-
     if (e) {
 
       e.preventDefault();
@@ -2227,7 +2719,6 @@ elegance.define('elegance-scroll', function ($) {
       e.stopPropagation();
 
     }
-
 
 
     // Push new history state
@@ -2239,7 +2730,6 @@ elegance.define('elegance-scroll', function ($) {
     }
 
 
-
     // If a fixed header exists, offset for the height
 
     var header = $('header, body > .header, body > .w-nav, body > div:first-child');
@@ -2247,8 +2737,7 @@ elegance.define('elegance-scroll', function ($) {
     var offset = header.css('position') === 'fixed' ? header.outerHeight() : 0;
 
 
-
-    win.setTimeout(function() {
+    win.setTimeout(function () {
 
       scroll(el, offset);
 
@@ -2256,9 +2745,8 @@ elegance.define('elegance-scroll', function ($) {
 
   }
 
-  
 
-  function scroll(el, offset){
+  function scroll(el, offset) {
 
     var start = $(win).scrollTop();
 
@@ -2266,18 +2754,18 @@ elegance.define('elegance-scroll', function ($) {
 
     var clock = Date.now();
 
-    var animate = win.requestAnimationFrame || win.mozRequestAnimationFrame || win.webkitRequestAnimationFrame || function(fn) { win.setTimeout(fn, 15); };
+    var animate = win.requestAnimationFrame || win.mozRequestAnimationFrame || win.webkitRequestAnimationFrame || function (fn) {
+          win.setTimeout(fn, 15);
+        };
 
-    var duration = 472.143 * Math.log(Math.abs(start - end) +125) - 2000;
+    var duration = 472.143 * Math.log(Math.abs(start - end) + 125) - 2000;
 
-    
 
-    var step = function() {
+    var step = function () {
 
       var elapsed = Date.now() - clock;
 
       win.scroll(0, getY(start, end, elapsed, duration));
-
 
 
       if (elapsed <= duration) {
@@ -2289,12 +2777,10 @@ elegance.define('elegance-scroll', function ($) {
     };
 
 
-
     step();
 
   }
 
-  
 
   function getY(start, end, elapsed, duration) {
 
@@ -2305,24 +2791,21 @@ elegance.define('elegance-scroll', function ($) {
     }
 
 
-
-    return start + (end - start) * ease(elapsed / duration); 
+    return start + (end - start) * ease(elapsed / duration);
 
   }
 
-  
 
   function ease(t) {
 
-    return t<0.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1;
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
 
   }
 
-  
 
   // Export module
 
-  return { ready: ready };
+  return {ready: ready};
 
 });
 
@@ -2338,7 +2821,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   'use strict';
 
-  
 
   var api = {};
 
@@ -2358,13 +2840,11 @@ elegance.define('elegance-slider', function ($, _) {
 
   var fallback;
 
-  
 
   // -----------------------------------
 
   // Module methods
 
-  
 
   api.ready = function () {
 
@@ -2372,7 +2852,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   };
 
-  
 
   api.design = function () {
 
@@ -2382,7 +2861,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   };
 
-  
 
   api.preview = function () {
 
@@ -2392,13 +2870,11 @@ elegance.define('elegance-slider', function ($, _) {
 
   };
 
-  
 
   // -----------------------------------
 
   // Private methods
 
-  
 
   function init() {
 
@@ -2410,7 +2886,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     if (fallback) return;
 
-    
 
     // Wire events
 
@@ -2420,7 +2895,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function listen() {
 
@@ -2432,19 +2906,17 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function build(i, el) {
 
     var $el = $(el);
 
-    
 
     // Store slider state in data
 
     var data = $.data(el, namespace);
 
-    if (!data) data = $.data(el, namespace, { index: 0, el: $el, config: {} });
+    if (!data) data = $.data(el, namespace, {index: 0, el: $el, config: {}});
 
     data.mask = $el.children('.w-slider-mask');
 
@@ -2456,7 +2928,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     data.slides = data.mask.children('.w-slide');
 
-    
 
     // Disable in old browsers
 
@@ -2474,13 +2945,11 @@ elegance.define('elegance-slider', function ($, _) {
 
     }
 
-    
 
     // Fix chrome rendering bug
 
     elegance.env.chrome && fixAttach(data);
 
-    
 
     // Remove old events
 
@@ -2492,13 +2961,11 @@ elegance.define('elegance-slider', function ($, _) {
 
     data.nav.off(namespace);
 
-    
 
     // Set config from data attributes
 
     configure(data);
 
-    
 
     // Add events based on mode
 
@@ -2522,19 +2989,17 @@ elegance.define('elegance-slider', function ($, _) {
 
     }
 
-    
 
     // Listen to nav events
 
     data.nav.on('tap' + namespace, '> div', handler(data));
 
-    
 
     // Remove gaps from formatted html (for inline-blocks)
 
     if (!inApp) {
 
-      data.mask.contents().filter(function() {
+      data.mask.contents().filter(function () {
 
         return this.nodeType === 3;
 
@@ -2542,7 +3007,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     }
 
-    
 
     // Run first render
 
@@ -2550,19 +3014,16 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function configure(data) {
 
     var config = {};
 
-    
 
     config.depth = 1;
 
     config.crossOver = 0;
 
-    
 
     // Set config options from data attributes
 
@@ -2578,17 +3039,14 @@ elegance.define('elegance-slider', function ($, _) {
 
     config.easing = data.el.attr('data-easing') || 'ease';
 
-    
 
     var duration = data.el.attr('data-duration');
 
     config.duration = duration != null ? +duration : 500;
 
-    
 
     if (+data.el.attr('data-infinite')) config.infinite = true;
 
-    
 
     if (+data.el.attr('data-hide-arrows')) {
 
@@ -2602,7 +3060,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     }
 
-    
 
     if (+data.el.attr('data-autoplay')) {
 
@@ -2622,7 +3079,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     }
 
-    
 
     // Use edge buffer to help calculate page count
 
@@ -2630,7 +3086,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     config.edge = arrowWidth ? arrowWidth + 40 : 100;
 
-    
 
     // Store config in data
 
@@ -2638,31 +3093,28 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function previous(data) {
 
     return function (evt) {
 
-      change(data, { index: data.index - 1, vector: -1 });
+      change(data, {index: data.index - 1, vector: -1});
 
     };
 
   }
 
-  
 
   function next(data) {
 
     return function (evt) {
 
-      change(data, { index: data.index + 1, vector: 1 });
+      change(data, {index: data.index + 1, vector: 1});
 
     };
 
   }
 
-  
 
   function select(data, value) {
 
@@ -2672,7 +3124,8 @@ elegance.define('elegance-slider', function ($, _) {
 
     if (value === data.slides.length) {
 
-      init(); layout(data); // Rebuild and find new slides
+      init();
+      layout(data); // Rebuild and find new slides
 
     }
 
@@ -2686,11 +3139,10 @@ elegance.define('elegance-slider', function ($, _) {
 
     });
 
-    if (found != null) change(data, { index: found, immediate: true });
+    if (found != null) change(data, {index: found, immediate: true});
 
   }
 
-  
 
   function startTimer(data) {
 
@@ -2710,7 +3162,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function stopTimer(data) {
 
@@ -2722,7 +3173,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function killTimer(data) {
 
@@ -2734,7 +3184,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function handler(data) {
 
@@ -2742,7 +3191,6 @@ elegance.define('elegance-slider', function ($, _) {
 
       options = options || {};
 
-      
 
       // Designer settings
 
@@ -2764,7 +3212,6 @@ elegance.define('elegance-slider', function ($, _) {
 
       }
 
-      
 
       // Swipe event
 
@@ -2778,13 +3225,12 @@ elegance.define('elegance-slider', function ($, _) {
 
       }
 
-      
 
       // Page buttons
 
       if (data.nav.has(evt.target).length) {
 
-        change(data, { index: $(evt.target).index() });
+        change(data, {index: $(evt.target).index()});
 
       }
 
@@ -2792,7 +3238,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function change(data, options) {
 
@@ -2802,7 +3247,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     var anchors = data.anchors;
 
-    
 
     // Set new index
 
@@ -2814,7 +3258,7 @@ elegance.define('elegance-slider', function ($, _) {
 
     if (index < 0) {
 
-      index = anchors.length-1;
+      index = anchors.length - 1;
 
       if (config.infinite) {
 
@@ -2836,9 +3280,9 @@ elegance.define('elegance-slider', function ($, _) {
 
         // Shift last slide to the start
 
-        shift.x = anchors[anchors.length-1].width;
+        shift.x = anchors[anchors.length - 1].width;
 
-        shift.from = -anchors[anchors.length-1].x;
+        shift.from = -anchors[anchors.length - 1].x;
 
         shift.to = shift.from - shift.x;
 
@@ -2848,7 +3292,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     data.index = index;
 
-    
 
     // Select page nav
 
@@ -2856,19 +3299,17 @@ elegance.define('elegance-slider', function ($, _) {
 
     data.nav.children().not(active).removeClass('w-active');
 
-    
 
     // Hide arrows
 
     if (config.hideArrows) {
 
-      data.index === anchors.length-1 ? data.right.hide() : data.right.show();
+      data.index === anchors.length - 1 ? data.right.hide() : data.right.show();
 
       data.index === 0 ? data.left.hide() : data.left.show();
 
     }
 
-    
 
     // Get page offset from anchors
 
@@ -2876,9 +3317,8 @@ elegance.define('elegance-slider', function ($, _) {
 
     var offsetX = data.offsetX = -anchors[data.index].x;
 
-    var resetConfig = { x: offsetX, opacity: 1, visibility: '' };
+    var resetConfig = {x: offsetX, opacity: 1, visibility: ''};
 
-    
 
     // Transition slides
 
@@ -2900,7 +3340,6 @@ elegance.define('elegance-slider', function ($, _) {
 
     var slideRule = 'transform ' + duration + 'ms ' + easing;
 
-    
 
     // Set immediately after layout changes
 
@@ -2914,13 +3353,11 @@ elegance.define('elegance-slider', function ($, _) {
 
     }
 
-    
 
     // Exit early if index is unchanged
 
     if (data.index == data.previous) return;
 
-    
 
     // Cross Fade / Out-In
 
@@ -2934,29 +3371,28 @@ elegance.define('elegance-slider', function ($, _) {
 
       tram(previous)
 
-        .set({ visibility: '' })
+          .set({visibility: ''})
 
-        .add(fadeRule)
+          .add(fadeRule)
 
-        .start({ opacity: 0 });
+          .start({opacity: 0});
 
       tram(targets)
 
-        .set({ visibility: '', x: offsetX, opacity: 0, zIndex: config.depth++ })
+          .set({visibility: '', x: offsetX, opacity: 0, zIndex: config.depth++})
 
-        .add(fadeRule)
+          .add(fadeRule)
 
-        .wait(wait)
+          .wait(wait)
 
-        .then({ opacity: 1 })
+          .then({opacity: 1})
 
-        .then(resetOthers);
+          .then(resetOthers);
 
       return;
 
     }
 
-    
 
     // Fade Over
 
@@ -2964,53 +3400,51 @@ elegance.define('elegance-slider', function ($, _) {
 
       tram(previous)
 
-        .set({ visibility: '' })
+          .set({visibility: ''})
 
-        .stop();
+          .stop();
 
       tram(targets)
 
-        .set({ visibility: '', x: offsetX, opacity: 0, zIndex: config.depth++ })
+          .set({visibility: '', x: offsetX, opacity: 0, zIndex: config.depth++})
 
-        .add(fadeRule)
+          .add(fadeRule)
 
-        .start({ opacity: 1 })
+          .start({opacity: 1})
 
-        .then(resetOthers);
+          .then(resetOthers);
 
       return;
 
     }
 
-    
 
     // Slide Over
 
     if (animation == 'over') {
 
-      resetConfig = { x: data.endX };
+      resetConfig = {x: data.endX};
 
       tram(previous)
 
-        .set({ visibility: '' })
+          .set({visibility: ''})
 
-        .stop();
+          .stop();
 
       tram(targets)
 
-        .set({ visibility: '', zIndex: config.depth++, x: offsetX + anchors[data.index].width * vector })
+          .set({visibility: '', zIndex: config.depth++, x: offsetX + anchors[data.index].width * vector})
 
-        .add(slideRule)
+          .add(slideRule)
 
-        .start({ x: offsetX })
+          .start({x: offsetX})
 
-        .then(resetOthers);
+          .then(resetOthers);
 
       return;
 
     }
 
-    
 
     // Slide - infinite scroll
 
@@ -3018,49 +3452,46 @@ elegance.define('elegance-slider', function ($, _) {
 
       tram(data.slides.not(previous))
 
-        .set({ visibility: '', x: shift.x })
+          .set({visibility: '', x: shift.x})
 
-        .add(slideRule)
+          .add(slideRule)
 
-        .start({ x: offsetX });
+          .start({x: offsetX});
 
       tram(previous)
 
-        .set({ visibility: '', x: shift.from })
+          .set({visibility: '', x: shift.from})
 
-        .add(slideRule)
+          .add(slideRule)
 
-        .start({ x: shift.to });
+          .start({x: shift.to});
 
       data.shifted = previous;
 
-      
 
     } else {
 
       if (config.infinite && data.shifted) {
 
-        tram(data.shifted).set({ visibility: '', x: lastOffsetX });
+        tram(data.shifted).set({visibility: '', x: lastOffsetX});
 
         data.shifted = null;
 
       }
 
-      
 
       // Slide - basic scroll
 
       tram(data.slides)
 
-        .set({ visibility: '' })
+          .set({visibility: ''})
 
-        .add(slideRule)
+          .add(slideRule)
 
-        .start({ x: offsetX });
+          .start({x: offsetX});
 
     }
 
-    
 
     // Helper to move others out of view
 
@@ -3078,7 +3509,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function render(i, el) {
 
@@ -3090,7 +3520,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function layout(data) {
 
@@ -3104,7 +3533,7 @@ elegance.define('elegance-slider', function ($, _) {
 
     var width = 0;
 
-    data.anchors = [{ els: [], x: 0, width: 0 }];
+    data.anchors = [{els: [], x: 0, width: 0}];
 
     data.slides.each(function (i, el) {
 
@@ -3116,7 +3545,7 @@ elegance.define('elegance-slider', function ($, _) {
 
         // Store page anchor for transition
 
-        data.anchors[pages-1] = { els: [], x: anchor, width: 0 };
+        data.anchors[pages - 1] = {els: [], x: anchor, width: 0};
 
       }
 
@@ -3126,21 +3555,20 @@ elegance.define('elegance-slider', function ($, _) {
 
       anchor += width;
 
-      data.anchors[pages-1].width += width;
+      data.anchors[pages - 1].width += width;
 
-      data.anchors[pages-1].els.push(el);
+      data.anchors[pages - 1].els.push(el);
 
     });
 
     data.endX = anchor;
 
-    
 
     // Build dots if nav exists and needs updating
 
     if (designer) data.pages = null;
 
-    if (data.nav.length && data.pages !== pages){
+    if (data.nav.length && data.pages !== pages) {
 
       data.pages = pages;
 
@@ -3148,19 +3576,17 @@ elegance.define('elegance-slider', function ($, _) {
 
     }
 
-    
 
     // Make sure index is still within range and call change handler
 
     var index = data.index;
 
-    if (index >= pages) index = pages-1;
+    if (index >= pages) index = pages - 1;
 
-    change(data, { immediate: true, index: index });
+    change(data, {immediate: true, index: index});
 
   }
 
-  
 
   function buildNav(data) {
 
@@ -3172,11 +3598,11 @@ elegance.define('elegance-slider', function ($, _) {
 
     if (spacing) spacing = parseFloat(spacing) + 'px';
 
-    for (var i=0; i<data.pages; i++) {
+    for (var i = 0; i < data.pages; i++) {
 
       $dot = $(dot);
 
-      if (data.nav.hasClass('w-num')) $dot.text(i+1);
+      if (data.nav.hasClass('w-num')) $dot.text(i + 1);
 
       if (spacing != null) $dot.css({
 
@@ -3194,7 +3620,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function maskChanged(data) {
 
@@ -3212,7 +3637,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function slidesChanged(data) {
 
@@ -3236,7 +3660,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   function fixAttach(data) {
 
@@ -3254,7 +3677,6 @@ elegance.define('elegance-slider', function ($, _) {
 
   }
 
-  
 
   // Export module
 
@@ -3274,7 +3696,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   'use strict';
 
-  
 
   var api = {};
 
@@ -3304,13 +3725,11 @@ elegance.define('elegance-navbar', function ($, _) {
 
   var linkCurrent = 'w--current';
 
-  
 
   // -----------------------------------
 
   // Module methods
 
-  
 
   api.ready = function () {
 
@@ -3318,7 +3737,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   };
 
-  
 
   api.design = function () {
 
@@ -3328,7 +3746,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   };
 
-  
 
   api.preview = function () {
 
@@ -3338,19 +3755,16 @@ elegance.define('elegance-navbar', function ($, _) {
 
   };
 
-  
 
   // -----------------------------------
 
   // Private methods
 
-  
 
   function init() {
 
     $body = $(document.body);
 
-    
 
     // Find all instances on the page
 
@@ -3358,7 +3772,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
     $navbars.each(build);
 
-    
 
     // Wire events
 
@@ -3368,7 +3781,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function listen() {
 
@@ -3380,19 +3792,17 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function build(i, el) {
 
     var $el = $(el);
 
-    
 
     // Store state in data
 
     var data = $.data(el, namespace);
 
-    if (!data) data = $.data(el, namespace, { open: false, el: $el, config: {} });
+    if (!data) data = $.data(el, namespace, {open: false, el: $el, config: {}});
 
     data.menu = $el.find('.w-nav-menu');
     data.links = data.menu.find('.w-nav-link');
@@ -3400,7 +3810,6 @@ elegance.define('elegance-navbar', function ($, _) {
     data.container = $el.find('.w-container');
     data.outside = outside(data);
 
-    
 
     // Remove old events
 
@@ -3408,13 +3817,11 @@ elegance.define('elegance-navbar', function ($, _) {
 
     data.menu.off(namespace);
 
-    
 
     // Set config from data attributes
 
     configure(data);
 
-    
 
     // Add events based on mode
 
@@ -3434,13 +3841,11 @@ elegance.define('elegance-navbar', function ($, _) {
 
     }
 
-    
 
     // Select current section
 
     data.links.each(select);
 
-    
 
     // Trigger initial resize
 
@@ -3448,7 +3853,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function select(i, el) {
 
@@ -3462,7 +3866,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function removeOverlay(data) {
 
@@ -3476,7 +3879,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function addOverlay(data) {
 
@@ -3490,7 +3892,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function configure(data) {
 
@@ -3498,13 +3899,11 @@ elegance.define('elegance-navbar', function ($, _) {
 
     var old = data.config || {};
 
-    
 
     // Set config options from data attributes
 
     config.animation = data.el.attr('data-animation') || 'default';
 
-    
 
     // Re-open menu if the animation type changed
 
@@ -3514,19 +3913,16 @@ elegance.define('elegance-navbar', function ($, _) {
 
     }
 
-    
 
     config.easing = data.el.attr('data-easing') || 'ease';
 
     config.easing2 = data.el.attr('data-easing2') || 'ease';
 
-    
 
     var duration = data.el.attr('data-duration');
 
     config.duration = duration != null ? +duration : 400;
 
-    
 
     // Store config in data
 
@@ -3534,7 +3930,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function handler(data) {
 
@@ -3542,7 +3937,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
       options = options || {};
 
-      
 
       // Designer settings
 
@@ -3572,7 +3966,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function closeEach(i, el) {
 
@@ -3582,7 +3975,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function reopen(data) {
 
@@ -3594,7 +3986,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function toggle(data) {
 
@@ -3607,7 +3998,6 @@ elegance.define('elegance-navbar', function ($, _) {
   }
 
 
-
   function navigate(data) {
 
     return function (evt) {
@@ -3615,7 +4005,6 @@ elegance.define('elegance-navbar', function ($, _) {
       var link = $(this);
 
       var href = link.attr('href');
-
 
 
       // Close when navigating to an in-page anchor
@@ -3630,7 +4019,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function outside(data) {
 
@@ -3648,7 +4036,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function resize(i, el) {
 
@@ -3668,7 +4055,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   var maxWidth = 'max-width';
 
@@ -3692,7 +4078,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   function open(data, immediate) {
 
@@ -3728,13 +4113,11 @@ elegance.define('elegance-navbar', function ($, _) {
 
     resize(0, data.el[0]);
 
-    
 
     // Listen for tap outside events
 
     if (!designer) $doc.on('tap' + namespace, data.outside);
 
-    
 
     // Update menu height for Over state
 
@@ -3746,17 +4129,14 @@ elegance.define('elegance-navbar', function ($, _) {
 
     }
 
-    
 
     // No transition for immediate
 
     if (immediate) return;
 
-    
 
     var transConfig = 'transform ' + config.duration + 'ms ' + config.easing;
 
-    
 
     // Add menu to overlay
 
@@ -3764,13 +4144,12 @@ elegance.define('elegance-navbar', function ($, _) {
 
       data.overlay.show()
 
-        .append(data.menu)
+          .append(data.menu)
 
-        .height(menuHeight);
+          .height(menuHeight);
 
     }
 
-    
 
     // Over left/right
 
@@ -3778,17 +4157,16 @@ elegance.define('elegance-navbar', function ($, _) {
 
       tram(data.menu)
 
-        .add(transConfig)
+          .add(transConfig)
 
-        .set({ x: direction * menuWidth, height: bodyHeight }).start({ x: 0 });
+          .set({x: direction * menuWidth, height: bodyHeight}).start({x: 0});
 
-      data.overlay && data.overlay.css({ width: menuWidth, height: bodyHeight });
+      data.overlay && data.overlay.css({width: menuWidth, height: bodyHeight});
 
       return;
 
     }
 
-    
 
     // Drop Down
 
@@ -3796,13 +4174,12 @@ elegance.define('elegance-navbar', function ($, _) {
 
     tram(data.menu)
 
-      .add(transConfig)
+        .add(transConfig)
 
-      .set({ y: -offsetY }).start({ y: 0 });
+        .set({y: -offsetY}).start({y: 0});
 
   }
 
-  
 
   function close(data, immediate) {
 
@@ -3816,13 +4193,11 @@ elegance.define('elegance-navbar', function ($, _) {
 
     var animation = config.animation;
 
-    
 
     // Stop listening for tap outside events
 
     $doc.off('tap' + namespace, data.outside);
 
-    
 
     if (immediate) {
 
@@ -3834,7 +4209,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
     }
 
-    
 
     var transConfig = 'transform ' + config.duration + 'ms ' + config.easing2;
 
@@ -3848,7 +4222,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
     var animOver = /^over/.test(animation);
 
-    
 
     // Over left/right
 
@@ -3856,15 +4229,14 @@ elegance.define('elegance-navbar', function ($, _) {
 
       tram(data.menu)
 
-        .add(transConfig)
+          .add(transConfig)
 
-        .start({ x: menuWidth * direction }).then(complete);
+          .start({x: menuWidth * direction}).then(complete);
 
       return;
 
     }
 
-    
 
     // Drop Down
 
@@ -3872,17 +4244,16 @@ elegance.define('elegance-navbar', function ($, _) {
 
     tram(data.menu)
 
-      .add(transConfig)
+        .add(transConfig)
 
-      .start({ y: -offsetY }).then(complete);
+        .start({y: -offsetY}).then(complete);
 
-    
 
     function complete() {
 
       data.menu.height('');
 
-      tram(data.menu).set({ x: 0, y: 0 });
+      tram(data.menu).set({x: 0, y: 0});
 
       data.menu.removeClass(menuOpen);
 
@@ -3902,7 +4273,6 @@ elegance.define('elegance-navbar', function ($, _) {
 
   }
 
-  
 
   // Export module
 

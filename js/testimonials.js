@@ -58,9 +58,9 @@
 			// support for CSS Transitions
 			this.support = Modernizr.csstransitions;
 			// add the progress bar
-			if( this.support ) {
-				this.$progress = $( '<span class="cbp-qtprogress"></span>' ).appendTo( this.$el );
-			}
+			//if( this.support ) {
+			this.$progress = $( '<span class="cbp-qtprogress"></span>' ).appendTo( this.$el );
+			//}
 
 		},
 		_setTransition : function() {

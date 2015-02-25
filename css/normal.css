@@ -231,11 +231,11 @@ html { overflow-y: scroll; }
 
  .w-form{margin:0 0 15px} 
 
- .w-form-done{display:none;padding:10px;background-color:#dbffd1} 
+ .w-form-done{display:none;padding:10px;background-color:#080;font-size:200%;}
 
  .w-form-done-show{display:block} 
 
- .w-form-fail{display:none;margin-top:10px;padding:10px;background-color:#ffdede} 
+ .w-form-fail{display:none;margin-top:10px;padding:10px;background-color:#800;font-size:200%;}
 
  .w-form-fail-show{display:block} 
 

@@ -85,6 +85,7 @@ var banner = new Headhesive('.banner', options);
 // Headhesive destroy
 // banner.destroy();
 
+//$('.parallax-laptop').stellar();
 $('.parallax-back').stellar();
 $('.header-parallax').stellar();
 

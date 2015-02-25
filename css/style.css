@@ -189,6 +189,13 @@ padding: 100px 0 90px;
 * PARALLAX CLASSIES
 *******************************/
 
+.parallax-laptop {
+  background: url(../images/header/notebook-nature-2.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+}
+
 .parallax-back {
   background: url(../images/back.png) no-repeat;
   background-size: cover;
@@ -366,7 +373,7 @@ margin: auto;
   height: 76px;
   margin: 0 auto;
   padding-left: 10px;
-  background-image: url(../images/logo.png);
+  background-image: url(../images/smc-logo.png);
   background-position: 100% 45%;
   background-repeat: no-repeat;
   -webkit-transition: all 500ms linear;
@@ -375,7 +382,7 @@ margin: auto;
 }
 
 .logo {
-  margin-top: 0;
+  margin-top: 6px;
 }
 
 /***************************************************
@@ -487,6 +494,10 @@ margin: auto;
 * Testimonials
 
 ********************************************/
+#cbp-qtrotator.cbp-qtrotator {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .cbp-qtrotator {
   position: relative;
   margin: 1em auto 2em;
