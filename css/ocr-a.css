@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'OCR';
+  src:  url('../font/OCRA.woff') format('woff'),
+        url('../font/OCRA.otf') format('opentype'),
+        url('../font/OCRA.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

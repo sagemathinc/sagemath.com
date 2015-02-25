@@ -66,7 +66,7 @@ ol,ul {
 p {
   text-align: left;
   margin-bottom: 30px;
-  font-size: .85em;
+  font-size: .95em;
 }
 
 
@@ -81,6 +81,9 @@ a {
 * HEADINGS
 ****************************/
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "OCR", "Open Sans", sans-serif;
+}
 
 h1 {
   margin: 10px 0;
@@ -151,6 +154,10 @@ h6 {
   color: #27AE60;
 }
 
+.blue {
+  color: #3131ff;
+}
+
 .red {
   color: #c0392b;
 }
@@ -190,7 +197,9 @@ padding: 100px 0 90px;
 }
 
 .header-parallax {
-  background: url(../images/header/header-parallax.jpg);
+  /*background: url(../images/header/header-parallax.jpg);*/
+  background: url(../images/header/pc-in-laboratory-2.jpg);
+  /*background: url(../images/header/notebook-nature-2.jpg);*/
   background-size: cover;
   background-attachment: fixed;
   margin: auto;
@@ -272,7 +281,7 @@ h1.underline-dotted,h2.underline-dotted,h3.underline-dotted,h4.underline-dotted 
 * Backgrounds
 **********************************************/
 .row-back {
-  background: #2c3e50;
+  background: #7f7fff; //#2c3e50;
   border-bottom: 1px solid #34495E;
 }
 
@@ -288,7 +297,7 @@ h1.underline-dotted,h2.underline-dotted,h3.underline-dotted,h4.underline-dotted 
   margin: 0 auto;
   padding: 2em;
   text-align: center;
-  background: rgba(0,0,0,0.01);
+  background: #c9c9f9;
 }
 
 .container > header h1 {
@@ -303,15 +312,12 @@ h1.underline-dotted,h2.underline-dotted,h3.underline-dotted,h4.underline-dotted 
   margin-bottom: 0;
   padding-top: 0;
   border-bottom: 0 none #e03163;
-  background-image: 0;
-  background-image: 0;
   background-image: linear-gradient(white,white);
   box-shadow: none;
 }
 
 .banner {
-
-  background-color: rgba(255,255,255,1);
+  background-color: #c9c9f9;
   height:80px !important;
   z-index: 1000;
 }
@@ -346,8 +352,8 @@ margin: auto;
 }
 
 .banner--clone {
-  opacity: 0.8;
-background: #FFFFFF !important;
+  opacity: 0.7;
+  background: #c9c9f9 !important;
 }
 
 /************************************************
@@ -398,7 +404,7 @@ background: #FFFFFF !important;
 .banner {
   position: relative;
   width: 100% !important;
-  overflow: auto;
+  overflow: hidden;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -451,7 +457,7 @@ background: #FFFFFF !important;
 }
 
 .overlay {
-  background:rgba(0, 0, 0, 0.45) url(../images/pattern.png) repeat;
+  background:rgba(0, 0, 0, 0.45) url(../images/pattern/pattern-grey-squares-nq8.png) repeat;
   position: absolute;
   width: 100%;
   top: 80px;
@@ -557,7 +563,7 @@ background: #FFFFFF !important;
 }
 
 
-@media screen and max-width 306em {
+@media screen and (max-width: 306em) {
   .cbp-qtrotator {
     font-size: 70%;
   }
@@ -947,4 +953,15 @@ font-size: 20px;
 position: relative;
 right: 13px;
 top: 1px;
+}
+
+/* MINE */
+
+.icon-box > i {
+  font-size: 500%;
+  line-height: 1em;
+}
+
+.ocr {
+    font-family: "OCR", 'Open Sans', sans-serif;
 }

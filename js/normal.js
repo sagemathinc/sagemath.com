@@ -1244,7 +1244,7 @@ elegance.define('elegance-forms', function ($, _) {
 
   var retro = window.XDomainRequest && !window.atob;
 
-  var namespace = '.w-form';
+  var namespace = '.w-';
 
   var siteId;
 
@@ -1252,13 +1252,6 @@ elegance.define('elegance-forms', function ($, _) {
 
   var emailValue = /^\S+@\S+$/;
 
-  
-
-  // MailChimp domains: list-manage.com + mirrors
-
-  var chimpRegex = /list-manage[1-9]?.com/i;
-
-  
 
   api.ready = function () {
 
@@ -1292,8 +1285,7 @@ elegance.define('elegance-forms', function ($, _) {
 
     
 
-    $forms = $(namespace + ' form');
-
+    $forms = $('.w-form');
     $forms.each(build);
 
   }
@@ -1322,35 +1314,15 @@ elegance.define('elegance-forms', function ($, _) {
 
     
 
-    var action = data.action = $el.attr('action');
+    var action = data.action = $el.find("form").attr('action');
+    console.log("action: ", action);
 
     data.handler = null;
 
     data.redirect = $el.attr('data-redirect');
 
-    
+    data.handler = submit_form;
 
-    // MailChimp form
-
-    if (chimpRegex.test(action)) { data.handler = submitMailChimp; return; }
-
-    
-
-    // Custom form action
-
-    if (action) return;
-
-    
-
-    // elegance form
-
-    if (siteId) { data.handler = submitelegance; return; }
-
-    
-
-    // Alert for disconnected elegance forms
-
-    disconnected();
 
   }
 
@@ -1360,7 +1332,7 @@ elegance.define('elegance-forms', function ($, _) {
 
     // Handle form submission for elegance forms
 
-    $doc.on('submit', namespace + ' form', function(evt) {
+    $doc.on('submit', namespace + 'form', function(evt) {
 
       var data = $.data(this, namespace);
 
@@ -1472,7 +1444,8 @@ elegance.define('elegance-forms', function ($, _) {
 
   // Submit form to elegance
 
-  function submitelegance(data) {
+  function submit_form(data) {
+    var url = data.action;
 
     reset(data);
 
@@ -1516,19 +1489,19 @@ elegance.define('elegance-forms', function ($, _) {
 
     // NOTE: If this site is exported, the HTML tag must retain the data-wf-site attribute for forms to work
 
-    if (!siteId) { afterSubmit(data); return; }
-
-    var url = 'https://elegance.com/api/v1/form/' + siteId;
-
-
-
-    // Work around same-protocol IE XDR limitation
-
-    if (retro && url.indexOf('https://elegance.com') >= 0) {
-
-      url = url.replace('https://elegance.com/', 'http://data.elegance.com/');
-
-    }
+    //if (!siteId) { afterSubmit(data); return; }
+    //
+    //var url = 'https://elegance.com/api/v1/form/' + siteId;
+    //
+    //
+    //
+    //// Work around same-protocol IE XDR limitation
+    //
+    //if (retro && url.indexOf('https://elegance.com') >= 0) {
+    //
+    //  url = url.replace('https://elegance.com/', 'http://data.elegance.com/');
+    //
+    //}
 
     
 
@@ -1732,15 +1705,6 @@ elegance.define('elegance-forms', function ($, _) {
 
   }
 
-  
-
-  var disconnected = _.debounce(function () {
-
-    window.alert('Oops! This page has a form that is powered by elegance, but important code was removed that is required to make the form work. Please contact support@elegance.com to fix this issue.');
-
-  }, 100);
-
-  
 
   // Export module
 
@@ -3431,13 +3395,9 @@ elegance.define('elegance-navbar', function ($, _) {
     if (!data) data = $.data(el, namespace, { open: false, el: $el, config: {} });
 
     data.menu = $el.find('.w-nav-menu');
-
     data.links = data.menu.find('.w-nav-link');
-
     data.button = $el.find('.w-nav-button');
-
     data.container = $el.find('.w-container');
-
     data.outside = outside(data);
 
     

@@ -225,7 +225,7 @@ html { overflow-y: scroll; }
 
  fieldset{padding:0;margin:0;border:0} 
 
- label{display:block;margin-bottom:5px;font-weight:bold} 
+ label{display:block;margin-bottom:5px;font-weight:bold;text-align: left;}
 
  button,html input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button} 
 
@@ -691,7 +691,7 @@ html { overflow-y: scroll; }
 
          .w-nav-link.w--current{/* color:white */} 
 
-         .w-nav-menu{position:relative;float:right} 
+         .w-nav-menu{position:relative;float:right;padding-right: 20px;}
 
          .w--nav-menu-open{display:block !important;position:absolute;top:100%;left:0;right:0;background:#999;text-align:center;overflow:visible;min-width:200px} 
 
