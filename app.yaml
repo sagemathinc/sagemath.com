@@ -6,10 +6,20 @@ threadsafe: true
 
 default_expiration: "10m" # default is 10m, set this to 1d if happy
 
+# static handlers can have their individual expiration times (if necessary)
 handlers:
 - url: /static
   static_dir: static
+- url: /css
+  static_dir: css
+- url: /js
+  static_dir: js
+- url: /font
+  static_dir: font
+- url: /images
+  static_dir: images
 
+# main entrance point, everything is routed through smc.app
 - url: /.*
   script: smc.app
 
@@ -21,6 +31,7 @@ libraries:
 - name: markupsafe
   version: latest
 
+# a lot is activated by default, everything should be safe to use
 pagespeed:
   enabled_rewriters:
   - MinifyCss
