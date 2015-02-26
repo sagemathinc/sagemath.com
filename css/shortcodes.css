@@ -16,16 +16,16 @@
 
 ****************/
 .button:hover {
-  background: #56C16B;
-  border: 2px solid #56C16B;
+  background: #4f4fff;
+  border: 2px solid #4f4fff;
 }
 
 .button {
   display: inline-block;
   padding: 20px 60px;
   color: #D7D7D7;
-  background: #48A65B;
-  border: 2px solid #48A65B;
+  background: #3f3fff;
+  border: 2px solid #3f3fff;
   font-size: .95em;
   font-weight: 600;
   text-transform: uppercase;
@@ -47,8 +47,8 @@
 
 .button.border {
   color: #D7D7D7;
-  border: 2px solid #D7D7D7;
-  background: none;
+  border: 2px solid #3f3fff;
+  background: rgba(10, 10, 40, 0.3);
 }
 
 .button.medium {
@@ -58,7 +58,7 @@
 
 .button.large {
   padding: 15px 40px;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .button.small {
@@ -67,20 +67,15 @@
 }
 
 .button.border:hover {
-  color: #48A65B;
-  border: 2px solid #48A65B;
+  color: #D7D7D7;
+  border: 2px solid #4f4fff;
+  background: rgba(10, 10, 40, 0.2);
   background: none;
 }
 
 .button:hover {
-  background: #56C16B;
-  border: 2px solid #56C16B;
-}
-
-.button.border {
-  color: #D7D7D7;
-  border: 2px solid #D7D7D7;
-  background: none;
+  background: #4f4fff;
+  border: 2px solid #4f4fff;
 }
 
 /**************************

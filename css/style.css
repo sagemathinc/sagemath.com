@@ -72,7 +72,7 @@ p {
 
 a {
   cursor: pointer;
-  color: #48A65B;
+  color: #c9c9f9;
   text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ h1 {
   margin: 10px 0;
   font-weight: 600;
   letter-spacing: .075em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   line-height: 1.5;
   font-size: 3.5em;
   margin-bottom: 25px;
@@ -99,7 +99,7 @@ h2 {
   margin: 10px 0;
   font-weight: 600;
   letter-spacing: .075em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   line-height: 1.5;
   font-size: 2.5em;
   margin-bottom: 25px;
@@ -108,7 +108,7 @@ h2 {
 h3 {
   font-weight: 600;
   letter-spacing: .075em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   line-height: 1.5;
   font-size: 2em;
   margin-bottom: 20px;
@@ -117,7 +117,7 @@ h3 {
 h4 {
   font-weight: 600;
   letter-spacing: .075em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   line-height: 1.5;
   font-size: 1.3em;
   margin-bottom: 10px;
@@ -180,6 +180,10 @@ h6 {
   padding: 40px 0;
 }
 
+.wrap-thin {
+  padding: 20px 0;
+}
+
 .wrapper {
 padding: 100px 0 90px;
 }
@@ -189,6 +193,13 @@ padding: 100px 0 90px;
 * PARALLAX CLASSIES
 *******************************/
 
+.parallax-lab {
+  background: url(../images/header/the-lab-by-greg-francke-2.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+}
+
 .parallax-laptop {
   background: url(../images/header/notebook-nature-2.jpg) no-repeat;
   background-size: cover;
@@ -197,7 +208,7 @@ padding: 100px 0 90px;
 }
 
 .parallax-back {
-  background: url(../images/back.png) no-repeat;
+  background: url(../images/header/the-lab-by-greg-francke-2.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   margin: auto;
@@ -217,7 +228,7 @@ padding: 100px 0 90px;
 }
 
 .opcaity {
-  background: rgba(0,0,0,0.89);
+  background: rgba(0,0,0,0.75);
 }
 
 /******************************
@@ -288,13 +299,18 @@ h1.underline-dotted,h2.underline-dotted,h3.underline-dotted,h4.underline-dotted 
 * Backgrounds
 **********************************************/
 .row-back {
-  background: #7f7fff; //#2c3e50;
-  border-bottom: 1px solid #34495E;
+  background: #393999; //#2c3e50;
+  border-bottom: 1px solid #393999;
 }
 
 .row-gree {
   background: #27AE60;
-  border-bottom: 1px solid #27ae60;
+  border-bottom: 1px solid #218b4b;
+}
+
+.row-bluu {
+  background: #393999;
+  border-bottom: 1px solid #242444;
 }
 
 /*********************************************
@@ -473,7 +489,7 @@ margin: auto;
 
 .fixed-content {
   position: relative;
-  margin-top: 8em;
+  margin-top: 4em;
 }
 
 #rotate {
@@ -494,9 +510,6 @@ margin: auto;
 * Testimonials
 
 ********************************************/
-#cbp-qtrotator.cbp-qtrotator {
-  background: rgba(0, 0, 0, 0.6);
-}
 
 .cbp-qtrotator {
   position: relative;
@@ -609,9 +622,8 @@ margin: auto;
 
 .filter {
   margin: 4em 1em;
-  cursor: pointer;
-  cursor: 0;
-  cursor: 0;
+  /*cursor: pointer;*/
+  cursor: none;
 }
 
 .options ul li {
@@ -947,13 +959,15 @@ margin-top: -25px;
 *********************************************/
 .footer {
   border-top: 12px solid #95A5A6;
+  padding-bottom: 3em;
 }
 
 /* ==========================================================================
 Waypoints
 ========================================================================== */
 .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8 { visibility: hidden; }
-.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight { visibility: visible; }
+.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown,
+.fadeInUpD, .fadeInLeft, .fadeInRight { visibility: visible; }
 .delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
 .delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
 .delay-1-5s { animation-delay: 1.5s; -webkit-animation-delay: 1.5s; }
@@ -969,8 +983,14 @@ top: 1px;
 /* MINE */
 
 .icon-box > i {
-  font-size: 500%;
+  font-size: 100px;
   line-height: 1em;
+}
+
+.icon-box > img {
+  width: 100px;
+  height: 100px;
+  
 }
 
 .ocr {

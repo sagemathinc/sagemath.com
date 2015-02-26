@@ -18,6 +18,7 @@ GLOBAL_VALS = {
     "year": YEAR,
     "email": "info@sagemath.com",
     "smc": "SageMathCloud",
+    "smcurl": "https://cloud.sagemath.com/",
     "company": "SageMath, Inc.",
     "slogan": "Collaborative Computational Mathematics Online."
 }
