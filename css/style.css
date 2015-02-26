@@ -784,7 +784,7 @@ margin-top: -25px;
   opacity: 0;
   filter: alpha(opacity=0);
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-  background: rgba(39,174,96,0.93);
+  background: rgba(137, 138, 8, 0.93);
   -webkit-transition: opacity .3s;
   -moz-transition: opacity .7s;
   -o-transition: opacity .7s;
@@ -836,10 +836,10 @@ margin-top: -25px;
 
 .thumbnail-img {
   display: block;
-  height: auto;
-  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
+  height:auto;
+  width:100%;
 }
 
 .social-icons {
