@@ -9,12 +9,15 @@ import urllib
 import urllib2
 import json
 
+# DEBUG==False -> we are deployed on GAE
+DEBUG = not os.environ['SERVER_SOFTWARE'].startswith('Google App Engine')
+
 captcha_secret = "6LdNmQITAAAAAHPYZZpLFhO2EuG3dgyhOlCOmkmo"
 
 YEAR = str(datetime.date.today().year)
-# DEBUG==False -> we are deployed on GAE
-DEBUG = not os.environ['SERVER_SOFTWARE'].startswith('Google App Engine')
+
 GLOBAL_VALS = {
+    "DEBUG" : DEBUG,
     "year": YEAR,
     "email": "info@sagemath.com",
     "smc": "SageMathCloud",
@@ -74,14 +77,14 @@ class ContactForm(webapp2.RequestHandler):
         except:
             # error with captcha service, continue as nothing would have happened
             pass
-
-        # logging.info("data: %s" % self.request)
+        # END captcha check
 
         fields = {}
         for k in self.request.arguments():
             fields[k] = self.request.get(k)
             #logging.info("fields: %s -> %s" % (k, self.request.get(k)))
 
+        # we have all data, now sending the mail to the smc headquarter
         from google.appengine.api import mail
         msg = mail.EmailMessage()
         msg.sender="{name} <{email}>".format(**fields)
@@ -98,8 +101,9 @@ class ContactForm(webapp2.RequestHandler):
 class Stats(webapp2.RequestHandler):
     def get(self):
         import urllib2
+        url = 'https://cloud.sagemath.com/stats'
         try:
-            stats = urllib2.urlopen('https://cloud.sagemath.com/stats').read()
+            stats = urllib2.urlopen(url).read()
             self.response.write(stats)
         except:
             self .error(500)
