@@ -20,7 +20,7 @@ GLOBAL_VALS = {
     "smc": "SageMathCloud",
     "smcurl": "https://cloud.sagemath.com/",
     "company": "SageMath, Inc.",
-    "slogan": "Collaborative Computational Mathematics Online."
+    "slogan": "Collaborative Computational Mathematics Online"
 }
 
 TMPL_EMAIL = u"""\

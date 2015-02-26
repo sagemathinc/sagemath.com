@@ -100,7 +100,7 @@
         <div class="center fixed-content">
           <div class="center-fix">
             <img src="images/smc-icon.png" width="90px" height="90px">
-            <h1 class="underline animated fadeInDown ocr">{{ smc }}</h1>
+            <h1 class="underline animated fadeInDown ftShadow">{{ smc }}</h1>
             <h4 class="animated fadeInUp delay-05s" 
                 style="margin-bottom: 50px;">{{ slogan }}</h4>
             <a class="button animated fadeInUp delay-1s" 
@@ -132,8 +132,12 @@
         <div class="w-col w-col-4 wp1">
           <div class="icon-box">
             <i class="smc-pi-outline"></i>
-            <h4 class="icons-heading">Powerful Mathematics Software</h4> <p>
-            TEXT
+            <h4 class="icons-heading">Powerful Software</h4>
+            <p>
+            Work with <a href="http://www.sagemath.org/">SageMath</a>,
+            <a href="http://www.r-project.org">R</a>,
+            <a href="http://ctan.org">LaTeX</a>,
+            the entire scientific Python stack, and much more.
           </p>
           </div>
         </div>
@@ -141,39 +145,62 @@
         <div class="w-col w-col-4 wp1 delay-05s">
           <div class="icon-box">
             <i class="paramselegance-icons-"></i>
-            <h4 class="icons-heading">FAST SUPPORT</h4> <p>
-            TEXT
-          </p>
+            <h4 class="icons-heading">Fully Managed Software</h4>
+            <p>
+              {{ company }} fully manages the software, installs upgrades, rolls out bugfixes, etc.
+              No need to worry about how to get things up and running!
+            </p>
           </div>
         </div>
         
         <div class="w-col w-col-4 wp1 delay-1s">
           <div class="icon-box">
-            <i class="thumbs-upelegance-icons-"></i>
-            <h4 class="icons-heading">100% RESPONSIVE</h4> <p>
-            TEXT
-          </p>
+            <i class="smc-cloud"></i>
+            <h4 class="icons-heading">100% Web-Browser</h4>
+            <p>
+              A modern web-browser is all you need.
+              No local installation, no plugin, nothing.
+            </p>
           </div>
         </div>
       </div>
     </div>
     
   </div>
-  
-  <div class="row-bluu">
-    <div class="w-container wrap-thin">
+
+<!--///////////////////////////////////////////////////////
+// Service section
+//////////////////////////////////////////////////////////-->
+
+{#<div id="service">#}
+{#  <div class="row-gree">#}
+{#    <div class="w-container wrap">#}
+{#      <div class="center">#}
+{#        <h1 class="underline">OUR SERVICE</h1>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+
+{#  <div class="row-bluu">#}
+{#    <div class="w-container wrap-thin">#}
+{#      <div class="center">#}
+{#        <h1 class="underline" id="status">Status</h1>#}
+{#        <h4>Current Status of {{ smc }}</h4>#}
+{#        <p>Numbers fetched live from our data-centers.</p>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
+
+<div class="parallax-back" data-stellar-background-ratio="0.5">
+  <div class="opcaity">
+    <div class="w-container wrap-normal">
       <div class="center">
         <h1 class="underline" id="status">Status</h1>
         <h4>Current Status of {{ smc }}</h4>
         <p>Numbers fetched live from our data-centers.</p>
       </div>
-    </div>
-  </div>
-</div>
 
-<div class="parallax-back" data-stellar-background-ratio="0.5">
-  <div class="opcaity">
-    <div class="w-container wrap-normal">
       <div class="w-col w-col-4 wp2">
         <div class="icon-box">
           <i class="smc-users"></i>
@@ -182,7 +209,7 @@
           <p>Currently connected users right now</p>
         </div>
       </div>
-      
+
       <div class="w-col w-col-4 wp2 delay-05s">
         <div class="icon-box">
           <i class="smc-beaker"></i>
@@ -191,7 +218,7 @@
           <p>Currently Modified Projects</p>
         </div>
       </div>
-      
+
       <div class="w-col w-col-4 wp2 delay-1s">
         <div class="icon-box">
           <i class="smc-tasks"></i>
@@ -203,79 +230,67 @@
 
   </div>
 </div>
-<!--///////////////////////////////////////////////////////
-// Service section
-//////////////////////////////////////////////////////////-->
 
-<div id="service">
-  <div class="row-gree">
-    <div class="w-container wrap">
-      <div class="center">
-        <h1 class="underline">OUR SERVICE</h1>
-      </div>
-    </div>
-  </div>
-  
+
+
+
   <div class="row-back">
     <div class="w-container wrap-normal">
       <div class="center">
-        <h2>WHAT <span class="green">WE</span> DO</h2> <p>lorem ipsum metea data, what a lovely traeat to eyes</p>
+        <h2>What {{ smc }} Does For You</h2>
+        <p>This are the main task {{ smc }} does for you to keep you focused on your work.</p>
       </div>
-      <div class="w-col w-col-6">
-        <div class="right wp8">
-          <p>TEXT</p>
-          <a class="button wp8 delay-05s">Read More</a>
-        </div>
-      </div>
-      
-      <div class="w-col w-col-6">
-        <div class="left wp7">
-          <p>TEXT 2</p>
-          <a class="button border wp7 delay-05s">Buy Now!</a>
+
+{#      <div class="w-col w-col-6">#}
+{#        <div class="right wp8">#}
+{#          <p>TEXT</p>#}
+{#          <a class="button wp8 delay-05s">Read More</a>#}
+{#        </div>#}
+{#      </div>#}
+
+{#      <div class="w-col w-col-6">#}
+{#        <div class="left wp7">#}
+{#          <p>TEXT 2</p>#}
+{#          <a class="button border wp7 delay-05s">Buy Now!</a>#}
+{#        </div>        #}
+{#      </div>#}
+
+{#      <div class="spacing"></div>#}
+
+      <div class="w-col w-col-4">
+        <div class="icon-box">
+          <i class="smc-arrows-cw-outline"></i>
+          <h3 class="underline">Backup</h3>
+          <p>While you are working,
+            a continuous stream of consistent snapshots is copied on our servers.
+            Never lose your work again and be able to restore any file from past backups!
+          </p>
         </div>
         
       </div>
 
-      <div class="spacing"></div>
-
-      <div class="w-col w-col-3">
+      <div class="w-col w-col-4">
         <div class="icon-box">
-          <img src="images/services/branding.png" alt="branding"> <h3 class="underline">branding</h3>
-
-          <p>TEXT.</p>
-        </div>
-        
-      </div>
-
-      <div class="w-col w-col-3">
-        <div class="icon-box">
-          <img src="images/services/motion.png" alt="motion"> <h3 class="underline">motion</h3>
-
-          <p>Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation
-            ullamco labore et dolore magna aliqua.</p>
+          <i class="smc-users"></i>
+          <h3 class="underline">Collaboration</h3>
+          <p>
+            Add your friends and colleagues to your project
+            to edit the same documents in real-time.
+          </p>
         </div>
       </div>
       
-      <div class="w-col w-col-3">
+      <div class="w-col w-col-4">
         <div class="icon-box">
-          <img src="images/services/print.png" alt="print"> <h3 class="underline">print</h3>
-
-          <p>Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation
-            ullamco labore et dolore magna aliqua.</p>
+          <i class="smc-lightbulb"></i>
+          <h3 class="underline">Sharing</h3>
+          <p>
+            Share ideas with the world by publishing computational documents,
+            files, graphics, and PDFs.
+          </p>
         </div>
       </div>
-      
-      <div class="w-col w-col-3">
-        <div class="icon-box">
-          <img src="images/services/Web.png" alt="Web"> <h3 class="underline">Web Design</h3>
 
-          <p>Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation
-            ullamco labore et dolore magna aliqua.</p>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -284,6 +299,9 @@
 <!--///////////////////////////////////////////////////////        // End Service section         //////////////////////////////////////////////////////////-->
 
 <!--///////////////////////////////////////////////////////        // Process section         //////////////////////////////////////////////////////////-->
+
+
+
 
 <div class="parallax-laptop" data-stellar-background-ratio="0.5">
   <div class="opcaity">
@@ -341,7 +359,7 @@
 <!--///////////////////////////////////////////////////////
  // Our-plan section         //////////////////////////////////////////////////////////-->
 
-<div class="row-gree">
+<div class="row-yell">
   <div class="w-container wrap-normal">
     <div class="center">
       <h1 class="underline">Our Products</h1>
@@ -360,11 +378,11 @@
         <div class="pricing-section pricing-main">
           <div class="pricing-header header-main">
             <h3>Free</h3>
-            <span class="preice">$0</span>
+            <span class="preice">$ 0</span>
           </div>
           <div class="pricing-content">
             <ul>
-              <li>Sage, Linux, R, Git, etc.</li>
+              <li>Sage, Linux, R, LaTeX, etc.</li>
               <li>Unlimited number of projects</li>
               <li>1 GB storage space</li>
               <li>1 shared CPU core</li>
@@ -391,7 +409,7 @@
             <ul>
               <li>15 GB storage</li>
               <li>Projects run on dedicated cluster</li>
-              <li>Resources not shared with free users</li>
+              <li>Resources distinct from free users</li>
               <li>No Project Timeout</li>
               <li>Full Network Access</li>
               <li>Priority Support</li>
@@ -460,34 +478,39 @@
 
 <div class="row-gree" id="team">
   <div class="w-container wrap">
-    <h1 class="center underline">Meet the Team</h1>
+    <h1 class="center underline">People Behind {{ smc }}</h1>
   </div>
 </div>
 
 <div class="row-back">
-  <div class="w-container wrap-normal">
-    <div class="center">
-      <h2>People Behind {{ smc }}</h2>
-      <p>
-      </p>
-    </div>
+  <div class="w-container wrap-thin">
+{#    <div class="center">#}
+{#      <h2>People Behind {{ smc }}</h2>#}
+{#      <p>#}
+{#      </p>#}
+{#    </div>#}
+    <div class="center w-col w-col-3"></div>
+
     <div class="center w-col w-col-3 wp4">
       <div class="team-album">
         <div class="tumbnail">
           <a class="team-hyper">
-            <img class="thumbnail-img" src="images/team/image1.png" alt="team1">
+            <img class="circule thumbnail-img" src="images/team/wstein-2.jpg" alt="wstein">
               <span>
-                <h3 class="team-heading">James Dylan</h3>
-                <p class="team-designation">CREATIVE DIRECTOR</p>
-                <p class="team-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repellat possimus
-                  laboriosam et.</p>
+                <h3 class="team-heading">William Stein</h3>
+                <p class="team-designation">Lead Hacker</p>
+                <p class="team-des">
+                  Skates in elliptic curves,
+                  bends cutting-edge technology to his needs
+                  and never sleeps.
+                </p>
               </span>
           </a>
           <div class="team-social">
-            <a class="social-icons" href="" titlle="Facebook"><i class="facebookelegance-icons-"></i></a>
-            <a class="social-icons" href="" titlle="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
-            <a class="social-icons" href="" titlle="Linkedin"><i class="linkedinelegance-icons-"></i></a>
-            <a class="social-icons" href="" titlle="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Facebook"><i class="facebookelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Github"><i class="githubelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
           </div>
         </div>
       </div>
@@ -496,19 +519,22 @@
       <div class="team-album">
         <div class="tumbnail">
           <a class="team-hyper">
-            <img class="circule thumbnail-img" src="images/team/image1.png" alt="team1">
+            <img class="circule thumbnail-img" src="images/team/hsy-2.jpg" alt="team1">
               <span>
-                <h3 class="team-heading">James Dylan</h3>
-                <p class="team-designation">CREATIVE DIRECTOR</p>
-                <p class="team-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repellat possimus
-                  laboriosam et.</p>
+                <h3 class="team-heading">Harald Schilly</h3>
+                <p class="team-designation">Bug Juggler</p>
+                <p class="team-des">
+                  Crunches numbers for beautiful graphs,
+                  untangles html, js, css and python
+                  and only dreams binary.
+                </p>
               </span>
           </a>
           <div class="team-social">
-            <a class="social-icons" href="" titlle="Facebook"><i class="facebookelegance-icons-"></i></a>
-            <a class="social-icons" href="" titlle="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
-            <a class="social-icons" href="" titlle="Linkedin"><i class="linkedinelegance-icons-"></i></a>
-            <a class="social-icons" href="" titlle="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Facebook"><i class="facebookelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Github"><i class="githubelegance-icons-"></i></a>
+            <a class="social-icons" href="" title="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
           </div>
         </div>
       </div>
@@ -559,30 +585,37 @@
   </div>
 </div>
 
+
 <div class="parallax-lab" data-stellar-background-ratio="0.5">
   <div class="opcaity">
     <div class="w-container wrap">
       <div class="w-col w-col-4">
         <div class="center">
-          <h3>....</h3>
+          <h3 class="info-x">Want to get involved?</h3>
         </div>
       </div>
       <div class="w-col w-col-4">
         <div class="center">
           <div class="circule circule-info">
-            <p class="info"><strong class="info-strong">99%</strong><br/>CLIENT<br/>SATISFACTION
-          </p></div>
+            {# <p class="info"><strong class="info-strong">99%</strong><br/>CLIENT<br/>SATISFACTION</p>#}
+            <a href="https://github.com/sagemath/cloud" class="icon-box">
+              <i style="color: #333;" class="smc-github"></i>
+            </a>
+          </div>
         </div>
       </div>
       <div class="w-col w-col-4">
         <div class="center">
-          <h3 class="info-x">Want to Know More?<br/></h3>
-          <a href="mailto:{{ email }}"><span class="email">{{ email }}</span></a>
+          Join our mailing list<br/>
+          <h3 class="info-x">
+          <a href="https://groups.google.com/forum/#!forum/sage-cloud">sage-cloud</a>
+          </h3>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <!--///////////////////////////////////////////////////////
 // End Team section

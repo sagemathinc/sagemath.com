@@ -151,7 +151,7 @@ h6 {
 *******************************/
 
 .green {
-  color: #27AE60;
+  color: #FFD147;
 }
 
 .blue {
@@ -303,15 +303,17 @@ h1.underline-dotted,h2.underline-dotted,h3.underline-dotted,h4.underline-dotted 
   border-bottom: 1px solid #393999;
 }
 
-.row-gree {
-  background: #27AE60;
-  border-bottom: 1px solid #218b4b;
+.row-gree, .row-yell {
+  background: #FFD147;
+  border-bottom: 1px solid #D8B13D;
+  color: #333333;
 }
 
 .row-bluu {
   background: #393999;
   border-bottom: 1px solid #242444;
 }
+
 
 /*********************************************
 * Header Style
@@ -340,6 +342,7 @@ h1.underline-dotted,h2.underline-dotted,h3.underline-dotted,h4.underline-dotted 
 }
 
 .banner {
+  /*background-color: #c9c9f9;*/
   background-color: #c9c9f9;
   height:80px !important;
   z-index: 1000;
@@ -369,8 +372,8 @@ margin: auto;
 
 .menu-li:hover {
   border-top-style: none;
-  background-color: #27AE60;
-  color: #FFF;
+  background-color: #FFD147;
+  color: #222;
   transition: background, .7s;
 }
 
@@ -498,7 +501,7 @@ margin: auto;
 }
 
 .static {
-  background: #27AE60;
+  background: #FFD147;
   width: 80%;
   margin: auto;
   position: relative;
@@ -571,7 +574,7 @@ margin: auto;
 
 .cbp-qtrotator blockquote footer {
   font-size: 1.2em;
-  color: #27AE60;
+  color: #FFD147;
 }
 
 .cbp-qtrotator blockquote footer:before {
@@ -738,7 +741,7 @@ margin-top: -25px;
 
 .pricing-section .pricing-header {
   padding: 35px 0 25px;
-  border-bottom: 7px solid #27AE60;
+  border-bottom: 7px solid #FFD147;
 }
 
 .pricing-section .pricing-content {
@@ -822,7 +825,7 @@ margin-top: -25px;
 }
 
 .team-social {
-  border-top: 7px solid #27AE60;
+  border-top: 7px solid #FFD147;
   padding: 2.5em 1em 2em;
 }
 
@@ -844,7 +847,7 @@ margin-top: -25px;
 }
 
 .circule-info {
-  background: #27AE60;
+  background: #FFD147;
   padding: 1em 0 170px;
   width: 50%;
   max-height: 0;
@@ -984,15 +987,18 @@ top: 1px;
 
 .icon-box > i {
   font-size: 100px;
-  line-height: 1em;
+  line-height: 140px;
 }
 
 .icon-box > img {
   width: 100px;
   height: 100px;
-  
 }
 
 .ocr {
     font-family: "OCR", 'Open Sans', sans-serif;
+}
+
+.ftShadow {
+  text-shadow: 1px 3px 3px black;
 }
