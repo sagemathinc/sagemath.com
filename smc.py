@@ -12,7 +12,8 @@ import json
 captcha_secret = "6LdNmQITAAAAAHPYZZpLFhO2EuG3dgyhOlCOmkmo"
 
 YEAR = str(datetime.date.today().year)
-
+# DEBUG==False -> we are deployed on GAE
+DEBUG = not os.environ['SERVER_SOFTWARE'].startswith('Google App Engine')
 GLOBAL_VALS = {
     "year": YEAR,
     "email": "info@sagemath.com",
@@ -101,9 +102,9 @@ class Stats(webapp2.RequestHandler):
         except:
             self .error(500)
 
-app = webapp2.WSGIApplication([
-                                  ('/', MainPage),
-                                  ('/contact', ContactForm),
-                                  ('/stats', Stats)
-                              ],
-                              debug=True)
+routing = [
+    ('/',           MainPage),
+    ('/contact',    ContactForm),
+    ('/stats',      Stats)
+]
+app = webapp2.WSGIApplication(routing, debug=DEBUG)
