@@ -83,10 +83,10 @@ class ContactForm(webapp2.RequestHandler):
         })
         captcha_req = urllib2.Request(url=captcha_url, data=request_data)
         try:
-            captcha_resp = urllib2.urlopen(captcha_req, timeout=10)
+            captcha_resp = urllib2.urlopen(captcha_req, timeout=10).read()
             logging.debug("captcha response: %s" % captcha_resp)
 
-            if not json.loads(captcha_resp.read())["success"]:
+            if not json.loads(captcha_resp)["success"]:
                 self.error(500)
         except:
             # error with captcha service, continue as nothing would have happened
@@ -101,7 +101,7 @@ class ContactForm(webapp2.RequestHandler):
         # we have all data, now sending the mail to the smc headquarter
         from google.appengine.api import mail
         msg = mail.EmailMessage()
-        msg.sender="{name} <{email}>".format(**fields)
+        msg.sender="SMC Website <website@sage-math-inc.appspotmail.com>"
         msg.subject="[SMC.com] %s" % fields.get("subject")
         #msg.to = "SageMath Inc. <contact+website@sagemath.com>"
         msg.to = "SageMath Inc. <hsy+website@sagemath.com>"
