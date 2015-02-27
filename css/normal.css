@@ -240,8 +240,9 @@ html { overflow-y: scroll; }
  .w-form-fail-show{display:block} 
 
  .w-input,.w-select{display:block;width:100%;height:38px;padding:8px 12px;
-   margin-bottom:10px;font-size:14px;line-height:1.428571429;
+   margin-bottom:10px;font-size:16px;line-height:1.428571429;
    color: #ECF0F1;vertical-align:middle;
+   font-weight:bold;
    background-color: rgba(40,40,50,0.75);
    border: 1px solid #34495E;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075)}
 
