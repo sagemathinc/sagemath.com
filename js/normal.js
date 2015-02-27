@@ -1965,7 +1965,6 @@ elegance.define('elegance-forms', function ($, _) {
 
 
     var action = data.action = $el.find("form").attr('action');
-    console.log("action: ", action);
 
     data.handler = null;
 

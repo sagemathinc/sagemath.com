@@ -8,7 +8,7 @@ var smc_stats = {
   proj24: 0,
 
   init: function () {
-    console.log("smc_statistics.init");
+    // console.log("smc_statistics.init");
     smc_stats.users = $("#status-users");
     smc_stats.proj = $("#status-projects");
     smc_stats.proj24 = $("#status-24h");
