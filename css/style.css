@@ -236,7 +236,7 @@ padding: 100px 0 90px;
 }
 
 .opcaity {
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.7);
 }
 
 /******************************
@@ -416,6 +416,11 @@ margin: auto;
 
 .logo {
   margin-top: 4px;
+}
+
+img.logo {
+  height: 60px;
+  width: auto;
 }
 
 /***************************************************

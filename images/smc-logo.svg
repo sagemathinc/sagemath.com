@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="600"
+   width="700"
    height="132"
    id="svg3207"
    version="1.1"
@@ -28,10 +28,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="273.40059"
-     inkscape:cy="-87.753866"
+     inkscape:cx="324.47202"
+     inkscape:cy="-40.611009"
      inkscape:document-units="px"
-     inkscape:current-layer="g3061"
+     inkscape:current-layer="g3315"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1056"
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -88,7 +88,7 @@
          y="939.36176"
          x="14.679302"
          height="98.00087"
-         width="448.36996"
+         width="523.09833"
          id="rect3225-2-4"
          style="color:#000000;fill:#1919bf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter4103);enable-background:accumulate" />
       <g
@@ -248,7 +248,7 @@
            dx="-1.2315432e-08 -3.1922271 -2.9262083 -2.9262083 -2.6601894 0 0 0 0 0"
            id="tspan4007-5">Cloud</tspan></text>
       <g
-         transform="scale(1.0032626,0.996748)"
+         transform="matrix(1.0032626,0,0,0.996748,7.7097584,-2.640446e-5)"
          style="font-size:35.75294876px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:85.00000238%;letter-spacing:4.4691186px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:OCRABold;-inkscape-font-specification:OCRABold Bold"
          id="text3014">
         <g
@@ -256,16 +256,16 @@
            transform="translate(-1.4897063,0)">
           <text
              xml:space="preserve"
-             style="font-size:60.91505051px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:-9.87811661px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:OCRACondensed;-inkscape-font-specification:OCRACondensed Bold"
-             x="111.14162"
-             y="1011.3999"
+             style="font-size:63.31251526px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:-9.87811661px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA Bold"
+             x="106.13152"
+             y="1013.1765"
              id="text3031"
              sodipodi:linespacing="125%"><tspan
                sodipodi:role="line"
                id="tspan3033"
-               x="111.14162"
-               y="1011.3999"
-               dx="0 -4.1158819 -4.1158819 -3.5278988 0 -3.5278988 -4.7038646 -3.5278988 0 -5.2918477 -7.6437793 -3.5278988 -2.9399154">SageMathCloud</tspan></text>
+               x="106.13152"
+               y="1013.1765"
+               dx="0 -4.1158819 -4.6479197 -4.0599365 0 -4.0599365 -5.76794 -4.0599365 -1.0640759 -6.3559237 -9.239893 -4.0599365 -3.4719534">SageMathCloud</tspan></text>
         </g>
       </g>
     </g>
