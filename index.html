@@ -99,7 +99,7 @@
       <div class="overlay">
         <div class="center fixed-content">
           <div class="center-fix">
-            <img src="images/smc-icon.png" width="90px" height="90px">
+            <img src="images/smc-icon.png" width="100px" height="100px">
             <h1 class="underline animated fadeInDown ftShadow">{{ smc }}</h1>
             <h4 class="animated fadeInUp delay-05s" 
                 style="margin-bottom: 50px;">{{ slogan }}</h4>
@@ -107,7 +107,7 @@
                href="#features" style="margin-right: 20px;"><span>
               <i class="cogelegance-icons-"></i></span>Features</a>
             <a class="button border animated fadeInUp delay-1s"
-               href="index.html#contact">Get in Touch</a>
+               href="#contact">Get in Touch</a>
           </div>
           <div class="center-fix">
             <a class="button large animated fadeInUp delay-1-5s"
@@ -193,13 +193,13 @@
 {#  </div>#}
 {#</div>#}
 
-<div class="parallax-back" data-stellar-background-ratio="0.5">
+<div class="parallax-lab" data-stellar-background-ratio="0.5">
   <div class="opcaity">
     <div class="w-container wrap-normal">
       <div class="center">
         <h1 class="underline" id="status">Status</h1>
         <h4>Current Status of {{ smc }}</h4>
-        <p>Numbers fetched live from our data-centers.</p>
+        <p>Live numbers from our data-centers fetched in real-time.</p>
       </div>
 
       <div class="w-col w-col-4 wp2">
@@ -207,7 +207,7 @@
           <i class="smc-users"></i>
           <h2><strong><span class="red" id="status-users">0</span></strong></h2>
           <h4>Concurrent Users</h4>
-          <p>Currently connected users right now</p>
+          <p>Currently connected users working on SMC</p>
         </div>
       </div>
 
@@ -216,7 +216,7 @@
           <i class="smc-beaker"></i>
           <h2><strong><span class="red" id="status-projects">0</span></strong></h2>
           <h4>Active Projects</h4>
-          <p>Currently Modified Projects</p>
+          <p>Currently openend projects</p>
         </div>
       </div>
 
@@ -224,14 +224,13 @@
         <div class="icon-box">
           <i class="smc-tasks"></i>
           <h2><strong><span class="red" id="status-24h">0</span></strong></h2>
-          <h4>24h Modified Projects</h4>
-          <p>Projects modified in the last 24h</p>
+          <h4>Daily Modified Projects</h4>
+          <p>Number of projects modified in the last 24h</p>
         </div>
       </div>
-
+    </div>
   </div>
 </div>
-
 
 
 
@@ -295,7 +294,6 @@
     </div>
   </div>
 
-</div>
 
 <!--///////////////////////////////////////////////////////        // End Service section         //////////////////////////////////////////////////////////-->
 
@@ -308,7 +306,7 @@
   <div class="opcaity">
     <div class="w-container wrap-normal">
       <div class="center">
-        <h1 class="underline">Testimonials</h1>
+        <h1 class="underline" id="testimonials">Testimonials</h1>
         <p>
           See what some of our <strong class="blue">users</strong> say about us
         </p>
@@ -366,7 +364,7 @@
 <div class="row-yell">
   <div class="w-container wrap-normal">
     <div class="center">
-      <h1 class="underline">Our Products</h1>
+      <h1 class="underline dark">Our Products</h1>
       <p>
         Check our prices for our products.
       </p>
@@ -482,7 +480,7 @@
 
 <div class="row-gree" id="team">
   <div class="w-container wrap">
-    <h1 class="center underline">People Behind {{ smc }}</h1>
+    <h1 class="center underline dark">People Behind SMC</h1>
   </div>
 </div>
 
@@ -498,7 +496,7 @@
     <div class="center w-col w-col-3 wp4">
       <div class="team-album">
         <div class="tumbnail">
-          <a class="team-hyper">
+          <a class="team-hyper" href="http://wstein.org/">
             <!-- class circule for a round image -->
             <img class="thumbnail-img" src="images/team/wstein-2.jpg" alt="wstein">
               <span>
@@ -523,7 +521,7 @@
     <div class="center w-col w-col-3 wp4 delay-1s">
       <div class="team-album">
         <div class="tumbnail">
-          <a class="team-hyper">
+          <a class="team-hyper" href="https://harald.schil.ly">
             <img class="thumbnail-img" src="images/team/hsy-2.jpg" alt="team1">
               <span>
                 <h3 class="team-heading">Harald Schilly</h3>
@@ -632,7 +630,7 @@
 <div class="row-gree">
   <div class="w-container wrap-normal">
     <div class="center">
-      <h1 class="underline">Underlying Technology</h1>
+      <h1 class="underline dark">Underlying Technology</h1>
     </div>
   </div>
 </div>
@@ -691,7 +689,7 @@
 </div>
 
 <div id="contact">
-  <div class="parallax-back" data-stellar-background-ratio="0.5">
+  <div class="parallax-pen" data-stellar-background-ratio="0.5">
     <div class="opcaity">
       <div class="w-container wrap">
         <div class="center">
@@ -785,8 +783,9 @@
     {#<i class="tumblrelegance-icons-"></i>#}
   </div>
 
-  <div class="w-container wrap-thin center">
-    <a href="https://500px.com/photo/95588775/the-lab-by-greg-francke">CC-BY licensed pictures by Greg Francke</a>
+  <div class="w-container wrap-thin center grey">
+    <a href="https://500px.com/photo/95588775/the-lab-by-greg-francke">CC-BY licensed pictures by Greg Francke</a>,
+    <a href="http://commons.wikimedia.org/wiki/File:Stipula_fountain_pen.jpg">Wikimedia Stipula Pen</a>
   </div>
 
   <div class="w-container wrap-normal center"><strong>© {{ company }}, {{ year }}</strong></div>
@@ -817,5 +816,6 @@
 {#<script type="text/javascript" src="static/rAF.js"></script>#}
 {#<script type="text/javascript" src="static/graph.js"></script>#}
 <!-- end graph -->
+{{ analytics|safe }}
 </body>
 </html>

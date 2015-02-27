@@ -200,6 +200,13 @@ padding: 100px 0 90px;
   margin: auto;
 }
 
+.parallax-pen {
+  background: url(../images/header/stipula_fountain_pen.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+}
+
 .parallax-laptop {
   background: url(../images/header/notebook-nature-2.jpg) no-repeat;
   background-size: cover;
@@ -276,7 +283,13 @@ padding: 100px 0 90px;
 
 /* underline headings with image*/
 h1.underline,h2.underline,h3.underline,h4.underline {
-  background: url(../images/underline-headline.png) bottom center no-repeat;
+  background: url(../images/underline-headline-smc.png) bottom center no-repeat;
+}
+h1.underline.dark,
+h2.underline.dark,
+h3.underline.dark,
+h4.underline.dark {
+  background: url(../images/underline-headline-smc-dark.png) bottom center no-repeat;
 }
 
 h1.underline,h2.underline,h3.underline,h4.underline {
@@ -772,7 +785,7 @@ margin-top: -25px;
 .team-album .tumbnail > a span {
   position: absolute;
   left: 0;
-  padding: 1em;
+  padding: .5em;
   top: 0;
   right: 0;
   bottom: 105px;
@@ -1001,4 +1014,8 @@ top: 1px;
 
 .ftShadow {
   text-shadow: 1px 3px 3px black;
+}
+
+.grey {
+  color: #666;
 }
