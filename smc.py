@@ -104,8 +104,7 @@ class ContactForm(webapp2.RequestHandler):
         msg = mail.EmailMessage()
         msg.sender="SMC Website <website@sage-math-inc.appspotmail.com>"
         msg.subject="[SMC.com] %s" % fields.get("subject")
-        #msg.to = "SageMath Inc. <contact+website@sagemath.com>"
-        msg.to = "SageMath Inc. <hsy+website@sagemath.com>"
+        msg.to = "SageMath Inc. <contact+website@sagemath.com>"
         msg.body = TMPL_EMAIL.format(timestamp=timestamp, ip = ip, **fields)
         msg.send()
 
