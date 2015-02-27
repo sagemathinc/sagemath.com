@@ -34,10 +34,15 @@ libraries:
 # a lot is activated by default, everything should be safe to use
 pagespeed:
   enabled_rewriters:
-  - MinifyCss
   - CollapseWhitespace
   - ImageAddDimensions
   - RemoveComments
   - InlineImages
   - InlineJs
+  - MinifyCss
+  - CombineJs
+  - JsOptimize
+  - CombineCss
+  disabled_rewriters:
+  - FlushSubresources
 
