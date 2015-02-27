@@ -18,7 +18,7 @@ var smc_stats = {
     // $.getJSON("http://localhost:8080/stats")
     $.getJSON("/stats")
         .done(function (data) {
-          console.log("smc stats: success", data);
+          //console.log("smc stats: success", data);
           var nbusers = 0;
           $(data["hub_servers"]).each(
               function(i, x){

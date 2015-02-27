@@ -32,6 +32,7 @@ body,html {
   padding: 0;
   margin: 0;
   height: 100%;
+  background: black;
 }
 
 .clearfix:before,.clearfix:after {
@@ -414,7 +415,7 @@ margin: auto;
 }
 
 .logo {
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 /***************************************************
@@ -496,7 +497,7 @@ margin: auto;
 }
 
 .overlay {
-  background:rgba(0, 0, 0, 0.45) url(../images/pattern/pattern-grey-squares-nq8.png) repeat;
+  background:rgba(0, 0, 0, 0.55) url(../images/pattern/pattern-grey-squares-nq8.png) repeat;
   position: absolute;
   width: 100%;
   top: 80px;
@@ -1018,4 +1019,8 @@ top: 1px;
 
 .grey {
   color: #666;
+}
+
+.round-icon {
+  border-radius: 8px;
 }

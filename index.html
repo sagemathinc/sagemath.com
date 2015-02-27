@@ -99,20 +99,25 @@
       <div class="overlay">
         <div class="center fixed-content">
           <div class="center-fix">
-            <img src="images/smc-icon.png" width="100px" height="100px">
+            <img class="round-icon" src="images/smc-icon.png" width="128px" height="128px">
             <h1 class="underline animated fadeInDown ftShadow">{{ smc }}</h1>
             <h4 class="animated fadeInUp delay-05s" 
                 style="margin-bottom: 50px;">{{ slogan }}</h4>
-            <a class="button animated fadeInUp delay-1s" 
+            <a class="button animated fadeInUp delay-1-5s"
                href="#features" style="margin-right: 20px;"><span>
               <i class="cogelegance-icons-"></i></span>Features</a>
-            <a class="button border animated fadeInUp delay-1s"
+
+            <a class="button large animated fadeInUp delay-2s"
+                           href="https://cloud.sagemath.com"
+                           {# style="margin-top:20px;"#}
+                >Join for Free</a>
+
+            <a class="button border animated fadeInUp delay-1-5s"
+               style="margin-left: 20px;"
                href="#contact">Get in Touch</a>
-          </div>
-          <div class="center-fix">
-            <a class="button large animated fadeInUp delay-1-5s"
-               href="https://cloud.sagemath.com"
-               style="margin-top:20px;">Join for Free</a>
+{#          </div>#}
+{#          <div class="center-fix">#}
+
           </div>
         </div>
       </div>
@@ -237,7 +242,7 @@
   <div class="row-back">
     <div class="w-container wrap-normal">
       <div class="center">
-        <h2>What {{ smc }} Does For You</h2>
+        <h2 class="underline">What SMC Does For You</h2>
         <p>This are the main task {{ smc }} does for you to keep you focused on your work.</p>
       </div>
 
@@ -257,36 +262,37 @@
 
 {#      <div class="spacing"></div>#}
 
-      <div class="w-col w-col-4">
+      <div class="w-col w-col-4 wp5">
         <div class="icon-box">
           <i class="smc-arrows-cw-outline"></i>
-          <h3 class="underline">Backup</h3>
+          <h3>Backup</h3>
           <p>While you are working,
             a continuous stream of consistent snapshots is copied on our servers.
             Never lose your work again and be able to restore any file from past backups!
           </p>
         </div>
-        
       </div>
 
-      <div class="w-col w-col-4">
+      <div class="w-col w-col-4 wp5 delay-05s">
         <div class="icon-box">
           <i class="smc-users"></i>
-          <h3 class="underline">Collaboration</h3>
+          <h3>Collaboration</h3>
           <p>
-            Add your friends and colleagues to your project
-            to edit the same documents in real-time.
+            Work together with your friends and colleagues.<br>
+            Edit the same documents in real-time.<br>
+            Conveniently manage classroom courses.
           </p>
         </div>
       </div>
       
-      <div class="w-col w-col-4">
+      <div class="w-col w-col-4 wp5 delay-1s">
         <div class="icon-box">
           <i class="smc-lightbulb"></i>
-          <h3 class="underline">Publishing</h3>
+          <h3>Publishing</h3>
           <p>
-            Spread your ideas with the world by sharing computational documents,
-            files, graphics, and PDFs.
+            Spread your ideas with the world by sharing computational worksheets,
+            files, graphics, and PDFs.<br>
+            Author documents using LaTeX, Markdown or HTML.
           </p>
         </div>
       </div>
@@ -366,11 +372,17 @@
     <div class="center">
       <h1 class="underline dark">Our Products</h1>
       <p>
-        Check our prices for our products.
+        Check our what we offer you.
       </p>
     </div>
   </div>
 </div>
+
+<script>
+  function contact_product() {
+    $("input[name='subject'][value='product']").prop("checked", true)
+  }
+</script>
 
 <div class="row-back" id="products">
   <div class="w-container wrapper">
@@ -418,7 +430,9 @@
             </ul>
           </div>
           <div class="pricing-footer">
-            <a class="button border" href="#contact">Contact Us</a></div>
+            <a class="button border"
+               href="#contact"
+               onclick="contact_product()">Contact Us</a></div>
         </div>
       </div>
 
@@ -439,7 +453,9 @@
             </ul>
           </div>
           <div class="pricing-footer">
-            <a class="button border" href="#contact">Contact Us</a>
+            <a class="button border"
+               href="#contact"
+               onclick="contact_product()">Contact Us</a>
           </div>
         </div>
       </div>
@@ -462,7 +478,9 @@
             </ul>
           </div>
           <div class="pricing-footer">
-            <a class="button border" href="#contact">Contact Us</a>
+            <a class="button border"
+               href="#contact"
+               onclick="contact_product()">Contact Us</a>
           </div>
         </div>
       </div>
@@ -504,7 +522,7 @@
                 <p class="team-designation">Lead Hacker</p>
                 <p class="team-des">
                   Skates in elliptic curves,
-                  bends cutting-edge technology to our needs
+                  bends cutting-edge technology to our all needs
                   and never sleeps.
                 </p>
               </span>
@@ -593,8 +611,12 @@
   <div class="opcaity">
     <div class="w-container wrap">
       <div class="w-col w-col-4">
-        <div class="center">
-          <h3 class="info-x">Want to get involved?</h3>
+        <div class="center wrap">
+          <h3 class="info-x">
+            <a href="https://github.com/sagemath/cloud">
+              Want to <br>get involved<br>with SMC?
+            </a>
+          </h3>
         </div>
       </div>
       <div class="w-col w-col-4">
@@ -608,8 +630,8 @@
         </div>
       </div>
       <div class="w-col w-col-4">
-        <div class="center">
-          Join our mailing list<br/>
+        <div class="center wrap">
+          <h5>Join our mailing list</h5>
           <h3 class="info-x">
           <a href="https://groups.google.com/forum/#!forum/sage-cloud">sage-cloud</a>
           </h3>
