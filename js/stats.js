@@ -16,7 +16,7 @@ var smc_stats = {
   },
   run: function () {
     // $.getJSON("http://localhost:8080/stats")
-    $.getJSON("http://www.sagemath.com/stats")
+    $.getJSON("/stats")
         .done(function (data) {
           console.log("smc stats: success", data);
           var nbusers = 0;
