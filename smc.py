@@ -74,23 +74,24 @@ class ContactForm(webapp2.RequestHandler):
         ip = self.request.remote_addr
 
         # check captcha
-        captcha_response = self.request.get("g-recaptcha-response")
-        captcha_url = "https://www.google.com/recaptcha/api/siteverify"
-        request_data = urllib.urlencode({
-            'secret': captcha_secret,
-            'remoteip': ip,
-            'response': captcha_response
-        })
-        captcha_req = urllib2.Request(url=captcha_url, data=request_data)
-        try:
-            captcha_resp = urllib2.urlopen(captcha_req, timeout=10).read()
-            logging.debug("captcha response: %s" % captcha_resp)
+        if False:
+            captcha_response = self.request.get("g-recaptcha-response")
+            captcha_url = "https://www.google.com/recaptcha/api/siteverify"
+            request_data = urllib.urlencode({
+                'secret': captcha_secret,
+                'remoteip': ip,
+                'response': captcha_response
+            })
+            captcha_req = urllib2.Request(url=captcha_url, data=request_data)
+            try:
+                captcha_resp = urllib2.urlopen(captcha_req, timeout=10).read()
+                logging.debug("captcha response: %s" % captcha_resp)
 
-            if not json.loads(captcha_resp)["success"]:
-                self.error(500)
-        except:
-            # error with captcha service, continue as nothing would have happened
-            pass
+                if not json.loads(captcha_resp)["success"]:
+                    self.error(500)
+            except:
+                # error with captcha service, continue as nothing would have happened
+                pass
         # END captcha check
 
         fields = {}
@@ -109,7 +110,7 @@ class ContactForm(webapp2.RequestHandler):
         msg.send()
 
         self.response.headers['Content-Type'] = 'application/json'
-        self.response.write("{ 'success': 'true' }")
+        self.response.write(json.dumps({ 'success': True }))
 
 
 class Stats(webapp2.RequestHandler):
