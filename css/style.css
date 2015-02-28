@@ -582,18 +582,16 @@ img.logo {
 .cbp-qtrotator blockquote {
   margin: 0;
   padding: 0;
-}
-
-.cbp-qtrotator blockquote p {
   font-size: 2em;
-  color: #888;
+  color: #AAA;
   font-weight: 300;
   margin: .4em 0 1em;
 }
 
 .cbp-qtrotator blockquote footer {
-  font-size: 1.2em;
+  font-size: .6em;
   color: #FFD147;
+  text-align: right;
 }
 
 .cbp-qtrotator blockquote footer:before {
