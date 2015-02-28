@@ -6,6 +6,16 @@ threadsafe: true
 
 default_expiration: "10m" # default is 10m, set this to 1d if happy
 
+automatic_scaling:
+  # You will not be charged for idle instances over the specified maximum.
+  # minimum is set to automatic by default
+  max_idle_instances: 2
+  #  If the minimum pending latency is high App Engine will allow requests
+  # to wait rather than start new Instances to process them.
+  # This can reduce the number of instance hours your application uses,
+  # but can result in more user-visible latency.
+  min_pending_latency: 200ms
+
 # static handlers can have their individual expiration times (if necessary)
 handlers:
 - url: /static
