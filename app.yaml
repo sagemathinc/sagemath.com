@@ -4,12 +4,12 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
-default_expiration: "10m" # default is 10m, set this to 1d if happy
+default_expiration: "30m" # default is 10m, set this to 1d if happy
 
 automatic_scaling:
   # You will not be charged for idle instances over the specified maximum.
   # minimum is set to automatic by default
-  min_idle_instances: 1
+  #min_idle_instances: 1
   max_idle_instances: 2
   # If the minimum pending latency is high App Engine will allow requests
   # to wait rather than start new Instances to process them.
