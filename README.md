@@ -12,11 +12,20 @@ Right now, I think it does not. Hence, update AppEngine via:
 
 ## to deploy to app engine
 
-(it should work via git push origin master, but no idea why it isn't. until then:)
+At some point, it should work via `git push origin master`, but this requires to hook up those services and it's not sure if it works well with appengine right now. Anyhow, the command below is the "official" deploy method. It should list a few lines including a check that the deployed version has been deployed and everything works (takes about a minute).
 
-      appcfg.py --oauth2 update .
+    $ appcfg.py --oauth2 update .
 
+## to load the AppEngine webserver locally, for development
+
+This also activates displaying the email bodies when sending the form.
+(There are many other options for `dev_appserver` available)
+
+    $ dev_appserver.py --show_mail_body=yes .
 
 ## to compress the png files to -nq
 
-    pngnq -v -f -s 1 pattern-grey-squares.png
+This is not really necessary, as long as pagespeed is activated it compresses the images.
+But shouldn't hurt to do so ...
+
+    $ pngnq -v -f -s 1 pattern-grey-squares.png
