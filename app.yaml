@@ -56,7 +56,7 @@ pagespeed:
   - CombineJs
   - JsOptimize
   - DeferJs
-  - MinifyCss
   - CombineCss
   disabled_rewriters:
+  - MinifyCss
   - FlushSubresources # see http://stackoverflow.com/questions/22764588/pagespeed-on-app-engine-lots-of-issues-am-i-missing-something-php-appeng
