@@ -1,865 +1,865 @@
 <!DOCTYPE html>
 <html>
-<head>{# START HEAD #}
-  <meta charset="utf-8">
-  {# START TITLE #}
-  <title>{{ smc }} - {{ slogan }}</title>
-  {# END TITLE #}  {# START META, DESCRIPTION, KEYWORDS, AUTHOR #}
-  <meta name="description" content="A Template by Carino Technologies"/>
-  <meta name="keywords" content="Sage, SageMath, Mathematics, Math, Computational, Interactive, Online"/>
-  <meta name="author" content="SageMath, Inc. Authors"/>
-  {# END META, DESCRIPTION, KEYWORDS, AUTHOR #}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {# START THEME STYLE #}
-  <link rel="stylesheet" type="text/css" href="css/normal.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/headhesive.css">
-  <link href="css/animate.css" rel="stylesheet">
-    {# END THEME STYLE #}   {# START FONTELLO ICONS STYLESHEET #}
-  <link rel="stylesheet" type="text/css" href="css/fontello.css">
-  <link rel="stylesheet" type="text/css" href="css/fontello-ie7.css">
-  {# END FONTELLO ICONS STYLESHEET #}  {# START SMC FONTELLO SELECTION (to replace the general one) #}
-  <link rel="stylesheet" href="font/smc-fontello/css/smc-icons.css">
-  <link rel="stylesheet" href="font/smc-fontello/css/animation.css">
-  <!--[if IE 7]><link rel="stylesheet" href="font/smc-fontello/css/smc-icons-ie7.css"><![endif]-->
-  <link rel="stylesheet" type="text/css" href="css/ocr-a.css">
-  {# START MAGNIFIC POPUP STYLESHEET #}
-  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-  {# END MAGNIFIC POPUP STYLESHEET #}  {# LOAD GOOGLE FONT OPEN SANS #}
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700" rel="stylesheet"
-        type="text/css">
-  {# END GOOGLE FONT OPEN SANS #}
-    {# START AJAX WEBFONTS #}
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
-  {# END AJAX WEBFONTS #}  {# START MOBILE DETECT #}
-  <script>if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';</script>
-  {# END MOBILE DETECT #}  {# START FAVICON #}
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-  {# EDN FAVICON #}
-   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
-  {# reCaptcha, should be before ending HEAD #}
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+    <head>{# START HEAD #}
+        <meta charset="utf-8">
+        {# START TITLE #}
+        <title>{{ smc }} - {{ slogan }}</title>
+        {# END TITLE #}  {# START META, DESCRIPTION, KEYWORDS, AUTHOR #}
+        <meta name="description" content="A Template by Carino Technologies"/>
+        <meta name="keywords" content="Sage, SageMath, Mathematics, Math, Computational, Interactive, Online"/>
+        <meta name="author" content="SageMath, Inc. Authors"/>
+        {# END META, DESCRIPTION, KEYWORDS, AUTHOR #}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {# START THEME STYLE #}
+        <link rel="stylesheet" type="text/css" href="css/normal.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/headhesive.css">
+        <link href="css/animate.css" rel="stylesheet">
+        {# END THEME STYLE #}   {# START FONTELLO ICONS STYLESHEET #}
+        <link rel="stylesheet" type="text/css" href="css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="css/fontello-ie7.css">
+        {# END FONTELLO ICONS STYLESHEET #}  {# START SMC FONTELLO SELECTION (to replace the general one) #}
+        <link rel="stylesheet" href="font/smc-fontello/css/smc-icons.css">
+        <link rel="stylesheet" href="font/smc-fontello/css/animation.css">
+        <!--[if IE 7]><link rel="stylesheet" href="font/smc-fontello/css/smc-icons-ie7.css"><![endif]-->
+        <link rel="stylesheet" type="text/css" href="css/ocr-a.css">
+        {# START MAGNIFIC POPUP STYLESHEET #}
+        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+        {# END MAGNIFIC POPUP STYLESHEET #}  {# LOAD GOOGLE FONT OPEN SANS #}
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700" rel="stylesheet"
+              type="text/css">
+        {# END GOOGLE FONT OPEN SANS #}
+        {# START AJAX WEBFONTS #}
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+        {# END AJAX WEBFONTS #}  {# START MOBILE DETECT #}
+        <script>if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';</script>
+        {# END MOBILE DETECT #}  {# START FAVICON #}
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+        {# EDN FAVICON #}
+        <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+        {# reCaptcha, should be before ending HEAD #}
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
-</head>
-{# END HEAD #}
-<body> {# START BODY TAG #}{# START HEADER #}
-{# SCROLL DIV #boxscroll by nicescroll #}
-<div tabindex="1000" style="overflow-y: auto;" id="boxscroll">
-    {# CHANGEABLE UNIQUE SECTOIN ID #}
-  <section id="home">    {# START FIXED HEADER DIV #}
-    <div class="banner">
-      {# START CONTAINER #}
-      <div class="w-container container">
-        <div class="w-row">          {# START COLUMN 3 #}
-          <div class="w-col w-col-4 logo">
-            {# START LOGO #}
-            <a target="_blank" href="https://cloud.sagemath.com"><img class="logo" src="images/smc-logo.png" alt="{{ smc }}"></a>
-            {# END LOGO #}
-          </div>
-          {# END COLUMN 3 #}
-          {# START COLUMN 9 #}
-          <div class="w-col w-col-8">
-            {# START NAVIGATION #}
-            <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400"
-                 data-contain="1">
-              <div class="w-container nav">
-                {# START CONTAINER #}
-                {# START NAVIGATION LINKS #}
-                <nav class="w-nav-menu nav-menu" role="navigation">
-                  <a class="w-nav-link menu-li" href="#home">Home</a>
-                  <a class="w-nav-link menu-li" href="#features">Features</a>
-                  <a class="w-nav-link menu-li" href="#status">Status</a>
-                  <!--<a class="w-nav-link menu-li" href="#products">Products</a>-->
-                  {# <a class="w-nav-link menu-li" href="index.html#portfolio">PORTFOLIO</a>  #}
-                  <a class="w-nav-link menu-li" href="#team">Team</a>
-                  {#                 <a class="w-nav-link menu-li" href="shortcodes.html">SHORTCODES</a>  #}
-                  <a class="w-nav-link menu-li" href="#contact">Contact</a>
-                </nav>
-                {# END NAVIGATION LINKS #}
-                {# START MOBILE NAVIGATION BUTTON * DO NOT DELETE THIS DIV* #}
-                <div class="w-nav-button">
-                  <div class="w-icon-nav-menu"></div>
+    </head>
+    {# END HEAD #}
+    <body> {# START BODY TAG #}{# START HEADER #}
+        {# SCROLL DIV #boxscroll by nicescroll #}
+        <div tabindex="1000" style="overflow-y: auto;" id="boxscroll">
+            {# CHANGEABLE UNIQUE SECTOIN ID #}
+            <section id="home">    {# START FIXED HEADER DIV #}
+                <div class="banner">
+                    {# START CONTAINER #}
+                    <div class="w-container container">
+                        <div class="w-row">          {# START COLUMN 3 #}
+                            <div class="w-col w-col-4 logo">
+                                {# START LOGO #}
+                                <a target="_blank" href="https://cloud.sagemath.com"><img class="logo" src="images/smc-logo.png" alt="{{ smc }}"></a>
+                                {# END LOGO #}
+                            </div>
+                            {# END COLUMN 3 #}
+                            {# START COLUMN 9 #}
+                            <div class="w-col w-col-8">
+                                {# START NAVIGATION #}
+                                <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400"
+                                     data-contain="1">
+                                    <div class="w-container nav">
+                                        {# START CONTAINER #}
+                                        {# START NAVIGATION LINKS #}
+                                        <nav class="w-nav-menu nav-menu" role="navigation">
+                                            <a class="w-nav-link menu-li" href="#home">Home</a>
+                                            <a class="w-nav-link menu-li" href="#features">Features</a>
+                                            <a class="w-nav-link menu-li" href="#status">Status</a>
+                                            <!--<a class="w-nav-link menu-li" href="#products">Products</a>-->
+                                            {# <a class="w-nav-link menu-li" href="index.html#portfolio">PORTFOLIO</a>  #}
+                                            <a class="w-nav-link menu-li" href="#team">Team</a>
+                                            {#                 <a class="w-nav-link menu-li" href="shortcodes.html">SHORTCODES</a>  #}
+                                            <a class="w-nav-link menu-li" href="#contact">Contact</a>
+                                        </nav>
+                                        {# END NAVIGATION LINKS #}
+                                        {# START MOBILE NAVIGATION BUTTON * DO NOT DELETE THIS DIV* #}
+                                        <div class="w-nav-button">
+                                            <div class="w-icon-nav-menu"></div>
+                                        </div>
+                                        {# END MOBILE NAVIGATION BUTTON #}
+                                    </div>
+                                    {# END CONTAINER #}
+                                </div>
+                                {# END NAVIGATION #}
+                            </div>
+                            {# END COLUMN 9 #}
+                        </div>
+                    </div>
+                    {# END CONTAINER #}
                 </div>
-                {# END MOBILE NAVIGATION BUTTON #}
-              </div>
-              {# END CONTAINER #}
+                {# END FIXED HEADER DIV #}
+            </section>
+            {# END SECTION #}
+            {# END HEADER #}
+            <div class="header-parallax" data-stellar-background-ratio="0.5">
+                <div class="slidersection">
+                    <div class="overlay">
+                        <div class="center fixed-content">
+                            <div class="center-fix">
+                                <img class="round-icon" src="images/smc-icon.png" width="128" height="128">
+                                <a target="_blank" href="https://cloud.sagemath.com"><h1 class="underline animated fadeInDown ftShadow">{{ smc }}</h1></a>
+                                <h4 class="animated fadeInUp delay-05s"
+                                    style="margin-bottom: 50px;">{{ slogan }}</h4>
+                                <a target="_blank" class="button large animated fadeInUp delay-1s"
+                                   href="https://cloud.sagemath.com"
+                                   {# style="margin-top:20px;"#}
+                                   >Use SageMathCloud Now
+                                </a>
+
+                                <a class="button large animated fadeInUp delay-1-5s"
+                                   href="#features" ><span>
+                                    <i class="cogelegance-icons-"></i></span>Features
+                                </a>
+
+                                <a class="button large animated fadeInUp delay-1-5s"
+                                   href="#contact">Contact Us</a>
+                                {#          </div>#}
+                            {#          <div class="center-fix">#}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {# END NAVIGATION #}
-          </div>
-          {# END COLUMN 9 #}
-        </div>
-      </div>
-      {# END CONTAINER #}
-    </div>
-    {# END FIXED HEADER DIV #}
-  </section>
-  {# END SECTION #}
-  {# END HEADER #}
-  <div class="header-parallax" data-stellar-background-ratio="0.5">
-    <div class="slidersection">
-      <div class="overlay">
-        <div class="center fixed-content">
-          <div class="center-fix">
-            <img class="round-icon" src="images/smc-icon.png" width="128" height="128">
-            <a target="_blank" href="https://cloud.sagemath.com"><h1 class="underline animated fadeInDown ftShadow">{{ smc }}</h1></a>
-            <h4 class="animated fadeInUp delay-05s"
-                style="margin-bottom: 50px;">{{ slogan }}</h4>
-            <a target="_blank" class="button large animated fadeInUp delay-1s"
-                           href="https://cloud.sagemath.com"
-                           {# style="margin-top:20px;"#}
-                >Use SageMathCloud Now
-            </a>
+            {#///////////////////////////////////////////////////////
+            // End slider section
+            //////////////////////////////////////////////////////////#}
 
-            <a class="button large animated fadeInUp delay-1-5s"
-               href="#features" ><span>
-              <i class="cogelegance-icons-"></i></span>Features
-            </a>
+            <div id="features">
+                <div class="row-back">
+                    <div class="w-container wrap">
+                        <div class="center">
+                            <h2 class="underline">Core Features</h2>
+                        </div>
 
-            <a class="button large animated fadeInUp delay-1-5s"
-               href="#contact">Contact Us</a>
-{#          </div>#}
-{#          <div class="center-fix">#}
+                        <div class="w-col w-col-4 wp1">
+                            <div class="icon-box">
+                                <i class="smc-pi-outline"></i>
+                                <h4 class="icons-heading">Powerful Tools</h4>
+                                <p>
+                                    Work with <a target="_blank" href="http://www.sagemath.org/">SageMath</a>,
+                                    <a target="_blank" href="http://www.r-project.org">R</a>,
+                                    <a target="_blank" href="http://ctan.org">LaTeX</a>,
+                                    <a target="_blank" href="https://www.gnu.org/software/octave/">Octave</a>,
+                                    the entire scientific Python stack, and much more.
+                                </p>
+                            </div>
+                        </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    {#///////////////////////////////////////////////////////
-  // End slider section
-  //////////////////////////////////////////////////////////#}
+                        <div class="w-col w-col-4 wp1 delay-05s">
+                            <div class="icon-box">
+                                <i class="paramselegance-icons-"></i>
+                                <h4 class="icons-heading">Fully Managed</h4>
+                                <p>
+                                    {{ company }} fully manages the software, installs upgrades, rolls out bugfixes, backs up your files, etc.
+                                    No need to worry about installing software, and when you run into trouble email <a href="mailto:help@sagemath.com" target="_blank">help@sagemath.com</a> and
+                                    we will pop in and help!
+                                </p>
+                            </div>
+                        </div>
 
-  <div id="features">
-    <div class="row-back">
-      <div class="w-container wrap">
-        <div class="center">
-          <h2 class="underline">Core Features</h2>
-        </div>
+                        <div class="w-col w-col-4 wp1 delay-1s">
+                            <div class="icon-box">
+                                <i class="smc-cloud"></i>
+                                <h4 class="icons-heading">100% Web-Browser</h4>
+                                <p>
+                                    A modern web-browser is all you need.<br>
+                                    No local installation, no plugins, nothing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="w-col w-col-4 wp1">
-          <div class="icon-box">
-            <i class="smc-pi-outline"></i>
-            <h4 class="icons-heading">Powerful Tools</h4>
-            <p>
-            Work with <a target="_blank" href="http://www.sagemath.org/">SageMath</a>,
-            <a target="_blank" href="http://www.r-project.org">R</a>,
-            <a target="_blank" href="http://ctan.org">LaTeX</a>,
-            <a target="_blank" href="https://www.gnu.org/software/octave/">Octave</a>,
-            the entire scientific Python stack, and much more.
-          </p>
-          </div>
-        </div>
+            {#///////////////////////////////////////////////////////
+            // Service section
+            //////////////////////////////////////////////////////////#}
 
-        <div class="w-col w-col-4 wp1 delay-05s">
-          <div class="icon-box">
-            <i class="paramselegance-icons-"></i>
-            <h4 class="icons-heading">Fully Managed</h4>
-            <p>
-              {{ company }} fully manages the software, installs upgrades, rolls out bugfixes, backs up your files, etc.
-              No need to worry about installing software, and when you run into trouble email <a href="mailto:help@sagemath.com" target="_blank">help@sagemath.com</a> and
-                we will pop in and help!
-            </p>
-          </div>
-        </div>
+            {#<div id="service">#}
+            {#  <div class="row-gree">#}
+            {#    <div class="w-container wrap">#}
+            {#      <div class="center">#}
+            {#        <h1 class="underline">OUR SERVICE</h1>#}
+            {#      </div>#}
+            {#    </div>#}
+            {#  </div>#}
 
-        <div class="w-col w-col-4 wp1 delay-1s">
-          <div class="icon-box">
-            <i class="smc-cloud"></i>
-            <h4 class="icons-heading">100% Web-Browser</h4>
-            <p>
-              A modern web-browser is all you need.<br>
-              No local installation, no plugins, nothing.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            {#  <div class="row-bluu">#}
+            {#    <div class="w-container wrap-thin">#}
+            {#      <div class="center">#}
+            {#        <h1 class="underline" id="status">Status</h1>#}
+            {#        <h4>Current Status of {{ smc }}</h4>#}
+            {#        <p>Numbers fetched live.</p>#}
+            {#      </div>#}
+            {#    </div>#}
+            {#  </div>#}
+            {#</div>#}
 
-{#///////////////////////////////////////////////////////
-// Service section
-//////////////////////////////////////////////////////////#}
+            <div class="parallax-lab" data-stellar-background-ratio="0.5">
+                <div class="opcaity">
+                    <div class="w-container wrap-normal">
+                        <div class="center">
+                            <h1 class="underline" id="status">Status</h1>
+                            <h4>Current Status of {{ smc }}</h4>
+                            <p>Live numbers from our data-centers fetched in real-time.</p>
+                        </div>
 
-{#<div id="service">#}
-{#  <div class="row-gree">#}
-{#    <div class="w-container wrap">#}
-{#      <div class="center">#}
-{#        <h1 class="underline">OUR SERVICE</h1>#}
-{#      </div>#}
-{#    </div>#}
-{#  </div>#}
+                        <div class="w-col w-col-4 wp2">
+                            <div class="icon-box">
+                                <i class="smc-users"></i>
+                                <h2><strong><span class="red" id="status-users">0</span></strong></h2>
+                                <h4>Concurrent Users</h4>
+                                <p>Currently connected users working on SMC</p>
+                            </div>
+                        </div>
 
-{#  <div class="row-bluu">#}
-{#    <div class="w-container wrap-thin">#}
-{#      <div class="center">#}
-{#        <h1 class="underline" id="status">Status</h1>#}
-{#        <h4>Current Status of {{ smc }}</h4>#}
-{#        <p>Numbers fetched live.</p>#}
-{#      </div>#}
-{#    </div>#}
-{#  </div>#}
-{#</div>#}
+                        <div class="w-col w-col-4 wp2 delay-05s">
+                            <div class="icon-box">
+                                <i class="smc-beaker"></i>
+                                <h2><strong><span class="red" id="status-projects">0</span></strong></h2>
+                                <h4>Very Active Projects</h4>
+                                <p>Projects with files being modified right now.</p>
+                            </div>
+                        </div>
 
-<div class="parallax-lab" data-stellar-background-ratio="0.5">
-  <div class="opcaity">
-    <div class="w-container wrap-normal">
-      <div class="center">
-        <h1 class="underline" id="status">Status</h1>
-        <h4>Current Status of {{ smc }}</h4>
-        <p>Live numbers from our data-centers fetched in real-time.</p>
-      </div>
-
-      <div class="w-col w-col-4 wp2">
-        <div class="icon-box">
-          <i class="smc-users"></i>
-          <h2><strong><span class="red" id="status-users">0</span></strong></h2>
-          <h4>Concurrent Users</h4>
-          <p>Currently connected users working on SMC</p>
-        </div>
-      </div>
-
-      <div class="w-col w-col-4 wp2 delay-05s">
-        <div class="icon-box">
-          <i class="smc-beaker"></i>
-          <h2><strong><span class="red" id="status-projects">0</span></strong></h2>
-          <h4>Very Active Projects</h4>
-          <p>Projects with files being modified right now.</p>
-        </div>
-      </div>
-
-      <div class="w-col w-col-4 wp2 delay-1s">
-        <div class="icon-box">
-          <i class="smc-tasks"></i>
-          <h2><strong><span class="red" id="status-24h">0</span></strong></h2>
-          <h4>Daily Projects</h4>
-          <p>Number of projects modified in the last 24h</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                        <div class="w-col w-col-4 wp2 delay-1s">
+                            <div class="icon-box">
+                                <i class="smc-tasks"></i>
+                                <h2><strong><span class="red" id="status-24h">0</span></strong></h2>
+                                <h4>Daily Projects</h4>
+                                <p>Number of projects modified in the last 24h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-  <div class="row-back">
-    <div class="w-container wrap-normal">
-      <div class="center">
-        <h2 class="underline">What SMC Does For You</h2>
-        <p>These are the main activities that {{ smc }} does for you, so you can focus on your work.</p>
-      </div>
+            <div class="row-back">
+                <div class="w-container wrap-normal">
+                    <div class="center">
+                        <h2 class="underline">What SMC Does For You</h2>
+                        <p>These are the main activities that {{ smc }} does for you, so you can focus on your work.</p>
+                    </div>
 
-{#      <div class="w-col w-col-6">#}
-{#        <div class="right wp8">#}
-{#          <p>TEXT</p>#}
-{#          <a class="button wp8 delay-05s">Read More</a>#}
-{#        </div>#}
-{#      </div>#}
+                    {#      <div class="w-col w-col-6">#}
+                    {#        <div class="right wp8">#}
+                    {#          <p>TEXT</p>#}
+                    {#          <a class="button wp8 delay-05s">Read More</a>#}
+                    {#        </div>#}
+                    {#      </div>#}
 
-{#      <div class="w-col w-col-6">#}
-{#        <div class="left wp7">#}
-{#          <p>TEXT 2</p>#}
-{#          <a class="button border wp7 delay-05s">Buy Now!</a>#}
-{#        </div>        #}
-{#      </div>#}
+                    {#      <div class="w-col w-col-6">#}
+                    {#        <div class="left wp7">#}
+                    {#          <p>TEXT 2</p>#}
+                    {#          <a class="button border wp7 delay-05s">Buy Now!</a>#}
+                    {#        </div>        #}
+                    {#      </div>#}
 
-{#      <div class="spacing"></div>#}
+                    {#      <div class="spacing"></div>#}
 
-      <div class="w-col w-col-4 wp5 ">
-        <div class="icon-box">
-          <i class="smc-users"></i>
-          <h3>Collaboration</h3>
-          <p>
-            Work together with your friends and colleagues.<br>
-            Watch their cursors in real-time.<br>
-            Conveniently manage classroom courses.
-          </p>
-        </div>
-      </div>
+                    <div class="w-col w-col-4 wp5 ">
+                        <div class="icon-box">
+                            <i class="smc-users"></i>
+                            <h3>Collaboration</h3>
+                            <p>
+                                Work together with your friends and colleagues.<br>
+                                Watch their cursors in real-time.<br>
+                                Conveniently manage classroom courses.
+                            </p>
+                        </div>
+                    </div>
 
-      <div class="w-col w-col-4 wp5 delay-05s">
-        <div class="icon-box">
-          <i class="smc-lightbulb"></i>
-          <h3>Publishing</h3>
-          <p>
-            Spread your ideas by sharing computational worksheets,
-            files, graphics, and PDFs with the world.<br>
-            Author documents using LaTeX, Markdown or HTML.
-          </p>
-        </div>
-      </div>
+                    <div class="w-col w-col-4 wp5 delay-05s">
+                        <div class="icon-box">
+                            <i class="smc-lightbulb"></i>
+                            <h3>Publishing</h3>
+                            <p>
+                                Spread your ideas by sharing computational worksheets,
+                                files, graphics, and PDFs with the world.<br>
+                                Author documents using LaTeX, Markdown or HTML.
+                            </p>
+                        </div>
+                    </div>
 
-      <div class="w-col w-col-4 wp5  delay-1s">
-        <div class="icon-box">
-          <i class="smc-arrows-cw-outline"></i>
-          <h3>Backups</h3>
-          <p>Never lose your work again!
-            While you are working, SMC creates
-            frequent backups of all your files.
-            Restore any file from its state in the past.
-          </p>
-        </div>
-      </div>
+                    <div class="w-col w-col-4 wp5  delay-1s">
+                        <div class="icon-box">
+                            <i class="smc-arrows-cw-outline"></i>
+                            <h3>Backups</h3>
+                            <p>Never lose your work again!
+                                While you are working, SMC creates
+                                frequent backups of all your files.
+                                Restore any file from its state in the past.
+                            </p>
+                        </div>
+                    </div>
 
-    </div>
-  </div>
+                </div>
+            </div>
 
 
-{#///////////////////////////////////////////////////////        // End Service section         //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////        // End Service section         //////////////////////////////////////////////////////////#}
 
-{#///////////////////////////////////////////////////////        // Process section         //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////        // Process section         //////////////////////////////////////////////////////////#}
 
 
 
 
-<div class="parallax-laptop" data-stellar-background-ratio="0.5">
-  <div class="opcaity">
-    <div class="w-container wrap-normal">
-      <div class="center">
-        <h1 class="underline" id="testimonials">Testimonials</h1>
-        <p>
-          See what <a href="https://github.com/sagemath/cloud/wiki/Teaching" target="_blank">some of our users</a> say about us
-        </p>
-      </div>
+            <div class="parallax-laptop" data-stellar-background-ratio="0.5">
+                <div class="opcaity">
+                    <div class="w-container wrap-normal">
+                        <div class="center">
+                            <h1 class="underline" id="testimonials">Testimonials</h1>
+                            <p>
+                                See what <a href="https://github.com/sagemath/cloud/wiki/Teaching" target="_blank">some of our users</a> say about us
+                            </p>
+                        </div>
 
-      <div class="main">
-        <div id="cbp-qtrotator" class="cbp-qtrotator">
-          <div class="cbp-qtcontent">
-{#            <img src="images/testimonials/image1.png" alt="img01"/>#}
-            <blockquote>
-              <i class="smc-quote-left"></i>
-              SMC (sage math cloud) is a great way to get going quickly and efficiently...no setup problems. I used it almost exclusively last year, and my students did use it exclusively. SMC is a full-blown unix env. with dozens of tools if you or your students are interested in other areas of technical computing.
-              <i class="smc-quote-right"></i>
-              <footer>Singlet on <a href="https://groups.google.com/d/msg/sage-edu/kTn6n2I88hw/hPg4SOSj0U4J">sage-edu</a></footer>
-            </blockquote>
-          </div>
+                        <div class="main">
+                            <div id="cbp-qtrotator" class="cbp-qtrotator">
+                                <div class="cbp-qtcontent">
+                                    {#            <img src="images/testimonials/image1.png" alt="img01"/>#}
+                                    <blockquote>
+                                        <i class="smc-quote-left"></i>
+                                        SMC (sage math cloud) is a great way to get going quickly and efficiently...no setup problems. I used it almost exclusively last year, and my students did use it exclusively. SMC is a full-blown unix env. with dozens of tools if you or your students are interested in other areas of technical computing.
+                                        <i class="smc-quote-right"></i>
+                                        <footer>Singlet on <a href="https://groups.google.com/d/msg/sage-edu/kTn6n2I88hw/hPg4SOSj0U4J">sage-edu</a></footer>
+                                    </blockquote>
+                                </div>
 
-          <div class="cbp-qtcontent">
-{#            <img src="images/testimonials/image2.png" alt="img02"/>#}
-            <blockquote>
-              <i class="smc-quote-left"></i>
-              My 150+ students are now actively using SMC. This time last year I was running around in a panicked state rebooting servers and various other things as our local Sage Mathematical Software System server kept crashing. This year it's been completely painless with all the students using SageMathCloud. Even had the opportunity to teach some markdown to some students and also heard of a group of 3 who were collaboratively writing revision notes using a shared +IPython notebook. Great tool.
-              <i class="smc-quote-right"></i>
-              <footer>Vincent Knight - Computing for Mathematics - Cardiff University</footer>
-            </blockquote>
-          </div>
+                                <div class="cbp-qtcontent">
+                                    {#            <img src="images/testimonials/image2.png" alt="img02"/>#}
+                                    <blockquote>
+                                        <i class="smc-quote-left"></i>
+                                        My 150+ students are now actively using SMC. This time last year I was running around in a panicked state rebooting servers and various other things as our local Sage Mathematical Software System server kept crashing. This year it's been completely painless with all the students using SageMathCloud. Even had the opportunity to teach some markdown to some students and also heard of a group of 3 who were collaboratively writing revision notes using a shared +IPython notebook. Great tool.
+                                        <i class="smc-quote-right"></i>
+                                        <footer>Vincent Knight - Computing for Mathematics - Cardiff University</footer>
+                                    </blockquote>
+                                </div>
 
-          <div class="cbp-qtcontent">
-{#            <img src="images/testimonials/image3.png" alt="img03"/>#}
-            <blockquote>
-              <i class="smc-quote-left"></i>
-              The LaTeX in SMC is phenomenal and I really love the ability to store all of my files together in a project. <b>It's hard to say how awesome these features are!</b> This is handy for any kind of work; from a teaching perspective, I think this will be particularly useful in sharing information and providing an unified workspace.
-              <i class="smc-quote-right"></i>
-              <footer>Jeff Denny</footer>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                                <div class="cbp-qtcontent">
+                                    {#            <img src="images/testimonials/image3.png" alt="img03"/>#}
+                                    <blockquote>
+                                        <i class="smc-quote-left"></i>
+                                        The LaTeX in SMC is phenomenal and I really love the ability to store all of my files together in a project. <b>It's hard to say how awesome these features are!</b> This is handy for any kind of work; from a teaching perspective, I think this will be particularly useful in sharing information and providing an unified workspace.
+                                        <i class="smc-quote-right"></i>
+                                        <footer>Jeff Denny</footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-{#///////////////////////////////////////////////////////
-// End Process section         //////////////////////////////////////////////////////////#}
-{#///////////////////////////////////////////////////////
- // Porfolio section         //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // End Process section         //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // Porfolio section         //////////////////////////////////////////////////////////#}
 
-{#
-  <div id="portfolio">    <div class="row-gree">       <div class="w-container wrap">
-  <div class="center">           <h1 class="underline">SEE OUR WORK</h1>         </div>
-   </div>     </div>     <div class="row-back">       <div class="w-container center">
-      <div class="row">           <div class="options">             <ul>     <li class="filter button border medium active" data-filter="all">Show All</li>     <li class="filter button border medium" data-filter="web_design">Web Design</li>     <li class="filter button border medium" data-filter="html5_css3">HTML5 CSS3</li> </ul>           </div>         </div>         </div>          <ul class="lb-album" id="Grid">     <li class="mix web_design mix_all">      <a class="image-popup-no-margins"  alt="responsive" title="Responsive Design" href="images/portfolio/thumbnail-01.jpg">         <img src="images/portfolio/thumbnail-01.jpg">         <span>           <h4 class="underline heading-description">Responsive Design</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>           </li>     <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-07.jpg">         <img src="images/portfolio/thumbnail-07.jpg">         <span>           <h4 class="underline heading-description">HTML5 & CSS3</h4>           <p class="center description">Clinet / Themeforest</p>         </span>        </a>     </li>     <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-08.jpg">         <img src="images/portfolio/thumbnail-08.jpg">         <span>           <h4 class="underline heading-description">Grid System</h4>           <p class="center description">Clinet / Themeforest</p>         </span>        </a>     </li>     <li class="mix web_design mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-02.jpg">         <img src="images/portfolio/thumbnail-02.jpg">         <span>           <h4 class="underline heading-description">IOS7 Style</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>      <li class="mix web_design mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-03.jpg">         <img src="images/portfolio/thumbnail-03.jpg">         <span>           <h4 class="underline heading-description">Design Works</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-06.jpg">         <img src="images/portfolio/thumbnail-06.jpg">         <span>           <h4 class="underline heading-description">JQuery Slider</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     <li class="mix web_design mix_all">     <a class="image-popup-no-margins" href="images/portfolio/thumbnail-04.jpg">         <img src="images/portfolio/thumbnail-04.jpg">         <span>           <h4 class="underline heading-description">Hunting Themes</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     <li class="mix web_design mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-05.jpg">         <img src="images/portfolio/thumbnail-05.jpg">         <span>           <h4 class="underline heading-description">Flat Design</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>          <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-09.jpg">         <img src="images/portfolio/thumbnail-09.jpg">         <span>           <h4 class="underline heading-description">Long Shadow</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     </ul>     </div>   </div>
+            {#
+            <div id="portfolio">    <div class="row-gree">       <div class="w-container wrap">
+                <div class="center">           <h1 class="underline">SEE OUR WORK</h1>         </div>
+                </div>     </div>     <div class="row-back">       <div class="w-container center">
+                <div class="row">           <div class="options">             <ul>     <li class="filter button border medium active" data-filter="all">Show All</li>     <li class="filter button border medium" data-filter="web_design">Web Design</li>     <li class="filter button border medium" data-filter="html5_css3">HTML5 CSS3</li> </ul>           </div>         </div>         </div>          <ul class="lb-album" id="Grid">     <li class="mix web_design mix_all">      <a class="image-popup-no-margins"  alt="responsive" title="Responsive Design" href="images/portfolio/thumbnail-01.jpg">         <img src="images/portfolio/thumbnail-01.jpg">         <span>           <h4 class="underline heading-description">Responsive Design</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>           </li>     <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-07.jpg">         <img src="images/portfolio/thumbnail-07.jpg">         <span>           <h4 class="underline heading-description">HTML5 & CSS3</h4>           <p class="center description">Clinet / Themeforest</p>         </span>        </a>     </li>     <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-08.jpg">         <img src="images/portfolio/thumbnail-08.jpg">         <span>           <h4 class="underline heading-description">Grid System</h4>           <p class="center description">Clinet / Themeforest</p>         </span>        </a>     </li>     <li class="mix web_design mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-02.jpg">         <img src="images/portfolio/thumbnail-02.jpg">         <span>           <h4 class="underline heading-description">IOS7 Style</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>      <li class="mix web_design mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-03.jpg">         <img src="images/portfolio/thumbnail-03.jpg">         <span>           <h4 class="underline heading-description">Design Works</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-06.jpg">         <img src="images/portfolio/thumbnail-06.jpg">         <span>           <h4 class="underline heading-description">JQuery Slider</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     <li class="mix web_design mix_all">     <a class="image-popup-no-margins" href="images/portfolio/thumbnail-04.jpg">         <img src="images/portfolio/thumbnail-04.jpg">         <span>           <h4 class="underline heading-description">Hunting Themes</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     <li class="mix web_design mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-05.jpg">         <img src="images/portfolio/thumbnail-05.jpg">         <span>           <h4 class="underline heading-description">Flat Design</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>          <li class="mix html5_css3 mix_all">       <a class="image-popup-no-margins" href="images/portfolio/thumbnail-09.jpg">         <img src="images/portfolio/thumbnail-09.jpg">         <span>           <h4 class="underline heading-description">Long Shadow</h4>           <p class="center description">Clinet / Themeforest</p>         </span>       </a>     </li>     </ul>     </div>   </div>
 
-{#///////////////////////////////////////////////////////
- // End Porfolio section         //////////////////////////////////////////////////////////#}
-{#///////////////////////////////////////////////////////
- // Our-plan section         //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // End Porfolio section         //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // Our-plan section         //////////////////////////////////////////////////////////#}
 
-    <!--
+            <!--
 <div class="row-yell">
-  <div class="w-container wrap-normal">
-    <div class="center">
-      <h1 class="underline dark">Our Products</h1>
-      <p>
-        Check our what we offer you.
-      </p>
-    </div>
-  </div>
+<div class="w-container wrap-normal">
+<div class="center">
+<h1 class="underline dark">Our Products</h1>
+<p>
+Check our what we offer you.
+</p>
+</div>
+</div>
 </div>-->
 
-<script>
-  function contact_product() {
-    $("input[name='subject'][value='product']").prop("checked", true)
-  }
-</script>
-<!--
+            <script>
+                function contact_product() {
+                    $("input[name='subject'][value='product']").prop("checked", true)
+                }
+            </script>
+            <!--
 <div class="row-back" id="products">
-  <div class="w-container wrapper">
-    <div class="pricing-table">
+<div class="w-container wrapper">
+<div class="pricing-table">
 
-      <div class="w-co w-col-3 wp3">
-        <div class="pricing-section pricing-main">
-          <div class="pricing-header header-main">
-            <h3>Free</h3>
-            <span class="preice">$ 0</span>
-          </div>
-          <div class="pricing-content">
-            <ul>
-              <li>Sage, Linux, R, LaTeX, etc.</li>
-              <li>Unlimited number of projects</li>
-              <li>2 GB storage space</li>
-              <li>1 shared CPU core</li>
-              <li>90 minutes project timeout</li>
-              <li>Restricted network access</li>
-            </ul>
-          </div>
+<div class="w-co w-col-3 wp3">
+<div class="pricing-section pricing-main">
+<div class="pricing-header header-main">
+<h3>Free</h3>
+<span class="preice">$ 0</span>
+</div>
+<div class="pricing-content">
+<ul>
+<li>Sage, Linux, R, LaTeX, etc.</li>
+<li>Unlimited number of projects</li>
+<li>2 GB storage space</li>
+<li>1 shared CPU core</li>
+<li>90 minutes project timeout</li>
+<li>Restricted network access</li>
+</ul>
+</div>
 
-          <div class="pricing-footer footer-main">
-            <a class="button" href="{{ smcurl }}">Join Now</a>
-          </div>
-        </div>
+<div class="pricing-footer footer-main">
+<a class="button" href="{{ smcurl }}">Join Now</a>
+</div>
+</div>
 
-      </div>
+</div>
 
-      <div class="w-co w-col-3 wp3 delay-05s">
-        <div class="pricing-section">
-          <div class="pricing-header">
-            <h3>Professional</h3>
-            <span class="preice">$ T.B.A.</span>
-          </div>
+<div class="w-co w-col-3 wp3 delay-05s">
+<div class="pricing-section">
+<div class="pricing-header">
+<h3>Professional</h3>
+<span class="preice">$ T.B.A.</span>
+</div>
 
-          <div class="pricing-content">
-            <ul>
-              <li>15 GB storage</li>
-              <li>Projects run on dedicated cluster</li>
-              <li>Resources distinct from free users</li>
-              <li>No Project Timeout</li>
-              <li>Full Network Access</li>
-              <li>Priority Support</li>
-            </ul>
-          </div>
-          <div class="pricing-footer">
-            <a class="button border"
-               href="#contact"
-               onclick="contact_product()">Contact Us</a></div>
-        </div>
-      </div>
+<div class="pricing-content">
+<ul>
+<li>15 GB storage</li>
+<li>Projects run on dedicated cluster</li>
+<li>Resources distinct from free users</li>
+<li>No Project Timeout</li>
+<li>Full Network Access</li>
+<li>Priority Support</li>
+</ul>
+</div>
+<div class="pricing-footer">
+<a class="button border"
+href="#contact"
+onclick="contact_product()">Contact Us</a></div>
+</div>
+</div>
 
-      <div class="w-co w-col-3 wp3 delay-1s">
-        <div class="pricing-section">
-          <div class="pricing-header">
-            <h3>Dedicated</h3>
-            <span class="preice">$ T.B.A.</span></div>
+<div class="w-co w-col-3 wp3 delay-1s">
+<div class="pricing-section">
+<div class="pricing-header">
+<h3>Dedicated</h3>
+<span class="preice">$ T.B.A.</span></div>
 
-          <div class="pricing-content">
-            <ul>
-              <li>Same as "Professional"</li>
-              <li>Projects run on dedicated machines</li>
-              <li>Resources not shared with others</li>
-              <li>&nbsp;</li>
-              <li>&nbsp;</li>
-              <li>&nbsp;</li>
-            </ul>
-          </div>
-          <div class="pricing-footer">
-            <a class="button border"
-               href="#contact"
-               onclick="contact_product()">Contact Us</a>
-          </div>
-        </div>
-      </div>
+<div class="pricing-content">
+<ul>
+<li>Same as "Professional"</li>
+<li>Projects run on dedicated machines</li>
+<li>Resources not shared with others</li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+<div class="pricing-footer">
+<a class="button border"
+href="#contact"
+onclick="contact_product()">Contact Us</a>
+</div>
+</div>
+</div>
 
-      <div class="w-co w-col-3 wp3 delay-1-5s">
-        <div class="pricing-section last">
-          <div class="pricing-header">
-            <h3>On-Premises</h3>
-            <span class="preice">$ T.B.A.</span>
-          </div>
+<div class="w-co w-col-3 wp3 delay-1-5s">
+<div class="pricing-section last">
+<div class="pricing-header">
+<h3>On-Premises</h3>
+<span class="preice">$ T.B.A.</span>
+</div>
 
-          <div class="pricing-content">
-            <ul>
-              <li>Dedicated SMC installation</li>
-              <li>On your own hardware (in-house)</li>
-              <li>Managed by {{ company }}</li>
-              <li>Priority Support and Upgrades</li>
-              <li>&nbsp;</li>
-              <li>&nbsp;</li>
-            </ul>
-          </div>
-          <div class="pricing-footer">
-            <a class="button border"
-               href="#contact"
-               onclick="contact_product()">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="pricing-content">
+<ul>
+<li>Dedicated SMC installation</li>
+<li>On your own hardware (in-house)</li>
+<li>Managed by {{ company }}</li>
+<li>Priority Support and Upgrades</li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+<div class="pricing-footer">
+<a class="button border"
+href="#contact"
+onclick="contact_product()">Contact Us</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 -->
 
-{#///////////////////////////////////////////////////////
-// End Our-Plan section
-//////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // End Our-Plan section
+            //////////////////////////////////////////////////////////#}
 
-{#///////////////////////////////////////////////////////
-// Team section
-//////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // Team section
+            //////////////////////////////////////////////////////////#}
 
-<div class="row-gree" id="team">
-  <div class="w-container wrap">
-    <h1 class="center underline dark">People Behind SMC</h1>
-      <div class="center">
-          William Stein, Harald Schilly, Jon Lee, Andy Huchala, and Nicholas Ruhland, Keith Clawson, ...
-      </div>
-  </div>
-</div>
+            <div class="row-gree" id="team">
+                <div class="w-container wrap">
+                    <h1 class="center underline dark">People Behind SMC</h1>
+                    <div class="center">
+                        William Stein, Harald Schilly, Jon Lee, Andy Huchala, and Nicholas Ruhland, Keith Clawson, ...
+                    </div>
+                </div>
+            </div>
 
-<div class="row-back">
-  <div class="w-container wrap-thin">
-{#    <div class="center">#}
-{#      <h2>People Behind {{ smc }}</h2>#}
-{#      <p>#}
-{#      </p>#}
-{#    </div>#}
-    <div class="center w-col w-col-3"></div>
+            <div class="row-back">
+                <div class="w-container wrap-thin">
+                    {#    <div class="center">#}
+                    {#      <h2>People Behind {{ smc }}</h2>#}
+                    {#      <p>#}
+                    {#      </p>#}
+                    {#    </div>#}
+                    <div class="center w-col w-col-3"></div>
 
-    <div class="center w-col w-col-3 wp4">
-      <div class="team-album">
-        <div class="tumbnail">
-          <a class="team-hyper" href="http://wstein.org/">
-            {# class circule for a round image #}
-            <img class="thumbnail-img" src="images/team/wstein-2.jpg" alt="wstein">
-              <span>
-                <h3 class="team-heading">William Stein</h3>
-                <p class="team-designation">Lead Hacker</p>
-                <p class="team-des">
-                  Skateboards algebraic curves and
-                  bends cutting-edge technology to our needs.
-                </p>
-              </span>
-          </a>
-          <div class="team-social">
-            <a class="social-icons" href="https://www.facebook.com/william.stein.37"
-               title="Facebook"><i class="facebookelegance-icons-"></i></a>
-            <a class="social-icons" href="https://twitter.com/wstein389"
-               title="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
-            <a class="social-icons" href="https://github.com/williamstein/"
-               title="Github"><i class="githubelegance-icons-"></i></a>
-            <a class="social-icons" href="https://plus.google.com/115360165819500279592/posts"
-               title="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="center w-col w-col-3 wp4 delay-1s">
-      <div class="team-album">
-        <div class="tumbnail">
-          <a class="team-hyper" href="https://harald.schil.ly">
-            <img class="thumbnail-img" src="images/team/hsy-2.jpg" alt="team1">
-              <span>
-                <h3 class="team-heading">Harald Schilly</h3>
-                <p class="team-designation">Bug Juggler</p>
-                <p class="team-des">
-                  Crunches numbers for beautiful graphs,
-                  untangles html, js, css and python
-                  and only dreams in binary.
-                </p>
-              </span>
-          </a>
-          <div class="team-social">
-            <a class="social-icons" href="https://www.facebook.com/harald.schilly"
-               title="Facebook"><i class="facebookelegance-icons-"></i></a>
-            <a class="social-icons" href="https://twitter.com/ha_sch"
-               title="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
-            <a class="social-icons" href="https://github.com/haraldschilly/" title="Github"><i class="githubelegance-icons-"></i></a>
-            <a class="social-icons" href="https://plus.google.com/+HaraldSchilly"
-               title="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-{#    <div class="center w-col w-col-3 wp4 delay-1s">#}
-{#      <div class="team-album">#}
-{#        <div class="tumbnail">#}
-{#          <a class="team-hyper">#}
-{#            <img class="thumbnail-img" src="images/team/image1.png" alt="team1">#}
-{#              <span>#}
-{#                <h3 class="team-heading">James Dylan</h3>#}
-{#                <p class="team-designation">CREATIVE DIRECTOR</p>#}
-{#                <p class="team-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repellat possimus#}
-{#                  laboriosam et.</p>#}
-{#              </span>#}
-{#          </a>#}
-{#          <div class="team-social">#}
-{#            <a class="social-icons" href="" titlle="Facebook"><i class="facebookelegance-icons-"></i></a>#}
-{#            <a class="social-icons" href="" titlle="Twitter"><i class="twitter-birdelegance-icons-"></i></a>#}
-{#            <a class="social-icons" href="" titlle="Linkedin"><i class="linkedinelegance-icons-"></i></a>#}
-{#            <a class="social-icons" href="" titlle="Google+"><i class="googleplus-rectelegance-icons-"></i></a>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
-{#    </div>#}
-{#    <div class="center w-col w-col-3 wp4 delay-1-5s">#}
-{#      <div class="team-album">#}
-{#        <div class="tumbnail">#}
-{#          <a class="team-hyper">#}
-{#            <img class="thumbnail-img" src="images/team/image1.png" alt="team1">#}
-{#              <span>#}
-{#                <h3 class="team-heading">James Dylan</h3>#}
-{#                <p class="team-designation">CREATIVE DIRECTOR</p>#}
-{#                <p class="team-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit.#}
-{#                  Ipsum repellat possimus laboriosam et.</p>#}
-{#              </span>#}
-{#          </a>#}
-{#          <div class="team-social">#}
-{#            <a class="social-icons" href="" titlle="Facebook"><i class="facebookelegance-icons-"></i></a>#}
-{#            <a class="social-icons" href="" titlle="Twitter"><i class="twitter-birdelegance-icons-"></i></a>#}
-{#            <a class="social-icons" href="" titlle="Linkedin"><i class="linkedinelegance-icons-"></i></a>#}
-{#            <a class="social-icons" href="" titlle="Google+"><i class="googleplus-rectelegance-icons-"></i></a>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
-{#    </div>#}
-
-
-{#
-  </div>
-</div>
+                    <div class="center w-col w-col-3 wp4">
+                        <div class="team-album">
+                            <div class="tumbnail">
+                                <a class="team-hyper" href="http://wstein.org/">
+                                    {# class circule for a round image #}
+                                    <img class="thumbnail-img" src="images/team/wstein-2.jpg" alt="wstein">
+                                    <span>
+                                        <h3 class="team-heading">William Stein</h3>
+                                        <p class="team-designation">Lead Hacker</p>
+                                        <p class="team-des">
+                                            Skateboards algebraic curves and
+                                            bends cutting-edge technology to our needs.
+                                        </p>
+                                    </span>
+                                </a>
+                                <div class="team-social">
+                                    <a class="social-icons" href="https://www.facebook.com/william.stein.37"
+                                       title="Facebook"><i class="facebookelegance-icons-"></i></a>
+                                    <a class="social-icons" href="https://twitter.com/wstein389"
+                                       title="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
+                                    <a class="social-icons" href="https://github.com/williamstein/"
+                                       title="Github"><i class="githubelegance-icons-"></i></a>
+                                    <a class="social-icons" href="https://plus.google.com/115360165819500279592/posts"
+                                       title="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center w-col w-col-3 wp4 delay-1s">
+                        <div class="team-album">
+                            <div class="tumbnail">
+                                <a class="team-hyper" href="https://harald.schil.ly">
+                                    <img class="thumbnail-img" src="images/team/hsy-2.jpg" alt="team1">
+                                    <span>
+                                        <h3 class="team-heading">Harald Schilly</h3>
+                                        <p class="team-designation">Bug Juggler</p>
+                                        <p class="team-des">
+                                            Crunches numbers for beautiful graphs,
+                                            untangles html, js, css and python
+                                            and only dreams in binary.
+                                        </p>
+                                    </span>
+                                </a>
+                                <div class="team-social">
+                                    <a class="social-icons" href="https://www.facebook.com/harald.schilly"
+                                       title="Facebook"><i class="facebookelegance-icons-"></i></a>
+                                    <a class="social-icons" href="https://twitter.com/ha_sch"
+                                       title="Twitter"><i class="twitter-birdelegance-icons-"></i></a>
+                                    <a class="social-icons" href="https://github.com/haraldschilly/" title="Github"><i class="githubelegance-icons-"></i></a>
+                                    <a class="social-icons" href="https://plus.google.com/+HaraldSchilly"
+                                       title="Google+"><i class="googleplus-rectelegance-icons-"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {#    <div class="center w-col w-col-3 wp4 delay-1s">#}
+                    {#      <div class="team-album">#}
+                    {#        <div class="tumbnail">#}
+                    {#          <a class="team-hyper">#}
+                    {#            <img class="thumbnail-img" src="images/team/image1.png" alt="team1">#}
+                    {#              <span>#}
+                    {#                <h3 class="team-heading">James Dylan</h3>#}
+                    {#                <p class="team-designation">CREATIVE DIRECTOR</p>#}
+                    {#                <p class="team-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repellat possimus#}
+                    {#                  laboriosam et.</p>#}
+                    {#              </span>#}
+                    {#          </a>#}
+                    {#          <div class="team-social">#}
+                    {#            <a class="social-icons" href="" titlle="Facebook"><i class="facebookelegance-icons-"></i></a>#}
+                    {#            <a class="social-icons" href="" titlle="Twitter"><i class="twitter-birdelegance-icons-"></i></a>#}
+                    {#            <a class="social-icons" href="" titlle="Linkedin"><i class="linkedinelegance-icons-"></i></a>#}
+                    {#            <a class="social-icons" href="" titlle="Google+"><i class="googleplus-rectelegance-icons-"></i></a>#}
+                    {#          </div>#}
+                    {#        </div>#}
+                    {#      </div>#}
+                    {#    </div>#}
+                    {#    <div class="center w-col w-col-3 wp4 delay-1-5s">#}
+                    {#      <div class="team-album">#}
+                    {#        <div class="tumbnail">#}
+                    {#          <a class="team-hyper">#}
+                    {#            <img class="thumbnail-img" src="images/team/image1.png" alt="team1">#}
+                    {#              <span>#}
+                    {#                <h3 class="team-heading">James Dylan</h3>#}
+                    {#                <p class="team-designation">CREATIVE DIRECTOR</p>#}
+                    {#                <p class="team-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit.#}
+                    {#                  Ipsum repellat possimus laboriosam et.</p>#}
+                    {#              </span>#}
+                    {#          </a>#}
+                    {#          <div class="team-social">#}
+                    {#            <a class="social-icons" href="" titlle="Facebook"><i class="facebookelegance-icons-"></i></a>#}
+                    {#            <a class="social-icons" href="" titlle="Twitter"><i class="twitter-birdelegance-icons-"></i></a>#}
+                    {#            <a class="social-icons" href="" titlle="Linkedin"><i class="linkedinelegance-icons-"></i></a>#}
+                    {#            <a class="social-icons" href="" titlle="Google+"><i class="googleplus-rectelegance-icons-"></i></a>#}
+                    {#          </div>#}
+                    {#        </div>#}
+                    {#      </div>#}
+                    {#    </div>#}
 
 
-<div class="parallax-lab" data-stellar-background-ratio="0.5">
-  <div class="opcaity">
-#}
-    <div class="w-container wrap">
-      <div class="w-col w-col-4">
-        <div class="center wrap">
-          <h3 class="info-x">
-            <a href="https://github.com/sagemath/cloud">
-              Want to <br>get involved<br>with SMC?
-            </a>
-          </h3>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="center">
-          <div class="circule circule-info">
-            {# <p class="info"><strong class="info-strong">99%</strong><br/>CLIENT<br/>SATISFACTION</p>#}
-            <a href="https://github.com/sagemath/cloud" class="icon-box">
-              <i style="color: #333;" class="smc-github"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="center wrap">
-          <h5>Join our mailing list</h5>
-          <h3 class="info-x">
-          <a href="https://groups.google.com/forum/#!forum/sage-cloud">sage-cloud</a>
-          </h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                    {#
+                </div>
+            </div>
 
 
-{#///////////////////////////////////////////////////////
-// End Team section
-//////////////////////////////////////////////////////////#}
+            <div class="parallax-lab" data-stellar-background-ratio="0.5">
+                <div class="opcaity">
+                    #}
+                    <div class="w-container wrap">
+                        <div class="w-col w-col-4">
+                            <div class="center wrap">
+                                <h3 class="info-x">
+                                    <a href="https://github.com/sagemath/cloud">
+                                        Want to <br>get involved<br>with SMC?
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="w-col w-col-4">
+                            <div class="center">
+                                <div class="circule circule-info">
+                                    {# <p class="info"><strong class="info-strong">99%</strong><br/>CLIENT<br/>SATISFACTION</p>#}
+                                    <a href="https://github.com/sagemath/cloud" class="icon-box">
+                                        <i style="color: #333;" class="smc-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-col w-col-4">
+                            <div class="center wrap">
+                                <h5>Join our mailing list</h5>
+                                <h3 class="info-x">
+                                    <a href="https://groups.google.com/forum/#!forum/sage-cloud">sage-cloud</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-{#///////////////////////////////////////////////////////
-// tech section
-//////////////////////////////////////////////////////////#}
-    <!--
+
+            {#///////////////////////////////////////////////////////
+            // End Team section
+            //////////////////////////////////////////////////////////#}
+
+            {#///////////////////////////////////////////////////////
+            // tech section
+            //////////////////////////////////////////////////////////#}
+            <!--
 <div class="row-gree">
-  <div class="w-container wrap">
-    <div class="center">
-      <h1 class="underline dark">Underlying Technology</h1>
-    </div>
-  </div>
+<div class="w-container wrap">
+<div class="center">
+<h1 class="underline dark">Underlying Technology</h1>
+</div>
+</div>
 </div>
 
 <div id="technology">
-  <div class="parallax-lab" data-stellar-background-ratio="0.5">
-    <div class="opcaity">
-      <div class="w-container wrap-normal">
-        <div class="center">
-          <h2>Built on Top of Giants</h2>
+<div class="parallax-lab" data-stellar-background-ratio="0.5">
+<div class="opcaity">
+<div class="w-container wrap-normal">
+<div class="center">
+<h2>Built on Top of Giants</h2>
 
-          <p>{{ smc }} is built on many
-            high-quality
-            open-source software products.</p>
-        </div>
+<p>{{ smc }} is built on many
+high-quality
+open-source software products.</p>
+</div>
 
-        <div class="clients-sub">
-          <div id="clients">
-            <div class="clients-wrap">
-              <ul id="clients-list" class="clearfix">
-                <li><div class="icon-box">
-                    <i class="smc-plancast"></i><h4> <a href="http://linux.org">Linux</a></h4>
-                  </div>
-                </li>
-                <li><div class="icon-box">
-                  <img src="images/giants/cassandra.png" alt="cassandra db">
-                  <h4><a href="http://cassandra.apache.org/">Cassandra</a></h4>
-                </div>
-              </li>
-              </ul>
-            </div>
-            {# @end .clients-wrap #}
-          </div>
-          {# @end #clients #}
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="clients-sub">
+<div id="clients">
+<div class="clients-wrap">
+<ul id="clients-list" class="clearfix">
+<li><div class="icon-box">
+<i class="smc-plancast"></i><h4> <a href="http://linux.org">Linux</a></h4>
+</div>
+</li>
+<li><div class="icon-box">
+<img src="images/giants/cassandra.png" alt="cassandra db">
+<h4><a href="http://cassandra.apache.org/">Cassandra</a></h4>
+</div>
+</li>
+</ul>
+</div>
+{# @end .clients-wrap #}
+</div>
+{# @end #clients #}
+</div>
+</div>
+</div>
+</div>
 </div>
 -->
-{#///////////////////////////////////////////////////////
- // End tech section
- //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // End tech section
+            //////////////////////////////////////////////////////////#}
 
 
-{#///////////////////////////////////////////////////////
-// Contact section
-//////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // Contact section
+            //////////////////////////////////////////////////////////#}
 
-<div class="row-bluu">
-  <div class="w-container wrap-normal">
-    <div class="center">
-      <h1 class="underline">Contact Us</h1>
-      <p>Email <a href="mailto:help@sagemath.com" target="_blank">help@sagemath.com</a>.</p>
-    </div>
-  </div>
+            <div class="row-bluu">
+                <div class="w-container wrap-normal">
+                    <div class="center">
+                        <h1 class="underline">Contact Us</h1>
+                        <p>Email <a href="mailto:help@sagemath.com" target="_blank">help@sagemath.com</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="parallax-pen" data-stellar-background-ratio="0.5">
+                    <div class="opcaity">
+                        <div class="w-container wrap">
+                            <div class="center">
+                                <div class="w-form">
+                                    <!--
+<form action="/contact" method="post" name="contact">
+<div class="w-container w-input left">
+<div class="w-col w-col-2">Subject:</div>
+<div class="w-col w-col-2"><label><input type="radio" name="subject" value="general" checked="checked"/ style="margin-right: 1ex;">General</label>
 </div>
-<div id="contact">
-  <div class="parallax-pen" data-stellar-background-ratio="0.5">
-    <div class="opcaity">
-      <div class="w-container wrap">
-        <div class="center">
-          <div class="w-form">
-<!--
-            <form action="/contact" method="post" name="contact">
-              <div class="w-container w-input left">
-                <div class="w-col w-col-2">Subject:</div>
-                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="general" checked="checked"/ style="margin-right: 1ex;">General</label>
-                </div>
-                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="help"/ style="margin-right: 1ex;">Help</label></div>
-                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="feedback"/ style="margin-right: 1ex;">Feedback</label>
-                </div>
-              </div>
-              <label for="name"></label>
-              <input class="w-input" type="text" id="name" placeholder="Name (optional)" name="name">
-              <label for="email"></label>
-              <input class="w-input" placeholder="Email (optional)" type="text" id="email" name="email"> <label for="telephone"></label>
-              <textarea class="w-input message" placeholder="Message" id="message"
-                        name="message"></textarea><br>
+<div class="w-col w-col-2"><label><input type="radio" name="subject" value="help"/ style="margin-right: 1ex;">Help</label></div>
+<div class="w-col w-col-2"><label><input type="radio" name="subject" value="feedback"/ style="margin-right: 1ex;">Feedback</label>
+</div>
+</div>
+<label for="name"></label>
+<input class="w-input" type="text" id="name" placeholder="Name (optional)" name="name">
+<label for="email"></label>
+<input class="w-input" placeholder="Email (optional)" type="text" id="email" name="email"> <label for="telephone"></label>
+<textarea class="w-input message" placeholder="Message" id="message"
+name="message"></textarea><br>
 
-              <div class="w-container">
+<div class="w-container">
 {#
-                <div class="w-col w-col-12 left">
-                  Click checkbox below to reveal the send button.
-                </div>
-                <div class="w-col w-col-3">
-                  <script type="text/javascript">
-                    var contact_send_show = function() {
-                      $('#contact-send').show();
-                    };
-                  </script>
-                  <div class="g-recaptcha"
-                       data-callback="contact_send_show"
-                       data-theme="dark"
-                       data-sitekey="6LdNmQITAAAAAPE6WHQjouaJ2qE5eGq0V5JPM3Op"></div>
-                </div>
+<div class="w-col w-col-12 left">
+Click checkbox below to reveal the send button.
+</div>
+<div class="w-col w-col-3">
+<script type="text/javascript">
+var contact_send_show = function() {
+$('#contact-send').show();
+};
+</script>
+<div class="g-recaptcha"
+data-callback="contact_send_show"
+data-theme="dark"
+data-sitekey="6LdNmQITAAAAAPE6WHQjouaJ2qE5eGq0V5JPM3Op"></div>
+</div>
 #}
 {#                <div class="w-col w-col-3"> #}
-                <div class="w-col center">
-                  <input id="contact-send" class="button large" type="submit" value="Send" {# style="display: none" #} >
-                </div>
-              </div>
-            </form>
+<div class="w-col center">
+<input id="contact-send" class="button large" type="submit" value="Send" {# style="display: none" #} >
+</div>
+</div>
+</form>
 
-            <div class="w-form-done">
-              <p>Thank you! Your submission has been received!</p>
-            </div>
+<div class="w-form-done">
+<p>Thank you! Your submission has been received!</p>
+</div>
 
-            <div class="w-form-fail">
-              <p>Oops! Something went wrong while submitting the form :(</p>
-            </div>
+<div class="w-form-fail">
+<p>Oops! Something went wrong while submitting the form :(</p>
+</div>
 -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{#
-  <div class="w-widget w-widget-map contac-map"
-  data-widget-latlng="37.782163,-122.400591"
-  data-widget-style="roadmap"
-   data-widget-zoom="25"
-   data-widget-tooltip="{{ smc }} Headquater"></div>
- #}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {#
+            <div class="w-widget w-widget-map contac-map"
+                 data-widget-latlng="37.782163,-122.400591"
+                 data-widget-style="roadmap"
+                 data-widget-zoom="25"
+                 data-widget-tooltip="{{ smc }} Headquater"></div>
+            #}
 
-{#///////////////////////////////////////////////////////
- // End Contact section
- //////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // End Contact section
+            //////////////////////////////////////////////////////////#}
 
-{#///////////////////////////////////////////////////////
-// Footer section
-//////////////////////////////////////////////////////////#}
+            {#///////////////////////////////////////////////////////
+            // Footer section
+            //////////////////////////////////////////////////////////#}
 
-<div class="footer row-back">
-  <div class="social-footter center">
-    <a href="https://www.facebook.com/pages/Sage-Math/26593144945"><i class="facebookelegance-icons-"></i></a>
-    <a href="https://twitter.com/sagemath"><i class="twitter-birdelegance-icons-"></i></a>
-    <a href="https://plus.google.com/+sagemath"><i class="googleplus-rectelegance-icons-"></i></a>
-    <a href="https://plus.google.com/b/117696122667171964473/117696122667171964473/"><i
-        class="googleplus-rectelegance-icons-"></i></a>
-    {#<i class="vimeoelegance-icons-"></i>#}
-    {#<i class="friendfeedelegance-icons-"></i>#}
-    {#<i class="deviantartelegance-icons-"></i>#}
-    {#<i class="lastfmelegance-icons-"></i>#}
-    {#<i class="linkedinelegance-icons-"></i>#}
-    {#<i class="picasaelegance-icons-"></i>#}
-    {#<i class="wordpresselegance-icons-"></i>#}
-    {#<i class="instagramelegance-icons-"></i>#}
-    {#<i class="tumblrelegance-icons-"></i>#}
-  </div>
+            <div class="footer row-back">
+                <div class="social-footter center">
+                    <a href="https://www.facebook.com/pages/Sage-Math/26593144945"><i class="facebookelegance-icons-"></i></a>
+                    <a href="https://twitter.com/sagemath"><i class="twitter-birdelegance-icons-"></i></a>
+                    <a href="https://plus.google.com/+sagemath"><i class="googleplus-rectelegance-icons-"></i></a>
+                    <a href="https://plus.google.com/b/117696122667171964473/117696122667171964473/"><i
+                                                                                                        class="googleplus-rectelegance-icons-"></i></a>
+                    {#<i class="vimeoelegance-icons-"></i>#}
+                    {#<i class="friendfeedelegance-icons-"></i>#}
+                    {#<i class="deviantartelegance-icons-"></i>#}
+                    {#<i class="lastfmelegance-icons-"></i>#}
+                    {#<i class="linkedinelegance-icons-"></i>#}
+                    {#<i class="picasaelegance-icons-"></i>#}
+                    {#<i class="wordpresselegance-icons-"></i>#}
+                    {#<i class="instagramelegance-icons-"></i>#}
+                    {#<i class="tumblrelegance-icons-"></i>#}
+                </div>
 
-  <div class="w-container wrap-thin center grey">
-    <a href="https://500px.com/photo/95588775/the-lab-by-greg-francke">CC-BY licensed pictures by Greg Francke</a>,
-    <a href="http://commons.wikimedia.org/wiki/File:Stipula_fountain_pen.jpg">Wikimedia Stipula Pen</a>
-  </div>
+                <div class="w-container wrap-thin center grey">
+                    <a href="https://500px.com/photo/95588775/the-lab-by-greg-francke">CC-BY licensed pictures by Greg Francke</a>,
+                    <a href="http://commons.wikimedia.org/wiki/File:Stipula_fountain_pen.jpg">Wikimedia Stipula Pen</a>
+                </div>
 
-  <div class="w-container wrap-normal center"><strong>© {{ company }}, {{ year }}</strong></div>
-</div>
+                <div class="w-container wrap-normal center"><strong>© {{ company }}, {{ year }}</strong></div>
+            </div>
 
-{#///////////////////////////////////////////////////////
-// End Footer section
-//////////////////////////////////////////////////////////#}
-</div>{# START JQUERY PLUGINS LOAD #}
-<script src="js/jquery.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/normal.js"></script>
-<script src="js/carousels.js"></script>
-<script src="js/jquery.stellar.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/jquery.mixitup.js"></script>
-<script src="js/testimonials.js"></script>
-<!-- <script src="js/jquery.nicescroll.js"></script>-->
-<script src="js/rotating-text.js"></script>
-<script src="js/jquery.magnific-popup.js"></script>
-<script src="js/headhesive.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/scripts.js"></script>
-{# END JQUERY PLUGINS LOAD #}
-<script src="js/stats.js"></script>
-{# the living graph #}
-{#<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.1/TweenMax.min.js"></script>#}
-{#<script type="text/javascript" src="static/rAF.js"></script>#}
-{#<script type="text/javascript" src="static/graph.js"></script>#}
-{# end graph #}
-{{ analytics|safe }}
-</body>
+            {#///////////////////////////////////////////////////////
+            // End Footer section
+            //////////////////////////////////////////////////////////#}
+        </div>{# START JQUERY PLUGINS LOAD #}
+        <script src="js/jquery.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/normal.js"></script>
+        <script src="js/carousels.js"></script>
+        <script src="js/jquery.stellar.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/jquery.mixitup.js"></script>
+        <script src="js/testimonials.js"></script>
+        <!-- <script src="js/jquery.nicescroll.js"></script>-->
+        <script src="js/rotating-text.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
+        <script src="js/headhesive.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/scripts.js"></script>
+        {# END JQUERY PLUGINS LOAD #}
+        <script src="js/stats.js"></script>
+        {# the living graph #}
+        {#<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.1/TweenMax.min.js"></script>#}
+        {#<script type="text/javascript" src="static/rAF.js"></script>#}
+        {#<script type="text/javascript" src="static/graph.js"></script>#}
+        {# end graph #}
+        {{ analytics|safe }}
+    </body>
 </html>
