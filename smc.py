@@ -37,7 +37,7 @@ GLOBAL_VALS = {
     "smc": "SageMathCloud",
     "smcurl": "https://cloud.sagemath.com/",
     "company": "SageMath, Inc.",
-    "slogan": "Collaborative Computational Mathematics Online"
+    "slogan": "Collaborative Computational Mathematics"
 }
 
 # double {{ }} for { } because {fields} are replaced via string.format()

@@ -19,4 +19,4 @@ Right now, I think it does not. Hence, update AppEngine via:
 
 ## to compress the png files to -nq
 
-pngnq -v -f -s 1 pattern-grey-squares.png
+    pngnq -v -f -s 1 pattern-grey-squares.png
