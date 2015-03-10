@@ -53,7 +53,7 @@
         <div class="w-row">          {# START COLUMN 3 #}
           <div class="w-col w-col-4 logo">
             {# START LOGO #}
-            <a href="https://cloud.sagemath.com"><img class="logo" src="images/smc-logo.png" alt="{{ smc }}"></a>
+            <a target="_blank" href="https://cloud.sagemath.com"><img class="logo" src="images/smc-logo.png" alt="{{ smc }}"></a>
             {# END LOGO #}
           </div>
           {# END COLUMN 3 #}
@@ -101,20 +101,21 @@
         <div class="center fixed-content">
           <div class="center-fix">
             <img class="round-icon" src="images/smc-icon.png" width="128" height="128">
-            <h1 class="underline animated fadeInDown ftShadow">{{ smc }}</h1>
+            <a target="_blank" href="https://cloud.sagemath.com"><h1 class="underline animated fadeInDown ftShadow">{{ smc }}</h1></a>
             <h4 class="animated fadeInUp delay-05s"
                 style="margin-bottom: 50px;">{{ slogan }}</h4>
-            <a class="button large animated fadeInUp delay-2s"
+            <a target="_blank" class="button large animated fadeInUp delay-2s"
                            href="https://cloud.sagemath.com"
                            {# style="margin-top:20px;"#}
-                >Use SageMathCloud Now</a>
+                >Use SageMathCloud Now
+            </a>
 
-            <a class="button animated fadeInUp delay-1-5s"
-               href="#features" style="margin-right: 20px;"><span>
-              <i class="cogelegance-icons-"></i></span>Features</a>
+            <a class="button large animated fadeInUp delay-1-5s"
+               href="#features" ><span>
+              <i class="cogelegance-icons-"></i></span>Features
+            </a>
 
-            <a class="button border animated fadeInUp delay-1-5s"
-               style="margin-left: 20px;"
+            <a class="button large border animated fadeInUp delay-1-5s"
                href="#contact">Get in Touch</a>
 {#          </div>#}
 {#          <div class="center-fix">#}
@@ -133,7 +134,6 @@
       <div class="w-container wrap">
         <div class="center">
           <h2 class="underline">Core Features</h2>
-          <p>This makes <strong>you</strong> productive in SMC</p>
         </div>
 
         <div class="w-col w-col-4 wp1">
@@ -141,9 +141,10 @@
             <i class="smc-pi-outline"></i>
             <h4 class="icons-heading">Powerful Tools</h4>
             <p>
-            Work with <a href="http://www.sagemath.org/">SageMath</a>,
-            <a href="http://www.r-project.org">R</a>,
-            <a href="http://ctan.org">LaTeX</a>, Octave,
+            Work with <a target="_blank" href="http://www.sagemath.org/">SageMath</a>,
+            <a target="_blank" href="http://www.r-project.org">R</a>,
+            <a target="_blank" href="http://ctan.org">LaTeX</a>,
+            <a target="_blank" href="https://www.gnu.org/software/octave/">Octave</a>,
             the entire scientific Python stack, and much more.
           </p>
           </div>
@@ -154,8 +155,9 @@
             <i class="paramselegance-icons-"></i>
             <h4 class="icons-heading">Fully Managed</h4>
             <p>
-              {{ company }} fully manages the software, installs upgrades, rolls out bugfixes, backups your files, etc.
-              No need to worry about how to get things up and running!
+              {{ company }} fully manages the software, installs upgrades, rolls out bugfixes, backs up your files, etc.
+              No need to worry about installing software, and when you run into trouble email <a href="mailto:help@sagemath.com">help@sagemath.com</a> and
+                we will pop in and help!
             </p>
           </div>
         </div>
@@ -166,7 +168,7 @@
             <h4 class="icons-heading">100% Web-Browser</h4>
             <p>
               A modern web-browser is all you need.<br>
-              No local installation, no plugin, nothing.
+              No local installation, no plugins, nothing.
             </p>
           </div>
         </div>
@@ -192,7 +194,7 @@
 {#      <div class="center">#}
 {#        <h1 class="underline" id="status">Status</h1>#}
 {#        <h4>Current Status of {{ smc }}</h4>#}
-{#        <p>Numbers fetched live from our data-centers.</p>#}
+{#        <p>Numbers fetched live.</p>#}
 {#      </div>#}
 {#    </div>#}
 {#  </div>#}
@@ -220,7 +222,7 @@
         <div class="icon-box">
           <i class="smc-beaker"></i>
           <h2><strong><span class="red" id="status-projects">0</span></strong></h2>
-          <h4>Active Projects</h4>
+          <h4>Very Active Projects</h4>
           <p>Projects with files being modified right now.</p>
         </div>
       </div>
@@ -243,7 +245,7 @@
     <div class="w-container wrap-normal">
       <div class="center">
         <h2 class="underline">What SMC Does For You</h2>
-        <p>This are the main task {{ smc }} does for you to keep you focused on your work.</p>
+        <p>These are the main tasks that {{ smc }} does for you, so you can focus on your work.</p>
       </div>
 
 {#      <div class="w-col w-col-6">#}
@@ -267,8 +269,8 @@
           <i class="smc-arrows-cw-outline"></i>
           <h3>Backup</h3>
           <p>Never lose your work again!
-            While you are working,
-            a continuous stream of consistent snapshots is copied to our servers.
+            While you are working, SMC creates
+            frequent backups of all your files.
             Restore any file from its state in the past.
           </p>
         </div>
@@ -280,7 +282,7 @@
           <h3>Collaboration</h3>
           <p>
             Work together with your friends and colleagues.<br>
-            Watch their cursors jumping around in real-time.<br>
+            Watch their cursors in real-time.<br>
             Conveniently manage classroom courses.
           </p>
         </div>
@@ -315,7 +317,7 @@
       <div class="center">
         <h1 class="underline" id="testimonials">Testimonials</h1>
         <p>
-          See what some of our <strong class="blue">users</strong> say about us
+          See what some of our users say about us
         </p>
       </div>
 
@@ -372,6 +374,7 @@
 {#///////////////////////////////////////////////////////
  // Our-plan section         //////////////////////////////////////////////////////////#}
 
+    <!--
 <div class="row-yell">
   <div class="w-container wrap-normal">
     <div class="center">
@@ -381,7 +384,7 @@
       </p>
     </div>
   </div>
-</div>
+</div>-->
 
 <script>
   function contact_product() {
@@ -504,8 +507,10 @@
 
 <div class="row-gree" id="team">
   <div class="w-container wrap">
-    <h1 class="center underline dark">Main People Behind SMC</h1>
-      William Stein, Harald Schilly, Jon Lee, Andy Huchala, and Nicholas Ruhland, Keith Clawson...
+    <h1 class="center underline dark">People Behind SMC</h1>
+      <div class="center">
+          William Stein, Harald Schilly, Jon Lee, Andy Huchala, and Nicholas Ruhland, Keith Clawson, ...
+      </div>
   </div>
 </div>
 
@@ -673,6 +678,7 @@
   </div>
 </div>
 
+    <!--
 <div id="technology">
   <div class="parallax-lab" data-stellar-background-ratio="0.5">
     <div class="opcaity">
@@ -680,7 +686,7 @@
         <div class="center">
           <h2>Built on Top of Giants</h2>
 
-          <p>The foundations of {{ smc }} rest on top of several
+          <p>{{ smc }} is built on many
             high-quality
             open-source software products.</p>
         </div>
@@ -708,6 +714,7 @@
     </div>
   </div>
 </div>
+-->
 {#///////////////////////////////////////////////////////
  // End tech section
  //////////////////////////////////////////////////////////#}
@@ -735,22 +742,21 @@
             <form action="/contact" method="post" name="contact">
               <div class="w-container w-input left">
                 <div class="w-col w-col-2">Subject:</div>
-                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="general" checked="checked"/>General</label>
+                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="general" checked="checked"/ style="margin-right: 1ex;">General</label>
                 </div>
-                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="help"/>Help</label></div>
-                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="product"/>Product</label>
+                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="help"/ style="margin-right: 1ex;">Help</label></div>
+                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="product"/ style="margin-right: 1ex;">Product</label>
                 </div>
-                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="feedback"/>Feedback</label>
+                <div class="w-col w-col-2"><label><input type="radio" name="subject" value="feedback"/ style="margin-right: 1ex;">Feedback</label>
                 </div>
               </div>
               <label for="name"></label>
-              <input class="w-input" type="text" id="name" placeholder="Enter your name (optional)" name="name">
+              <input class="w-input" type="text" id="name" placeholder="Name (optional)" name="name">
               <label for="email"></label>
-              <input class="w-input" placeholder="Enter your email address" type="text" id="email" name="email"
-                     required="required"> <label for="telephone"></label>
-              <input class="w-input" placeholder="Enter your phone number (optional)" type="text" id="telephone"
+              <input class="w-input" placeholder="Email (optional)" type="text" id="email" name="email"> <label for="telephone"></label>
+              <input class="w-input" placeholder="Phone number (optional)" type="text" id="telephone"
                      name="tel"> <label for="message"></label>
-              <textarea class="w-input message" placeholder="Enter your Message Here" id="message"
+              <textarea class="w-input message" placeholder="Message" id="message"
                         name="message"></textarea><br>
 
               <div class="w-container">
