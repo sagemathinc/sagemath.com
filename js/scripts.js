@@ -45,13 +45,13 @@ $(document).ready(function () {
 
 });
 
-
+/*
 $(document).ready(function () {
   // The document page (body)
-  // var nice = $("html").niceScroll({cursorwidth: "15px", zindex: 9999});
-  // $("#boxscroll").niceScroll(); // {touchbehavior: true}); // First scrollable DIV
+   var nice = $("html").niceScroll({cursorwidth: "15px", zindex: 9999});
+   $("#boxscroll").niceScroll(); // {touchbehavior: true}); // First scrollable DIV
 });
-
+*/
 
 $(function () {
   $('#cbp-qtrotator').cbpQTRotator();
