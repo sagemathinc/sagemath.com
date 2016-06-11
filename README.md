@@ -14,7 +14,7 @@ Right now, I think it does not. Hence, update AppEngine via:
 
 At some point, it should work via `git push origin master`, but this requires to hook up those services and it's not sure if it works well with appengine right now. Anyhow, the command below is the "official" deploy method. It should list a few lines including a check that the deployed version has been deployed and everything works (takes about a minute).
 
-    $ appcfg.py --oauth2 update .
+    $ appcfg.py --noauth_local_webserver --oauth2 update .
 
 ## to load the AppEngine webserver locally, for development
 

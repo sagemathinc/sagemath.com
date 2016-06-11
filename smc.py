@@ -77,13 +77,18 @@ j2env = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        # demo example
         # self.response.headers['Content-Type'] = 'text/plain'
         #self.response.write('Hello, World!')
 
-        vals = {}
-        vals.update(GLOBAL_VALS)
-        template = j2env.get_template('index.html')
-        self.response.write(template.render(vals))
+        # what has been before to show the page
+        #vals = {}
+        #vals.update(GLOBAL_VALS)
+        #template = j2env.get_template('index.html')
+        #self.response.write(template.render(vals))
+
+        # redirect to SMC instead
+        self.redirect('https://cloud.sagemath.com/')
 
 
 class ContactForm(webapp2.RequestHandler):

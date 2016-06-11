@@ -46,17 +46,17 @@ libraries:
   version: latest
 
 # a lot is activated by default, everything should be safe to use
-pagespeed:
-  enabled_rewriters:
-  - CollapseWhitespace
-  - ImageAddDimensions
-  - RemoveComments
-  - InlineImages
-  - InlineJs
-  - CombineJs
-  - JsOptimize
-  - DeferJs
-  - CombineCss
-  disabled_rewriters:
-  - MinifyCss
-  - FlushSubresources # see http://stackoverflow.com/questions/22764588/pagespeed-on-app-engine-lots-of-issues-am-i-missing-something-php-appeng
+#pagespeed:
+#  enabled_rewriters:
+#  - CollapseWhitespace
+#  - ImageAddDimensions
+#  - RemoveComments
+#  - InlineImages
+#  - InlineJs
+#  - CombineJs
+#  - JsOptimize
+#  - DeferJs
+#  - CombineCss
+#  disabled_rewriters:
+#  - MinifyCss
+#  - FlushSubresources # see http://stackoverflow.com/questions/22764588/pagespeed-on-app-engine-lots-of-issues-am-i-missing-something-php-appeng
